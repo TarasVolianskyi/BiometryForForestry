@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_1_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_1_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_1_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_2_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_2_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_2_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_3_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_3_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_3_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_4_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_4_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_4_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                              android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_5_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_5_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_5_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_row_6_colomn_1"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_6_colomn_2"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_6_colomn_3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_row_6_colomn_4"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_count1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
