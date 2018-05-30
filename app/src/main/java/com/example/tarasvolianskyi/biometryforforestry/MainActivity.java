@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.tarasvolianskyi.biometryforforestry.IncomingData.ChosingOfOneFromFiveColumns;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,14 +26,13 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TopicOneCountFragment topicOneCountFragment = new TopicOneCountFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.flMainActivity, topicOneCountFragment, "listView").commit();
+                //TopicOneCountFragment topicOneCountFragment = new TopicOneCountFragment();
+                ChosingOfOneFromFiveColumns chosingOfOneFromFiveColumns = new ChosingOfOneFromFiveColumns();
+                getSupportFragmentManager().beginTransaction().replace(R.id.flMainActivity, chosingOfOneFromFiveColumns, "listView").commit();
 
             }
         });
