@@ -2,7 +2,105 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorAccent">
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:text="Довжина" />
+
+        <TextView
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:text="Висота" />
+
+        <TextView
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:text="Об'єм" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_r1c1"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:numeric="integer"/>
+
+                    <EditText
+                        android:id="@+id/et_r1c2"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:digits="0123456789."
+                        android:inputType="numberDecimal"/>
+
+                    <EditText
+                        android:id="@+id/et_r1c3"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/et_r2c1"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_r2c2"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/et_r2c3"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
