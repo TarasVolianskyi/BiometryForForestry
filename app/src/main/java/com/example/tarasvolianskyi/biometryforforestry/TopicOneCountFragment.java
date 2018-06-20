@@ -75,14 +75,14 @@ public class TopicOneCountFragment extends Fragment implements View.OnClickListe
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.topic_one_view_fragment, container, false);
+        view = inflater.inflate(R.layout.topic_1_view_fragment, container, false);
         initView();
         return view;
     }
 
     private void initView() {
-        btnCountTopicOne = (Button) view.findViewById(R.id.btn_count1);
-        btnCountTopicOne.setOnClickListener(this);
+        //btnCountTopicOne = (Button) view.findViewById(R.id.btn_count1);
+        //btnCountTopicOne.setOnClickListener(this);
 
         etR1C1 = (EditText) view.findViewById(R.id.et_row_1_colomn_1);
         etR2C1 = (EditText) view.findViewById(R.id.et_row_2_colomn_1);

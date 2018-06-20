@@ -1,5 +1,6 @@
 package com.example.tarasvolianskyi.biometryforforestry.IncomingData;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
+import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
 
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
@@ -37,19 +40,36 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         btnColumn5.setOnClickListener(this);
 
 
+        //test
+        Button btnColumn5d = (Button) view.findViewById(R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment);
+        btnColumn5d.setOnClickListener(this);
+
+
     }
 
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment:
+                TopicOneCountFragment topicOneCountFragment = new TopicOneCountFragment();
 
+                FragmentManager fragmentManager1 = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
+                fragmentTransaction1.replace(R.id.flMainActivity, topicOneCountFragment, "timeForReservation");
+                fragmentTransaction1.addToBackStack(null);
+                fragmentTransaction1.commit();
+                break;
+            case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:
+                IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
 
-        IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
+        }
 
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
     }
 }
