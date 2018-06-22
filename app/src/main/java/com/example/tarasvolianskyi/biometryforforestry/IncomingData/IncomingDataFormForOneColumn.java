@@ -35,6 +35,10 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     private ArrayList<Double> arrayListOfDataVolume;
     private DatabaseReference databaseReferenceUsers;
 
+    private String userId;
+    int myBundleFromPreviousPage;
+   // Bundle bundle;
+
     private EditText etR1C1;
     private EditText etR2C1;
     private EditText etR3C1;
@@ -185,11 +189,21 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     private Double aDoubleR23C3;
     private Double aDoubleR24C3;
 
+    int value;
+    Bundle bundle;
+    int myInt;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.incoming_data_form_for_one_column_fragment, container, false);
-        initView();
+
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            myInt = bundle.getInt("ttt", 77);
+        }
+          initView();
         return view;
     }
 
@@ -197,6 +211,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         databaseReferenceUsers = FirebaseDatabase.getInstance().getReference("biometry");
         btnSentDataToFB = (Button) view.findViewById(R.id.btn_sent_data_to_fb_fragment);
         btnSentDataToFB.setOnClickListener(this);
+        userId = databaseReferenceUsers.push().getKey();
 
         etR1C1 = (EditText) view.findViewById(R.id.et_r1c1);
         etR2C1 = (EditText) view.findViewById(R.id.et_r2c1);
@@ -335,25 +350,41 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
 
     }
 
+   /* public int bundleGetData() {
+
+        bundle = this.getArguments();
+        if (bundle != null) {
+            myBundleFromPreviousPage = bundle.getInt("numberForCellIdColumn", 7);
+        }
+        return myBundleFromPreviousPage;
+    }*/
+
     private void saveDataFromTableToFB() {
         addDataToArrayDiameter();
-        for (int i = 0; i < arrayListOfDataDiameter.size() - 1; i++) {
-            int numR = i + 1;
-            String cellId = "R" + numR + "C1";
+
+        String cellType = DIAMETR;
+        int numForId1of5Column = myInt;
+        int numR;
+        for (int i = 0; i < arrayListOfDataDiameter.size(); i++) {
+            numR = i + 1;
+            String cellId;
+            if (numR >= 10) {
+                cellId = numForId1of5Column + "R" + numR + "C1";
+            } else {
+                cellId = numForId1of5Column + "R" + 0 + numR + "C1";
+            }
             //String name = editTextTask.getText().toString().trim();
-            String userId = databaseReferenceUsers.push().getKey();
-            String cellType = DIAMETR;
-            double cellValue =arrayListOfDataDiameter.get(i);
+            double cellValue = arrayListOfDataDiameter.get(i);
             CellPojo cellPojo = new CellPojo(userId, cellType, cellId, cellValue);
             databaseReferenceUsers.child(userId).child(cellType).child(cellId).setValue(cellPojo);
-            Toast.makeText(getContext(), "GOOD", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), i+"GOOD " + numForId1of5Column, Toast.LENGTH_SHORT).show();
         }
     }
 
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getContext(), "Click button add task", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), "Click button add task", Toast.LENGTH_SHORT).show();
         saveDataFromTableToFB();
     }
 }

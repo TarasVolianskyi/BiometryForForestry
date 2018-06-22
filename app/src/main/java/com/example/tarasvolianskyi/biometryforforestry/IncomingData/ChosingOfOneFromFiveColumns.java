@@ -18,6 +18,7 @@ import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,13 +48,18 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
 
     }
 
+    public void bundleSetData(int value) {
+
+
+    }
+
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+
             case R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment:
                 TopicOneCountFragment topicOneCountFragment = new TopicOneCountFragment();
-
                 FragmentManager fragmentManager1 = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
                 fragmentTransaction1.replace(R.id.flMainActivity, topicOneCountFragment, "timeForReservation");
@@ -63,11 +69,16 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
             case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:
                 IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
 
+                Bundle bundle = new Bundle();
+                bundle.putInt("ttt", 1);
+                incomingDataFormForOneColumn.setArguments(bundle);
+
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
                 break;
         }
 
