@@ -37,7 +37,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
 
     private String userId;
     int myBundleFromPreviousPage;
-   // Bundle bundle;
+    // Bundle bundle;
 
     private EditText etR1C1;
     private EditText etR2C1;
@@ -203,7 +203,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         if (bundle != null) {
             myInt = bundle.getInt("ttt", 77);
         }
-          initView();
+        initView();
         return view;
     }
 
@@ -377,7 +377,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
             double cellValue = arrayListOfDataDiameter.get(i);
             CellPojo cellPojo = new CellPojo(userId, cellType, cellId, cellValue);
             databaseReferenceUsers.child(userId).child(cellType).child(cellId).setValue(cellPojo);
-            Toast.makeText(getContext(), i+"GOOD " + numForId1of5Column, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), i + "GOOD " + numForId1of5Column, Toast.LENGTH_SHORT).show();
         }
     }
 

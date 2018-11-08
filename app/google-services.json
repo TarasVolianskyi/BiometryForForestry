@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "376959453953",
+    "firebase_url": "https://biometryforforestry.firebaseio.com",
+    "project_id": "biometryforforestry",
+    "storage_bucket": "biometryforforestry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376959453953:android:18c9c7fc867147a0",
+        "android_client_info": {
+          "package_name": "com.example.tarasvolianskyi.biometryforforestry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376959453953-07v6vipooegt6oc7ca85ifdrv8asfaq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tarasvolianskyi.biometryforforestry",
+            "certificate_hash": "7cdcbb13a755ffd9983090da16ac772a3688a44c"
+          }
+        },
+        {
+          "client_id": "376959453953-o90tbqs5vvjd5as7e6gjun80vkgm7qv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVnn4wMUW_GZFc7VdWWmp6UNa1PQi3IL8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376959453953-o90tbqs5vvjd5as7e6gjun80vkgm7qv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

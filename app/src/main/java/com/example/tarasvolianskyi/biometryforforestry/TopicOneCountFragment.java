@@ -12,173 +12,227 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by tarasvolianskyi on 21.03.18.
  */
 
-public class TopicOneCountFragment extends Fragment implements View.OnClickListener {
+public class TopicOneCountFragment extends Fragment {
 
     View view;
 
-    private EditText etR1C1;
-    private EditText etR2C1;
-    private EditText etR3C1;
-    private EditText etR4C1;
-    private EditText etR5C1;
+    private double number1;
+    private double number2;
+    private double number3;
+    private double number4;
+    private double number5;
+    private double number6;
+    private double number7;
+    private double number8;
+    private double number9;
+    private double number10;
+    private double number11;
+    private double number12;
+    private double number13;
+    private double number14;
+    private double number15;
+    private double number16;
+    private double number17;
+    private double number18;
+    private double number19;
+    private double number20;
 
-    private TextView tvR1C2;
-    private TextView tvR2C2;
-    private TextView tvR3C2;
-    private TextView tvR4C2;
-    private TextView tvR5C2;
-    private TextView tvR6C2;
-    private TextView tvR1C3;
-    private TextView tvR2C3;
-    private TextView tvR3C3;
-    private TextView tvR4C3;
-    private TextView tvR5C3;
-    private TextView tvR6C3;
-    private TextView tvR1C4;
-    private TextView tvR2C4;
-    private TextView tvR3C4;
-    private TextView tvR4C4;
-    private TextView tvR5C4;
-    private TextView tvR6C4;
+    private TextView tvTableC1R1;
+    private TextView tvTableC1R2;
+    private TextView tvTableC1R3;
+    private TextView tvTableC1R4;
+    private TextView tvTableC1R5;
+    private TextView tvTableC1R6;
+    private TextView tvTableC1R7;
+    private TextView tvTableC1R8;
+    private TextView tvTableC1R9;
+    private TextView tvTableC1R10;
+    private TextView tvTableC1R11;
+    private TextView tvTableC1R12;
+    private TextView tvTableC1R13;
+    private TextView tvTableC1R14;
+    private TextView tvTableC1R15;
+    private TextView tvTableC1R16;
+    private TextView tvTableC1R17;
+    private TextView tvTableC1R18;
+    private TextView tvTableC1R19;
+    private TextView tvTableC1R20;
 
-    private Button btnCountTopicOne;
+    private TextView tvTableC2R1;
+    private TextView tvTableC2R2;
+    private TextView tvTableC2R3;
+    private TextView tvTableC2R4;
+    private TextView tvTableC2R5;
+    private TextView tvTableC2R6;
+    private TextView tvTableC2R7;
+    private TextView tvTableC2R8;
+    private TextView tvTableC2R9;
+    private TextView tvTableC2R10;
+    private TextView tvTableC2R11;
+    private TextView tvTableC2R12;
+    private TextView tvTableC2R13;
+    private TextView tvTableC2R14;
+    private TextView tvTableC2R15;
+    private TextView tvTableC2R16;
+    private TextView tvTableC2R17;
+    private TextView tvTableC2R18;
+    private TextView tvTableC2R19;
+    private TextView tvTableC2R20;
 
-    double valueOfTvR1C2;
-    double valueOfTvR2C2;
-    double valueOfTvR3C2;
-    double valueOfTvR4C2;
-    double valueOfTvR5C2;
-    double valueOfTvR6C2;
-    double valueOfTvR1C3;
-    double valueOfTvR2C3;
-    double valueOfTvR3C3;
-    double valueOfTvR4C3;
-    double valueOfTvR5C3;
-    double valueOfTvR6C3;
-    double valueOfTvR1C4;
-    double valueOfTvR2C4;
-    double valueOfTvR3C4;
-    double valueOfTvR4C4;
-    double valueOfTvR5C4;
-    double valueOfTvR6C4;
+    List<Double> arrayWithNumbers1Topic = new ArrayList<Double>();
 
-    double valueOfTotalColomn2;
-    double valueOfTotalColomn3;
-    double valueOfTotalColomn4;
-
-    double valueAvarage;
+    private double sumOf20;
+    private double avarageOf20;
+    TextView testTextView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_1_view_fragment, container, false);
         initView();
+
         return view;
     }
 
     private void initView() {
-        //btnCountTopicOne = (Button) view.findViewById(R.id.btn_count1);
-        //btnCountTopicOne.setOnClickListener(this);
-
-        etR1C1 = (EditText) view.findViewById(R.id.et_row_1_colomn_1);
-        etR2C1 = (EditText) view.findViewById(R.id.et_row_2_colomn_1);
-        etR3C1 = (EditText) view.findViewById(R.id.et_row_3_colomn_1);
-        etR4C1 = (EditText) view.findViewById(R.id.et_row_4_colomn_1);
-        etR5C1 = (EditText) view.findViewById(R.id.et_row_5_colomn_1);
-
-        tvR1C2 = (TextView) view.findViewById(R.id.tv_row_1_colomn_2);
-        tvR2C2 = (TextView) view.findViewById(R.id.tv_row_2_colomn_2);
-        tvR3C2 = (TextView) view.findViewById(R.id.tv_row_3_colomn_2);
-        tvR4C2 = (TextView) view.findViewById(R.id.tv_row_4_colomn_2);
-        tvR5C2 = (TextView) view.findViewById(R.id.tv_row_5_colomn_2);
-        tvR6C2 = (TextView) view.findViewById(R.id.tv_row_6_colomn_2);
-
-        tvR1C3 = (TextView) view.findViewById(R.id.tv_row_1_colomn_3);
-        tvR2C3 = (TextView) view.findViewById(R.id.tv_row_2_colomn_3);
-        tvR3C3 = (TextView) view.findViewById(R.id.tv_row_3_colomn_3);
-        tvR4C3 = (TextView) view.findViewById(R.id.tv_row_4_colomn_3);
-        tvR5C3 = (TextView) view.findViewById(R.id.tv_row_5_colomn_3);
-        tvR6C3 = (TextView) view.findViewById(R.id.tv_row_6_colomn_3);
-
-        tvR1C4 = (TextView) view.findViewById(R.id.tv_row_1_colomn_4);
-        tvR2C4 = (TextView) view.findViewById(R.id.tv_row_2_colomn_4);
-        tvR3C4 = (TextView) view.findViewById(R.id.tv_row_3_colomn_4);
-        tvR4C4 = (TextView) view.findViewById(R.id.tv_row_4_colomn_4);
-        tvR5C4 = (TextView) view.findViewById(R.id.tv_row_5_colomn_4);
-        tvR6C4 = (TextView) view.findViewById(R.id.tv_row_6_colomn_4);
-
-    }
-
-    @Override
-    public void onClick(View view) {
-        getDataToFirstColomn();
-        countTotalColomnTwo();
+        getDataWithNumbersToTable1();
+        putFirstColumnToTable();
+        putDataToArray();
+        countSumOf20();
         countAvarage();
-        countNumbersToColomnThree();
-        countTotalColomnThree();
-        countNumbersToColomnFour();
+        countAllTable();
+        testTextView = (TextView) view.findViewById(R.id.tvR12C2_topic_1_view_fragment);
+        testTextView.setText(String.valueOf(sumOf20 + " - " + avarageOf20));
     }
 
-    private void countNumbersToColomnFour() {
-        valueOfTvR1C4 = Math.pow(valueOfTvR1C3, 2);
-        valueOfTvR2C4 = Math.pow(valueOfTvR2C3, 2);
-        valueOfTvR3C4 = Math.pow(valueOfTvR3C3, 2);
-        valueOfTvR4C4 = Math.pow(valueOfTvR4C3, 2);
-        valueOfTvR5C4 = Math.pow(valueOfTvR5C3, 2);
+    private void putFirstColumnToTable() {
+        tvTableC1R1 = view.findViewById(R.id.tvR2C2_topic_1_view_fragment);
+        tvTableC1R2 = view.findViewById(R.id.tvR3C2_topic_1_view_fragment);
+        tvTableC1R3 = view.findViewById(R.id.tvR4C2_topic_1_view_fragment);
+        tvTableC1R4 = view.findViewById(R.id.tvR5C2_topic_1_view_fragment);
+        tvTableC1R5 = view.findViewById(R.id.tvR6C2_topic_1_view_fragment);
+        tvTableC1R6 = view.findViewById(R.id.tvR7C2_topic_1_view_fragment);
+        tvTableC1R7 = view.findViewById(R.id.tvR8C2_topic_1_view_fragment);
+        tvTableC1R8 = view.findViewById(R.id.tvR9C2_topic_1_view_fragment);
+        tvTableC1R9 = view.findViewById(R.id.tvR10C2_topic_1_view_fragment);
+        tvTableC1R10 = view.findViewById(R.id.tvR11C2_topic_1_view_fragment);
+        tvTableC1R11 = view.findViewById(R.id.tvR2C6_topic_1_view_fragment);
+        tvTableC1R12 = view.findViewById(R.id.tvR3C6_topic_1_view_fragment);
+        tvTableC1R13 = view.findViewById(R.id.tvR4C6_topic_1_view_fragment);
+        tvTableC1R14 = view.findViewById(R.id.tvR5C6_topic_1_view_fragment);
+        tvTableC1R15 = view.findViewById(R.id.tvR6C6_topic_1_view_fragment);
+        tvTableC1R16 = view.findViewById(R.id.tvR7C6_topic_1_view_fragment);
+        tvTableC1R17 = view.findViewById(R.id.tvR8C6_topic_1_view_fragment);
+        tvTableC1R18 = view.findViewById(R.id.tvR9C6_topic_1_view_fragment);
+        tvTableC1R19 = view.findViewById(R.id.tvR10C6_topic_1_view_fragment);
+        tvTableC1R20 = view.findViewById(R.id.tvR11C6_topic_1_view_fragment);
 
-        tvR1C4.setText(Double.toString(valueOfTvR1C4));
-        tvR2C4.setText(Double.toString(valueOfTvR2C4));
-        tvR3C4.setText(Double.toString(valueOfTvR3C4));
-        tvR4C4.setText(Double.toString(valueOfTvR4C4));
-        tvR5C4.setText(Double.toString(valueOfTvR5C4));
-    }
-
-    private void countTotalColomnThree() {
-        valueOfTotalColomn3 = valueOfTvR1C3 + valueOfTvR2C3 + valueOfTvR3C3 + valueOfTvR4C3 + valueOfTvR5C3;
-        tvR6C3.setText(Double.toString(valueOfTotalColomn3));
-    }
-
-    private void countNumbersToColomnThree() {
-        valueOfTvR1C3 = valueOfTvR1C2 - valueAvarage;
-        valueOfTvR2C3 = valueOfTvR2C2 - valueAvarage;
-        valueOfTvR3C3 = valueOfTvR3C2 - valueAvarage;
-        valueOfTvR4C3 = valueOfTvR4C2 - valueAvarage;
-        valueOfTvR5C3 = valueOfTvR5C2 - valueAvarage;
-
-        tvR1C3.setText(Double.toString(valueOfTvR1C3));
-        tvR2C3.setText(Double.toString(valueOfTvR2C3));
-        tvR3C3.setText(Double.toString(valueOfTvR3C3));
-        tvR4C3.setText(Double.toString(valueOfTvR4C3));
-        tvR5C3.setText(Double.toString(valueOfTvR5C3));
-    }
-
-
-    private void getDataToFirstColomn() {
-        tvR1C2.setText(etR1C1.getText().toString());
-        tvR2C2.setText(etR2C1.getText().toString());
-        tvR3C2.setText(etR3C1.getText().toString());
-        tvR4C2.setText(etR4C1.getText().toString());
-        tvR5C2.setText(etR5C1.getText().toString());
-
-        valueOfTvR1C2 = Double.parseDouble(etR1C1.getText().toString());
-        valueOfTvR2C2 = Double.parseDouble(etR2C1.getText().toString());
-        valueOfTvR3C2 = Double.parseDouble(etR3C1.getText().toString());
-        valueOfTvR4C2 = Double.parseDouble(etR4C1.getText().toString());
-        valueOfTvR5C2 = Double.parseDouble(etR5C1.getText().toString());
-
-    }
-
-    @SuppressLint("SetTextI18n")
-    private void countTotalColomnTwo() {
-        valueOfTotalColomn2 = valueOfTvR1C2 + valueOfTvR2C2 + valueOfTvR3C2 + valueOfTvR4C2 + valueOfTvR5C2;
-        tvR6C2.setText(Double.toString(valueOfTotalColomn2));
+        tvTableC1R1.setText(String.valueOf(number1));
+        tvTableC1R2.setText(String.valueOf(number2));
+        tvTableC1R3.setText(String.valueOf(number3));
+        tvTableC1R4.setText(String.valueOf(number4));
+        tvTableC1R5.setText(String.valueOf(number5));
+        tvTableC1R6.setText(String.valueOf(number6));
+        tvTableC1R7.setText(String.valueOf(number7));
+        tvTableC1R8.setText(String.valueOf(number8));
+        tvTableC1R9.setText(String.valueOf(number9));
+        tvTableC1R10.setText(String.valueOf(number10));
+        tvTableC1R11.setText(String.valueOf(number11));
+        tvTableC1R12.setText(String.valueOf(number12));
+        tvTableC1R13.setText(String.valueOf(number13));
+        tvTableC1R14.setText(String.valueOf(number14));
+        tvTableC1R15.setText(String.valueOf(number15));
+        tvTableC1R16.setText(String.valueOf(number16));
+        tvTableC1R17.setText(String.valueOf(number17));
+        tvTableC1R18.setText(String.valueOf(number18));
+        tvTableC1R19.setText(String.valueOf(number19));
+        tvTableC1R20.setText(String.valueOf(number20));
     }
 
     private void countAvarage() {
-        valueAvarage = valueOfTotalColomn2 / 5;
+        avarageOf20 = sumOf20 / 20;
     }
+
+    private void putDataToArray() {
+
+        arrayWithNumbers1Topic.add(number1);
+        arrayWithNumbers1Topic.add(number2);
+        arrayWithNumbers1Topic.add(number3);
+        arrayWithNumbers1Topic.add(number4);
+        arrayWithNumbers1Topic.add(number5);
+        arrayWithNumbers1Topic.add(number6);
+        arrayWithNumbers1Topic.add(number7);
+        arrayWithNumbers1Topic.add(number8);
+        arrayWithNumbers1Topic.add(number9);
+        arrayWithNumbers1Topic.add(number10);
+        arrayWithNumbers1Topic.add(number11);
+        arrayWithNumbers1Topic.add(number12);
+        arrayWithNumbers1Topic.add(number13);
+        arrayWithNumbers1Topic.add(number14);
+        arrayWithNumbers1Topic.add(number15);
+        arrayWithNumbers1Topic.add(number16);
+        arrayWithNumbers1Topic.add(number17);
+        arrayWithNumbers1Topic.add(number18);
+        arrayWithNumbers1Topic.add(number19);
+        arrayWithNumbers1Topic.add(number20);
+    }
+
+    private void countAllTable() {
+        countColomnTwo();
+        countColomnThree();
+        countSumInTable();
+    }
+
+    private void countSumInTable() {
+
+    }
+
+    private void countSumOf20() {
+        sumOf20 = 0d;
+        for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
+            final double value = Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)));
+            sumOf20 += Math.round(value * 100) / 100.0;
+        }
+    }
+
+
+    private void countColomnThree() {
+    }
+
+    private void countColomnTwo() {
+
+
+    }
+
+    private void getDataWithNumbersToTable1() {
+        number1 = 33;
+        number2 = 41;
+        number3 = 32;
+        number4 = 20;
+        number5 = 14;
+        number6 = 21;
+        number7 = 29;
+        number8 = 20;
+        number9 = 18;
+        number10 = 20;
+        number11 = 16;
+        number12 = 18;
+        number13 = 17;
+        number14 = 18;
+        number15 = 35;
+        number16 = 20;
+        number17 = 42;
+        number18 = 20;
+        number19 = 30;
+        number20 = 23;
+
+    }
+
 }
