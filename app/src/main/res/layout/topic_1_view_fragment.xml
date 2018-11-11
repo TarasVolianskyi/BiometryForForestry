@@ -57,7 +57,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Xi, cм"/>
+                        android:text="Xi, cм" />
 
 
                     <TextView
@@ -65,14 +65,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Xi - X"/>
+                        android:text="Xi - X" />
 
                     <TextView
                         android:id="@+id/tvR1C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="(Xi-X)2"/>
+                        android:text="(Xi-X)2" />
 
                     <TextView
                         android:id="@+id/tvR1C5_topic_1_view_fragment"
@@ -87,7 +87,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Xi, cм"/>
+                        android:text="Xi, cм" />
 
 
                     <TextView
@@ -95,7 +95,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Xi - X"/>
+                        android:text="Xi - X" />
 
 
                     <TextView
@@ -103,7 +103,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="(Xi-X)2"/>
+                        android:text="(Xi-X)2" />
                 </TableRow>
 
 
@@ -785,6 +785,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/topic_one_form_1" />
+
+            <TextView
+                android:id="@+id/tvAvarage_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
             <View
                 android:layout_width="match_parent"

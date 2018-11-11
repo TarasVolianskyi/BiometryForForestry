@@ -3,7 +3,6 @@ package com.example.tarasvolianskyi.biometryforforestry;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +42,48 @@ public class TopicOneCountFragment extends Fragment {
     private double number18;
     private double number19;
     private double number20;
+
+    private double number1colomn2;
+    private double number2colomn2;
+    private double number3colomn2;
+    private double number4colomn2;
+    private double number5colomn2;
+    private double number6colomn2;
+    private double number7colomn2;
+    private double number8colomn2;
+    private double number9colomn2;
+    private double number10colomn2;
+    private double number11colomn2;
+    private double number12colomn2;
+    private double number13colomn2;
+    private double number14colomn2;
+    private double number15colomn2;
+    private double number16colomn2;
+    private double number17colomn2;
+    private double number18colomn2;
+    private double number19colomn2;
+    private double number20colomn2;
+
+    private double number1colomn3;
+    private double number2colomn3;
+    private double number3colomn3;
+    private double number4colomn3;
+    private double number5colomn3;
+    private double number6colomn3;
+    private double number7colomn3;
+    private double number8colomn3;
+    private double number9colomn3;
+    private double number10colomn3;
+    private double number11colomn3;
+    private double number12colomn3;
+    private double number13colomn3;
+    private double number14colomn3;
+    private double number15colomn3;
+    private double number16colomn3;
+    private double number17colomn3;
+    private double number18colomn3;
+    private double number19colomn3;
+    private double number20colomn3;
 
     private TextView tvTableC1R1;
     private TextView tvTableC1R2;
@@ -86,7 +127,11 @@ public class TopicOneCountFragment extends Fragment {
     private TextView tvTableC2R19;
     private TextView tvTableC2R20;
 
-    List<Double> arrayWithNumbers1Topic = new ArrayList<Double>();
+    private TextView tvAvarage;
+
+    List<Double> arrayWithNumbers1Topic = new ArrayList<>();
+    List<Double> arrayWithNumbers2Topic = new ArrayList<>();
+    List<Double> arrayWithNumbers3Topic = new ArrayList<>();
 
     private double sumOf20;
     private double avarageOf20;
@@ -96,20 +141,28 @@ public class TopicOneCountFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_1_view_fragment, container, false);
+        bussinessLogic();
         initView();
 
         return view;
     }
 
-    private void initView() {
+    private void bussinessLogic() {
         getDataWithNumbersToTable1();
         putFirstColumnToTable();
-        putDataToArray();
+        putDataToArrayWithNumbers1();
         countSumOf20();
         countAvarage();
         countAllTable();
-        testTextView = (TextView) view.findViewById(R.id.tvR12C2_topic_1_view_fragment);
-        testTextView.setText(String.valueOf(sumOf20 + " - " + avarageOf20));
+        putDataToArrayWithNumbers2();
+    }
+
+
+
+    private void initView() {
+
+        testTextView = view.findViewById(R.id.tvR12C2_topic_1_view_fragment);
+        testTextView.setText(String.valueOf(sumOf20));
     }
 
     private void putFirstColumnToTable() {
@@ -134,6 +187,8 @@ public class TopicOneCountFragment extends Fragment {
         tvTableC1R19 = view.findViewById(R.id.tvR10C6_topic_1_view_fragment);
         tvTableC1R20 = view.findViewById(R.id.tvR11C6_topic_1_view_fragment);
 
+        tvAvarage = view.findViewById(R.id.tvAvarage_topic_1_view_fragment);
+
         tvTableC1R1.setText(String.valueOf(number1));
         tvTableC1R2.setText(String.valueOf(number2));
         tvTableC1R3.setText(String.valueOf(number3));
@@ -154,13 +209,16 @@ public class TopicOneCountFragment extends Fragment {
         tvTableC1R18.setText(String.valueOf(number18));
         tvTableC1R19.setText(String.valueOf(number19));
         tvTableC1R20.setText(String.valueOf(number20));
+
+
     }
 
     private void countAvarage() {
         avarageOf20 = sumOf20 / 20;
+        tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
     }
 
-    private void putDataToArray() {
+    private void putDataToArrayWithNumbers1() {
 
         arrayWithNumbers1Topic.add(number1);
         arrayWithNumbers1Topic.add(number2);
@@ -182,6 +240,12 @@ public class TopicOneCountFragment extends Fragment {
         arrayWithNumbers1Topic.add(number18);
         arrayWithNumbers1Topic.add(number19);
         arrayWithNumbers1Topic.add(number20);
+    }
+
+    private void putDataToArrayWithNumbers2() {
+        arrayWithNumbers2Topic.add(number1colomn2);
+
+
     }
 
     private void countAllTable() {
@@ -207,8 +271,47 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countColomnTwo() {
+        tvTableC2R1 = view.findViewById(R.id.tvR2C3_topic_1_view_fragment);
+        tvTableC2R2 = view.findViewById(R.id.tvR3C3_topic_1_view_fragment);
+        tvTableC2R3 = view.findViewById(R.id.tvR4C3_topic_1_view_fragment);
+        tvTableC2R4 = view.findViewById(R.id.tvR5C3_topic_1_view_fragment);
+        tvTableC2R5 = view.findViewById(R.id.tvR6C3_topic_1_view_fragment);
+        tvTableC2R6 = view.findViewById(R.id.tvR7C3_topic_1_view_fragment);
+        tvTableC2R7 = view.findViewById(R.id.tvR8C3_topic_1_view_fragment);
+        tvTableC2R8 = view.findViewById(R.id.tvR9C3_topic_1_view_fragment);
+        tvTableC2R9 = view.findViewById(R.id.tvR10C3_topic_1_view_fragment);
+        tvTableC2R10 = view.findViewById(R.id.tvR11C3_topic_1_view_fragment);
+        tvTableC2R11 = view.findViewById(R.id.tvR2C7_topic_1_view_fragment);
+        tvTableC2R12 = view.findViewById(R.id.tvR3C7_topic_1_view_fragment);
+        tvTableC2R13 = view.findViewById(R.id.tvR4C7_topic_1_view_fragment);
+        tvTableC2R14 = view.findViewById(R.id.tvR5C7_topic_1_view_fragment);
+        tvTableC2R15 = view.findViewById(R.id.tvR6C7_topic_1_view_fragment);
+        tvTableC2R16 = view.findViewById(R.id.tvR7C7_topic_1_view_fragment);
+        tvTableC2R17 = view.findViewById(R.id.tvR8C7_topic_1_view_fragment);
+        tvTableC2R18 = view.findViewById(R.id.tvR9C7_topic_1_view_fragment);
+        tvTableC2R19 = view.findViewById(R.id.tvR10C7_topic_1_view_fragment);
+        tvTableC2R20 = view.findViewById(R.id.tvR11C7_topic_1_view_fragment);
 
-
+        tvTableC2R1.setText(String.valueOf(number1colomn2));
+        tvTableC2R2.setText(String.valueOf(number2colomn2));
+        tvTableC2R3.setText(String.valueOf(number3colomn2));
+        tvTableC2R4.setText(String.valueOf(number4colomn2));
+        tvTableC2R5.setText(String.valueOf(number5colomn2));
+        tvTableC2R6.setText(String.valueOf(number6colomn2));
+        tvTableC2R7.setText(String.valueOf(number7colomn2));
+        tvTableC2R8.setText(String.valueOf(number8colomn2));
+        tvTableC2R9.setText(String.valueOf(number9colomn2));
+        tvTableC2R10.setText(String.valueOf(number10colomn2));
+        tvTableC2R11.setText(String.valueOf(number11colomn2));
+        tvTableC2R12.setText(String.valueOf(number12colomn2));
+        tvTableC2R13.setText(String.valueOf(number13colomn2));
+        tvTableC2R14.setText(String.valueOf(number14colomn2));
+        tvTableC2R15.setText(String.valueOf(number15colomn2));
+        tvTableC2R16.setText(String.valueOf(number16colomn2));
+        tvTableC2R17.setText(String.valueOf(number17colomn2));
+        tvTableC2R18.setText(String.valueOf(number18colomn2));
+        tvTableC2R19.setText(String.valueOf(number19colomn2));
+        tvTableC2R20.setText(String.valueOf(number20colomn2));
     }
 
     private void getDataWithNumbersToTable1() {
@@ -232,7 +335,6 @@ public class TopicOneCountFragment extends Fragment {
         number18 = 20;
         number19 = 30;
         number20 = 23;
-
     }
 
 }
