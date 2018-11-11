@@ -213,13 +213,13 @@ public class TopicOneCountFragment extends Fragment {
 
     }
 
-    private void countAvarage() {
+    private void countAvarage()
+    {
         avarageOf20 = sumOf20 / 20;
         tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
     }
 
     private void putDataToArrayWithNumbers1() {
-
         arrayWithNumbers1Topic.add(number1);
         arrayWithNumbers1Topic.add(number2);
         arrayWithNumbers1Topic.add(number3);
@@ -244,7 +244,25 @@ public class TopicOneCountFragment extends Fragment {
 
     private void putDataToArrayWithNumbers2() {
         arrayWithNumbers2Topic.add(number1colomn2);
-
+        arrayWithNumbers2Topic.add(number2colomn2);
+        arrayWithNumbers2Topic.add(number3colomn2);
+        arrayWithNumbers2Topic.add(number4colomn2);
+        arrayWithNumbers2Topic.add(number5colomn2);
+        arrayWithNumbers2Topic.add(number6colomn2);
+        arrayWithNumbers2Topic.add(number7colomn2);
+        arrayWithNumbers2Topic.add(number8colomn2);
+        arrayWithNumbers2Topic.add(number9colomn2);
+        arrayWithNumbers2Topic.add(number10colomn2);
+        arrayWithNumbers2Topic.add(number11colomn2);
+        arrayWithNumbers2Topic.add(number12colomn2);
+        arrayWithNumbers2Topic.add(number13colomn2);
+        arrayWithNumbers2Topic.add(number14colomn2);
+        arrayWithNumbers2Topic.add(number15colomn2);
+        arrayWithNumbers2Topic.add(number16colomn2);
+        arrayWithNumbers2Topic.add(number17colomn2);
+        arrayWithNumbers2Topic.add(number18colomn2);
+        arrayWithNumbers2Topic.add(number19colomn2);
+        arrayWithNumbers2Topic.add(number20colomn2);
 
     }
 
@@ -255,6 +273,16 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countSumInTable() {
+        countSumOf20();
+        countSumOfColomn2();
+        countSumOfColomn3();
+    }
+
+    private void countSumOfColomn3() {
+
+    }
+
+    private void countSumOfColomn2() {
 
     }
 
@@ -271,6 +299,16 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countColomnTwo() {
+        for(int i=0;i<arrayWithNumbers1Topic.size();++i){
+            arrayWithNumbers2Topic.add(Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)))) ;
+        }
+
+
+       /* for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
+            final double value = Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)));
+            sumOf20 += Math.round(value * 100) / 100.0;
+        }*/
+
         tvTableC2R1 = view.findViewById(R.id.tvR2C3_topic_1_view_fragment);
         tvTableC2R2 = view.findViewById(R.id.tvR3C3_topic_1_view_fragment);
         tvTableC2R3 = view.findViewById(R.id.tvR4C3_topic_1_view_fragment);
