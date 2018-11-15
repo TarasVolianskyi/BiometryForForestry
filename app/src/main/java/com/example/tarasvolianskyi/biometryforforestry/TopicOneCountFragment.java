@@ -151,12 +151,12 @@ public class TopicOneCountFragment extends Fragment {
         getDataWithNumbersToTable1();
         putFirstColumnToTable();
         putDataToArrayWithNumbers1();
+        putDataToArrayWithNumbers2();
         countSumOf20();
         countAvarage();
         countAllTable();
-        putDataToArrayWithNumbers2();
-    }
 
+    }
 
 
     private void initView() {
@@ -213,8 +213,7 @@ public class TopicOneCountFragment extends Fragment {
 
     }
 
-    private void countAvarage()
-    {
+    private void countAvarage() {
         avarageOf20 = sumOf20 / 20;
         tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
     }
@@ -299,9 +298,17 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countColomnTwo() {
-        for(int i=0;i<arrayWithNumbers1Topic.size();++i){
-            arrayWithNumbers2Topic.add(Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)))) ;
-        }
+
+        //for (int j = 0; j < arrayWithNumbers2Topic.size(); ++j) {
+
+
+          /*  for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
+
+                arrayWithNumbers2Topic.get(j);
+                     double tt=   Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i) - avarageOf20));
+
+            }
+        }*/
 
 
        /* for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
