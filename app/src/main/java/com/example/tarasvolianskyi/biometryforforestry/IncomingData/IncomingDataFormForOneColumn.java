@@ -400,7 +400,9 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     }
 
     private void addDataToArrayDiameter() {
-        aDoubleR1C1 = Double.valueOf(etR1C1.getText().toString());
+        if (etR1C1.getText().toString() != "") {
+            aDoubleR1C1 = Double.valueOf(etR1C1.getText().toString());
+        }
         aDoubleR2C1 = Double.valueOf(etR2C1.getText().toString());
         aDoubleR3C1 = Double.valueOf(etR3C1.getText().toString());
         aDoubleR4C1 = Double.valueOf(etR4C1.getText().toString());

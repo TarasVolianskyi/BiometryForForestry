@@ -271,6 +271,8 @@ public class TopicOneCountFragment extends Fragment {
         countSumInTable();
     }
 
+
+
     private void countSumInTable() {
         countSumOf20();
         countSumOfColomn2();
@@ -302,7 +304,26 @@ public class TopicOneCountFragment extends Fragment {
         //for (int j = 0; j < arrayWithNumbers2Topic.size(); ++j) {
 
 
-          /*  for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
+        number1colomn2 = Math.round((number1 - avarageOf20)*100)/100;
+        number2colomn2 = Math.round((number2 - avarageOf20)*100)/100;
+        number3colomn2 = Math.round((number3 - avarageOf20)*100)/100;
+        number4colomn2 = Math.round((number4 - avarageOf20)*100)/100;
+        number5colomn2 = Math.round((number5 - avarageOf20)*100)/100;
+        number6colomn2 = Math.round((number6 - avarageOf20)*100)/100;
+        number7colomn2 = Math.round((number7 - avarageOf20)*100)/100;
+        number8colomn2 = Math.round((number8 - avarageOf20)*100)/100;
+        number9colomn2 = Math.round((number9 - avarageOf20)*100)/100;
+        number10colomn2 = Math.round((number10 - avarageOf20)*100)/100;
+        number11colomn2 = Math.round((number11 - avarageOf20)*100)/100;
+        number12colomn2 = Math.round((number12 - avarageOf20)*100)/100;
+        number13colomn2 = Math.round((number13 - avarageOf20)*100)/100;
+        number14colomn2 = Math.round((number14 - avarageOf20)*100)/100;
+        number15colomn2 = Math.round((number15 - avarageOf20)*100)/100;
+        number16colomn2 = Math.round((number16 - avarageOf20)*100)/100;
+        number17colomn2 = Math.round((number17 - avarageOf20)*100)/100;
+        number18colomn2 = Math.round((number18 - avarageOf20)*100)/100;
+        number19colomn2 = Math.round((number19 - avarageOf20)*100)/100;
+        number20colomn2 = Math.round((number20 - avarageOf20)*100)/100;          /*  for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
 
                 arrayWithNumbers2Topic.get(j);
                      double tt=   Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i) - avarageOf20));
@@ -315,6 +336,26 @@ public class TopicOneCountFragment extends Fragment {
             final double value = Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)));
             sumOf20 += Math.round(value * 100) / 100.0;
         }*/
+        number1colomn2 = Math.round((number1 - avarageOf20)*100);
+        number2colomn2 = Math.round((number2 - avarageOf20)*100)/100;
+        number3colomn2 = Math.round((number3 - avarageOf20)*100)/100;
+        number4colomn2 = Math.round((number4 - avarageOf20)*100)/100;
+        number5colomn2 = Math.round((number5 - avarageOf20)*100)/100;
+        number6colomn2 = Math.round((number6 - avarageOf20)*100)/100;
+        number7colomn2 = Math.round((number7 - avarageOf20)*100)/100;
+        number8colomn2 = Math.round((number8 - avarageOf20)*100)/100;
+        number9colomn2 = Math.round((number9 - avarageOf20)*100)/100;
+        number10colomn2 = Math.round((number10 - avarageOf20)*100)/100;
+        number11colomn2 = Math.round((number11 - avarageOf20)*100)/100;
+        number12colomn2 = Math.round((number12 - avarageOf20)*100)/100;
+        number13colomn2 = Math.round((number13 - avarageOf20)*100)/100;
+        number14colomn2 = Math.round((number14 - avarageOf20)*100)/100;
+        number15colomn2 = Math.round((number15 - avarageOf20)*100)/100;
+        number16colomn2 = Math.round((number16 - avarageOf20)*100)/100;
+        number17colomn2 = Math.round((number17 - avarageOf20)*100)/100;
+        number18colomn2 = Math.round((number18 - avarageOf20)*100)/100;
+        number19colomn2 = Math.round((number19 - avarageOf20)*100)/100;
+        number20colomn2 = Math.round((number20 - avarageOf20)*100)/100;
 
         tvTableC2R1 = view.findViewById(R.id.tvR2C3_topic_1_view_fragment);
         tvTableC2R2 = view.findViewById(R.id.tvR3C3_topic_1_view_fragment);

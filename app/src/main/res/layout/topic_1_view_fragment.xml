@@ -187,7 +187,7 @@
                         android:layout_weight="1" />
 
 
-                    <TextView
+                    j<TextView
                         android:id="@+id/tvR3C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
