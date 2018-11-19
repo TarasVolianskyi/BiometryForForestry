@@ -127,13 +127,37 @@ public class TopicOneCountFragment extends Fragment {
     private TextView tvTableC2R19;
     private TextView tvTableC2R20;
 
+    private TextView tvTableC3R1;
+    private TextView tvTableC3R2;
+    private TextView tvTableC3R3;
+    private TextView tvTableC3R4;
+    private TextView tvTableC3R5;
+    private TextView tvTableC3R6;
+    private TextView tvTableC3R7;
+    private TextView tvTableC3R8;
+    private TextView tvTableC3R9;
+    private TextView tvTableC3R10;
+    private TextView tvTableC3R11;
+    private TextView tvTableC3R12;
+    private TextView tvTableC3R13;
+    private TextView tvTableC3R14;
+    private TextView tvTableC3R15;
+    private TextView tvTableC3R16;
+    private TextView tvTableC3R17;
+    private TextView tvTableC3R18;
+    private TextView tvTableC3R19;
+    private TextView tvTableC3R20;
+
     private TextView tvAvarage;
+
 
     List<Double> arrayWithNumbers1Topic = new ArrayList<>();
     List<Double> arrayWithNumbers2Topic = new ArrayList<>();
     List<Double> arrayWithNumbers3Topic = new ArrayList<>();
 
     private double sumOf20;
+    private double sumCol2;
+    private double sumCol3;
     private double avarageOf20;
     TextView testTextView;
 
@@ -265,12 +289,35 @@ public class TopicOneCountFragment extends Fragment {
 
     }
 
+    private void putDataToArrayWithNumbers3() {
+        arrayWithNumbers3Topic.add(number1colomn3);
+        arrayWithNumbers3Topic.add(number2colomn3);
+        arrayWithNumbers3Topic.add(number3colomn3);
+        arrayWithNumbers3Topic.add(number4colomn3);
+        arrayWithNumbers3Topic.add(number5colomn3);
+        arrayWithNumbers3Topic.add(number6colomn3);
+        arrayWithNumbers3Topic.add(number7colomn3);
+        arrayWithNumbers3Topic.add(number8colomn3);
+        arrayWithNumbers3Topic.add(number9colomn3);
+        arrayWithNumbers3Topic.add(number10colomn3);
+        arrayWithNumbers3Topic.add(number11colomn3);
+        arrayWithNumbers3Topic.add(number12colomn3);
+        arrayWithNumbers3Topic.add(number13colomn3);
+        arrayWithNumbers3Topic.add(number14colomn3);
+        arrayWithNumbers3Topic.add(number15colomn3);
+        arrayWithNumbers3Topic.add(number16colomn3);
+        arrayWithNumbers3Topic.add(number17colomn3);
+        arrayWithNumbers3Topic.add(number18colomn3);
+        arrayWithNumbers3Topic.add(number19colomn3);
+        arrayWithNumbers3Topic.add(number20colomn3);
+    }
+
+
     private void countAllTable() {
         countColomnTwo();
         countColomnThree();
         countSumInTable();
     }
-
 
 
     private void countSumInTable() {
@@ -284,7 +331,11 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countSumOfColomn2() {
-
+        sumCol2= 0d;
+        for (int i = 0; i < arrayWithNumbers3Topic.size(); ++i) {
+            final double value2 = Double.parseDouble(String.valueOf(arrayWithNumbers3Topic.get(i)));
+            sumCol2 += Math.round(value2 * 100) / 100.0;
+        }
     }
 
     private void countSumOf20() {
@@ -297,65 +348,102 @@ public class TopicOneCountFragment extends Fragment {
 
 
     private void countColomnThree() {
+
+        number1colomn3 = Math.round((number1colomn2 * number1colomn2) * 100.0) / 100.0;
+        number2colomn3 = Math.round((number2colomn2 * number2colomn2) * 100.0) / 100.0;
+        number3colomn3 = Math.round((number3colomn2 * number3colomn2) * 100.0) / 100.0;
+        number4colomn3 = Math.round((number4colomn2 * number4colomn2) * 100.0) / 100.0;
+        number5colomn3 = Math.round((number5colomn2 * number5colomn2) * 100.0) / 100.0;
+        number6colomn3 = Math.round((number6colomn2 * number6colomn2) * 100.0) / 100.0;
+        number7colomn3 = Math.round((number7colomn2 * number7colomn2) * 100.0) / 100.0;
+        number8colomn3 = Math.round((number8colomn2 * number8colomn2) * 100.0) / 100.0;
+        number9colomn3 = Math.round((number9colomn2 * number9colomn2) * 100.0) / 100.0;
+        number10colomn3 = Math.round((number10colomn2 * number10colomn2) * 100.0) / 100.0;
+        number11colomn3 = Math.round((number11colomn2 * number11colomn2) * 100.0) / 100.0;
+        number12colomn3 = Math.round((number12colomn2 * number12colomn2) * 100.0) / 100.0;
+        number13colomn3 = Math.round((number13colomn2 * number13colomn2) * 100.0) / 100.0;
+        number14colomn3 = Math.round((number14colomn2 * number14colomn2) * 100.0) / 100.0;
+        number15colomn3 = Math.round((number15colomn2 * number15colomn2) * 100.0) / 100.0;
+        number16colomn3 = Math.round((number16colomn2 * number16colomn2) * 100.0) / 100.0;
+        number17colomn3 = Math.round((number17colomn2 * number17colomn2) * 100.0) / 100.0;
+        number18colomn3 = Math.round((number18colomn2 * number18colomn2) * 100.0) / 100.0;
+        number19colomn3 = Math.round((number19colomn2 * number19colomn2) * 100.0) / 100.0;
+        number20colomn3 = Math.round((number20colomn2 * number20colomn2) * 100.0) / 100.0;
+
+        tvTableC3R1 = view.findViewById(R.id.tvR2C4_topic_1_view_fragment);
+        tvTableC3R2 = view.findViewById(R.id.tvR3C4_topic_1_view_fragment);
+        tvTableC3R3 = view.findViewById(R.id.tvR4C4_topic_1_view_fragment);
+        tvTableC3R4 = view.findViewById(R.id.tvR5C4_topic_1_view_fragment);
+        tvTableC3R5 = view.findViewById(R.id.tvR6C4_topic_1_view_fragment);
+        tvTableC3R6 = view.findViewById(R.id.tvR7C4_topic_1_view_fragment);
+        tvTableC3R7 = view.findViewById(R.id.tvR8C4_topic_1_view_fragment);
+        tvTableC3R8 = view.findViewById(R.id.tvR9C4_topic_1_view_fragment);
+        tvTableC3R9 = view.findViewById(R.id.tvR10C4_topic_1_view_fragment);
+        tvTableC3R10 = view.findViewById(R.id.tvR11C4_topic_1_view_fragment);
+        tvTableC3R11 = view.findViewById(R.id.tvR2C8_topic_1_view_fragment);
+        tvTableC3R12 = view.findViewById(R.id.tvR3C8_topic_1_view_fragment);
+        tvTableC3R13 = view.findViewById(R.id.tvR4C8_topic_1_view_fragment);
+        tvTableC3R14 = view.findViewById(R.id.tvR5C8_topic_1_view_fragment);
+        tvTableC3R15 = view.findViewById(R.id.tvR6C8_topic_1_view_fragment);
+        tvTableC3R16 = view.findViewById(R.id.tvR7C8_topic_1_view_fragment);
+        tvTableC3R17 = view.findViewById(R.id.tvR8C8_topic_1_view_fragment);
+        tvTableC3R18 = view.findViewById(R.id.tvR9C8_topic_1_view_fragment);
+        tvTableC3R19 = view.findViewById(R.id.tvR10C8_topic_1_view_fragment);
+        tvTableC3R20 = view.findViewById(R.id.tvR12C8_topic_1_view_fragment);
+
+        tvTableC3R1.setText(String.valueOf(number1colomn3));
+        tvTableC3R2.setText(String.valueOf(number2colomn3));
+        tvTableC3R3.setText(String.valueOf(number3colomn3));
+        tvTableC3R4.setText(String.valueOf(number4colomn3));
+        tvTableC3R5.setText(String.valueOf(number5colomn3));
+        tvTableC3R6.setText(String.valueOf(number6colomn3));
+        tvTableC3R7.setText(String.valueOf(number7colomn3));
+        tvTableC3R8.setText(String.valueOf(number8colomn3));
+        tvTableC3R9.setText(String.valueOf(number9colomn3));
+        tvTableC3R10.setText(String.valueOf(number10colomn3));
+        tvTableC3R11.setText(String.valueOf(number11colomn3));
+        tvTableC3R12.setText(String.valueOf(number12colomn3));
+        tvTableC3R13.setText(String.valueOf(number13colomn3));
+        tvTableC3R14.setText(String.valueOf(number14colomn3));
+        tvTableC3R15.setText(String.valueOf(number15colomn3));
+        tvTableC3R16.setText(String.valueOf(number16colomn3));
+        tvTableC3R17.setText(String.valueOf(number17colomn3));
+        tvTableC3R18.setText(String.valueOf(number18colomn3));
+        tvTableC3R19.setText(String.valueOf(number19colomn3));
+        tvTableC3R20.setText(String.valueOf(number20colomn3));
     }
 
     private void countColomnTwo() {
-
         //for (int j = 0; j < arrayWithNumbers2Topic.size(); ++j) {
-
-
-        number1colomn2 = Math.round((number1 - avarageOf20)*100)/100;
-        number2colomn2 = Math.round((number2 - avarageOf20)*100)/100;
-        number3colomn2 = Math.round((number3 - avarageOf20)*100)/100;
-        number4colomn2 = Math.round((number4 - avarageOf20)*100)/100;
-        number5colomn2 = Math.round((number5 - avarageOf20)*100)/100;
-        number6colomn2 = Math.round((number6 - avarageOf20)*100)/100;
-        number7colomn2 = Math.round((number7 - avarageOf20)*100)/100;
-        number8colomn2 = Math.round((number8 - avarageOf20)*100)/100;
-        number9colomn2 = Math.round((number9 - avarageOf20)*100)/100;
-        number10colomn2 = Math.round((number10 - avarageOf20)*100)/100;
-        number11colomn2 = Math.round((number11 - avarageOf20)*100)/100;
-        number12colomn2 = Math.round((number12 - avarageOf20)*100)/100;
-        number13colomn2 = Math.round((number13 - avarageOf20)*100)/100;
-        number14colomn2 = Math.round((number14 - avarageOf20)*100)/100;
-        number15colomn2 = Math.round((number15 - avarageOf20)*100)/100;
-        number16colomn2 = Math.round((number16 - avarageOf20)*100)/100;
-        number17colomn2 = Math.round((number17 - avarageOf20)*100)/100;
-        number18colomn2 = Math.round((number18 - avarageOf20)*100)/100;
-        number19colomn2 = Math.round((number19 - avarageOf20)*100)/100;
-        number20colomn2 = Math.round((number20 - avarageOf20)*100)/100;          /*  for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
-
+              /*  for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
                 arrayWithNumbers2Topic.get(j);
                      double tt=   Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i) - avarageOf20));
-
             }
         }*/
-
-
        /* for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
             final double value = Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)));
             sumOf20 += Math.round(value * 100) / 100.0;
         }*/
-        number1colomn2 = Math.round((number1 - avarageOf20)*100);
-        number2colomn2 = Math.round((number2 - avarageOf20)*100)/100;
-        number3colomn2 = Math.round((number3 - avarageOf20)*100)/100;
-        number4colomn2 = Math.round((number4 - avarageOf20)*100)/100;
-        number5colomn2 = Math.round((number5 - avarageOf20)*100)/100;
-        number6colomn2 = Math.round((number6 - avarageOf20)*100)/100;
-        number7colomn2 = Math.round((number7 - avarageOf20)*100)/100;
-        number8colomn2 = Math.round((number8 - avarageOf20)*100)/100;
-        number9colomn2 = Math.round((number9 - avarageOf20)*100)/100;
-        number10colomn2 = Math.round((number10 - avarageOf20)*100)/100;
-        number11colomn2 = Math.round((number11 - avarageOf20)*100)/100;
-        number12colomn2 = Math.round((number12 - avarageOf20)*100)/100;
-        number13colomn2 = Math.round((number13 - avarageOf20)*100)/100;
-        number14colomn2 = Math.round((number14 - avarageOf20)*100)/100;
-        number15colomn2 = Math.round((number15 - avarageOf20)*100)/100;
-        number16colomn2 = Math.round((number16 - avarageOf20)*100)/100;
-        number17colomn2 = Math.round((number17 - avarageOf20)*100)/100;
-        number18colomn2 = Math.round((number18 - avarageOf20)*100)/100;
-        number19colomn2 = Math.round((number19 - avarageOf20)*100)/100;
-        number20colomn2 = Math.round((number20 - avarageOf20)*100)/100;
+        number1colomn2 = Math.round((number1 - avarageOf20) * 100.0) / 100.0;
+        number2colomn2 = Math.round((number2 - avarageOf20) * 100.0) / 100.0;
+        number3colomn2 = Math.round((number3 - avarageOf20) * 100.0) / 100.0;
+        number4colomn2 = Math.round((number4 - avarageOf20) * 100.0) / 100.0;
+        number5colomn2 = Math.round((number5 - avarageOf20) * 100.0) / 100.0;
+        number6colomn2 = Math.round((number6 - avarageOf20) * 100.0) / 100.0;
+        number7colomn2 = Math.round((number7 - avarageOf20) * 100.0) / 100.0;
+        number8colomn2 = Math.round((number8 - avarageOf20) * 100.0) / 100.0;
+        number9colomn2 = Math.round((number9 - avarageOf20) * 100.0) / 100.0;
+        number10colomn2 = Math.round((number10 - avarageOf20) * 100.0) / 100.0;
+        number11colomn2 = Math.round((number11 - avarageOf20) * 100.0) / 100.0;
+        number12colomn2 = Math.round((number12 - avarageOf20) * 100.0) / 100.0;
+        number13colomn2 = Math.round((number13 - avarageOf20) * 100.0) / 100.0;
+        number14colomn2 = Math.round((number14 - avarageOf20) * 100.0) / 100.0;
+        number15colomn2 = Math.round((number15 - avarageOf20) * 100.0) / 100.0;
+        number16colomn2 = Math.round((number16 - avarageOf20) * 100.0) / 100.0;
+        number17colomn2 = Math.round((number17 - avarageOf20) * 100.0) / 100.0;
+        number18colomn2 = Math.round((number18 - avarageOf20) * 100.0) / 100.0;
+        number19colomn2 = Math.round((number19 - avarageOf20) * 100.0) / 100.0;
+        number20colomn2 = Math.round((number20 - avarageOf20) * 100.0) / 100.0;
 
         tvTableC2R1 = view.findViewById(R.id.tvR2C3_topic_1_view_fragment);
         tvTableC2R2 = view.findViewById(R.id.tvR3C3_topic_1_view_fragment);
@@ -402,13 +490,13 @@ public class TopicOneCountFragment extends Fragment {
 
     private void getDataWithNumbersToTable1() {
         number1 = 33;
-        number2 = 41;
-        number3 = 32;
+        number2 = 49;
+        number3 = 39;
         number4 = 20;
-        number5 = 14;
+        number5 = 10;
         number6 = 21;
         number7 = 29;
-        number8 = 20;
+        number8 = 28;
         number9 = 18;
         number10 = 20;
         number11 = 16;
