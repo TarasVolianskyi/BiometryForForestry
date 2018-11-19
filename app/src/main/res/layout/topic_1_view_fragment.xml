@@ -49,6 +49,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="№ пп" />
 
 
@@ -57,6 +58,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Xi, cм" />
 
 
@@ -65,6 +67,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Xi - X" />
 
                     <TextView
@@ -72,6 +75,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="(Xi-X)2" />
 
                     <TextView
@@ -79,6 +83,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="№ пп" />
 
 
@@ -87,6 +92,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Xi, cм" />
 
 
@@ -95,6 +101,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Xi - X" />
 
 
@@ -103,6 +110,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="(Xi-X)2" />
                 </TableRow>
 
@@ -116,6 +124,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="1" />
 
 
@@ -123,27 +132,31 @@
                         android:id="@+id/tvR2C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR2C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR2C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR2C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="11" />
 
 
@@ -151,21 +164,24 @@
                         android:id="@+id/tvR2C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR2C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR2C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -177,6 +193,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="2" />
 
 
@@ -184,27 +201,31 @@
                         android:id="@+id/tvR3C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
-                    j<TextView
+                    <TextView
                         android:id="@+id/tvR3C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR3C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR3C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="12" />
 
 
@@ -212,21 +233,24 @@
                         android:id="@+id/tvR3C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR3C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR3C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -238,6 +262,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="3" />
 
 
@@ -245,27 +270,31 @@
                         android:id="@+id/tvR4C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR4C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR4C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR4C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="13" />
 
 
@@ -273,21 +302,24 @@
                         android:id="@+id/tvR4C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR4C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR4C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
 
@@ -300,6 +332,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="4" />
 
 
@@ -307,27 +340,31 @@
                         android:id="@+id/tvR5C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR5C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR5C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR5C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="14" />
 
 
@@ -335,21 +372,24 @@
                         android:id="@+id/tvR5C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR5C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR5C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -361,6 +401,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="5" />
 
 
@@ -368,27 +409,31 @@
                         android:id="@+id/tvR6C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR6C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR6C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR6C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="15" />
 
 
@@ -396,21 +441,24 @@
                         android:id="@+id/tvR6C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR6C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR6C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -422,32 +470,37 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="6" />
 
                     <TextView
                         android:id="@+id/tvR7C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR7C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR7C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR7C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="16" />
 
 
@@ -455,21 +508,24 @@
                         android:id="@+id/tvR7C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR7C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR7C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -481,6 +537,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="7" />
 
 
@@ -488,27 +545,31 @@
                         android:id="@+id/tvR8C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR8C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR8C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR8C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="17" />
 
 
@@ -516,21 +577,24 @@
                         android:id="@+id/tvR8C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR8C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR8C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
                 <TableRow
@@ -542,6 +606,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="8" />
 
 
@@ -549,27 +614,31 @@
                         android:id="@+id/tvR9C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR9C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR9C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR9C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="18" />
 
 
@@ -577,21 +646,24 @@
                         android:id="@+id/tvR9C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR9C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR9C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
 
@@ -604,6 +676,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="9" />
 
 
@@ -611,27 +684,31 @@
                         android:id="@+id/tvR10C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR10C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR10C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR10C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="19" />
 
 
@@ -639,21 +716,24 @@
                         android:id="@+id/tvR10C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR10C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR10C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
 
@@ -666,6 +746,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="10" />
 
 
@@ -673,27 +754,31 @@
                         android:id="@+id/tvR11C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR11C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR11C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR11C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="20" />
 
 
@@ -701,21 +786,24 @@
                         android:id="@+id/tvR11C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR11C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR11C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
 
@@ -727,34 +815,39 @@
                         android:id="@+id/tvR12C1_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR12C2_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR12C3_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR12C4_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
                     <TextView
                         android:id="@+id/tvR12C5_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="∑" />
 
 
@@ -762,24 +855,28 @@
                         android:id="@+id/tvR12C6_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR12C7_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
 
 
                     <TextView
                         android:id="@+id/tvR12C8_topic_1_view_fragment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="center" />
                 </TableRow>
 
             </TableLayout>
+
 
             <TextView
                 android:layout_width="match_parent"

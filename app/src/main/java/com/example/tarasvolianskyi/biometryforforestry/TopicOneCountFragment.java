@@ -159,7 +159,9 @@ public class TopicOneCountFragment extends Fragment {
     private double sumCol2;
     private double sumCol3;
     private double avarageOf20;
-    TextView testTextView;
+    TextView sum1TextView;
+    TextView sum2TextView;
+    TextView sum3TextView;
 
     @Nullable
     @Override
@@ -174,72 +176,17 @@ public class TopicOneCountFragment extends Fragment {
     private void bussinessLogic() {
         getDataWithNumbersToTable1();
         putFirstColumnToTable();
-        putDataToArrayWithNumbers1();
-        putDataToArrayWithNumbers2();
+        putNumbersToArrays();
         countSumOf20();
         countAvarage();
         countAllTable();
 
     }
 
-
-    private void initView() {
-
-        testTextView = view.findViewById(R.id.tvR12C2_topic_1_view_fragment);
-        testTextView.setText(String.valueOf(sumOf20));
-    }
-
-    private void putFirstColumnToTable() {
-        tvTableC1R1 = view.findViewById(R.id.tvR2C2_topic_1_view_fragment);
-        tvTableC1R2 = view.findViewById(R.id.tvR3C2_topic_1_view_fragment);
-        tvTableC1R3 = view.findViewById(R.id.tvR4C2_topic_1_view_fragment);
-        tvTableC1R4 = view.findViewById(R.id.tvR5C2_topic_1_view_fragment);
-        tvTableC1R5 = view.findViewById(R.id.tvR6C2_topic_1_view_fragment);
-        tvTableC1R6 = view.findViewById(R.id.tvR7C2_topic_1_view_fragment);
-        tvTableC1R7 = view.findViewById(R.id.tvR8C2_topic_1_view_fragment);
-        tvTableC1R8 = view.findViewById(R.id.tvR9C2_topic_1_view_fragment);
-        tvTableC1R9 = view.findViewById(R.id.tvR10C2_topic_1_view_fragment);
-        tvTableC1R10 = view.findViewById(R.id.tvR11C2_topic_1_view_fragment);
-        tvTableC1R11 = view.findViewById(R.id.tvR2C6_topic_1_view_fragment);
-        tvTableC1R12 = view.findViewById(R.id.tvR3C6_topic_1_view_fragment);
-        tvTableC1R13 = view.findViewById(R.id.tvR4C6_topic_1_view_fragment);
-        tvTableC1R14 = view.findViewById(R.id.tvR5C6_topic_1_view_fragment);
-        tvTableC1R15 = view.findViewById(R.id.tvR6C6_topic_1_view_fragment);
-        tvTableC1R16 = view.findViewById(R.id.tvR7C6_topic_1_view_fragment);
-        tvTableC1R17 = view.findViewById(R.id.tvR8C6_topic_1_view_fragment);
-        tvTableC1R18 = view.findViewById(R.id.tvR9C6_topic_1_view_fragment);
-        tvTableC1R19 = view.findViewById(R.id.tvR10C6_topic_1_view_fragment);
-        tvTableC1R20 = view.findViewById(R.id.tvR11C6_topic_1_view_fragment);
-
-        tvAvarage = view.findViewById(R.id.tvAvarage_topic_1_view_fragment);
-
-        tvTableC1R1.setText(String.valueOf(number1));
-        tvTableC1R2.setText(String.valueOf(number2));
-        tvTableC1R3.setText(String.valueOf(number3));
-        tvTableC1R4.setText(String.valueOf(number4));
-        tvTableC1R5.setText(String.valueOf(number5));
-        tvTableC1R6.setText(String.valueOf(number6));
-        tvTableC1R7.setText(String.valueOf(number7));
-        tvTableC1R8.setText(String.valueOf(number8));
-        tvTableC1R9.setText(String.valueOf(number9));
-        tvTableC1R10.setText(String.valueOf(number10));
-        tvTableC1R11.setText(String.valueOf(number11));
-        tvTableC1R12.setText(String.valueOf(number12));
-        tvTableC1R13.setText(String.valueOf(number13));
-        tvTableC1R14.setText(String.valueOf(number14));
-        tvTableC1R15.setText(String.valueOf(number15));
-        tvTableC1R16.setText(String.valueOf(number16));
-        tvTableC1R17.setText(String.valueOf(number17));
-        tvTableC1R18.setText(String.valueOf(number18));
-        tvTableC1R19.setText(String.valueOf(number19));
-        tvTableC1R20.setText(String.valueOf(number20));
-
-
-    }
-
-    private void countAvarage() {
-        avarageOf20 = sumOf20 / 20;
-        tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
+    private void putNumbersToArrays() {
+        putDataToArrayWithNumbers1();
+        putDataToArrayWithNumbers2();
+        putDataToArrayWithNumbers3();
     }
 
     private void putDataToArrayWithNumbers1() {
@@ -312,13 +259,76 @@ public class TopicOneCountFragment extends Fragment {
         arrayWithNumbers3Topic.add(number20colomn3);
     }
 
+    private void initView() {
+
+        sum1TextView = view.findViewById(R.id.tvR12C6_topic_1_view_fragment);
+        sum1TextView.setText(String.valueOf(sumOf20));
+
+        sum2TextView = view.findViewById(R.id.tvR12C7_topic_1_view_fragment);
+        sum2TextView.setText(String.valueOf(sumCol2));
+
+        sum3TextView = view.findViewById(R.id.tvR12C8_topic_1_view_fragment);
+        sum3TextView.setText(String.valueOf(sumCol3));
+    }
+
+    private void putFirstColumnToTable() {
+        tvTableC1R1 = view.findViewById(R.id.tvR2C2_topic_1_view_fragment);
+        tvTableC1R2 = view.findViewById(R.id.tvR3C2_topic_1_view_fragment);
+        tvTableC1R3 = view.findViewById(R.id.tvR4C2_topic_1_view_fragment);
+        tvTableC1R4 = view.findViewById(R.id.tvR5C2_topic_1_view_fragment);
+        tvTableC1R5 = view.findViewById(R.id.tvR6C2_topic_1_view_fragment);
+        tvTableC1R6 = view.findViewById(R.id.tvR7C2_topic_1_view_fragment);
+        tvTableC1R7 = view.findViewById(R.id.tvR8C2_topic_1_view_fragment);
+        tvTableC1R8 = view.findViewById(R.id.tvR9C2_topic_1_view_fragment);
+        tvTableC1R9 = view.findViewById(R.id.tvR10C2_topic_1_view_fragment);
+        tvTableC1R10 = view.findViewById(R.id.tvR11C2_topic_1_view_fragment);
+        tvTableC1R11 = view.findViewById(R.id.tvR2C6_topic_1_view_fragment);
+        tvTableC1R12 = view.findViewById(R.id.tvR3C6_topic_1_view_fragment);
+        tvTableC1R13 = view.findViewById(R.id.tvR4C6_topic_1_view_fragment);
+        tvTableC1R14 = view.findViewById(R.id.tvR5C6_topic_1_view_fragment);
+        tvTableC1R15 = view.findViewById(R.id.tvR6C6_topic_1_view_fragment);
+        tvTableC1R16 = view.findViewById(R.id.tvR7C6_topic_1_view_fragment);
+        tvTableC1R17 = view.findViewById(R.id.tvR8C6_topic_1_view_fragment);
+        tvTableC1R18 = view.findViewById(R.id.tvR9C6_topic_1_view_fragment);
+        tvTableC1R19 = view.findViewById(R.id.tvR10C6_topic_1_view_fragment);
+        tvTableC1R20 = view.findViewById(R.id.tvR11C6_topic_1_view_fragment);
+
+        tvAvarage = view.findViewById(R.id.tvAvarage_topic_1_view_fragment);
+
+        tvTableC1R1.setText(String.valueOf(number1));
+        tvTableC1R2.setText(String.valueOf(number2));
+        tvTableC1R3.setText(String.valueOf(number3));
+        tvTableC1R4.setText(String.valueOf(number4));
+        tvTableC1R5.setText(String.valueOf(number5));
+        tvTableC1R6.setText(String.valueOf(number6));
+        tvTableC1R7.setText(String.valueOf(number7));
+        tvTableC1R8.setText(String.valueOf(number8));
+        tvTableC1R9.setText(String.valueOf(number9));
+        tvTableC1R10.setText(String.valueOf(number10));
+        tvTableC1R11.setText(String.valueOf(number11));
+        tvTableC1R12.setText(String.valueOf(number12));
+        tvTableC1R13.setText(String.valueOf(number13));
+        tvTableC1R14.setText(String.valueOf(number14));
+        tvTableC1R15.setText(String.valueOf(number15));
+        tvTableC1R16.setText(String.valueOf(number16));
+        tvTableC1R17.setText(String.valueOf(number17));
+        tvTableC1R18.setText(String.valueOf(number18));
+        tvTableC1R19.setText(String.valueOf(number19));
+        tvTableC1R20.setText(String.valueOf(number20));
+
+
+    }
+
+    private void countAvarage() {
+        avarageOf20 = sumOf20 / 20;
+        tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
+    }
 
     private void countAllTable() {
         countColomnTwo();
         countColomnThree();
         countSumInTable();
     }
-
 
     private void countSumInTable() {
         countSumOf20();
@@ -327,13 +337,18 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countSumOfColomn3() {
+        sumCol3 = 0d;
+        for (int i = 0; i < arrayWithNumbers3Topic.size(); ++i) {
+            final double value3 = Double.parseDouble(String.valueOf(arrayWithNumbers3Topic.get(i)));
+            sumCol3 += Math.round(value3 * 100) / 100.0;
+        }
 
     }
 
     private void countSumOfColomn2() {
-        sumCol2= 0d;
-        for (int i = 0; i < arrayWithNumbers3Topic.size(); ++i) {
-            final double value2 = Double.parseDouble(String.valueOf(arrayWithNumbers3Topic.get(i)));
+        sumCol2 = 0d;
+        for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
+            final double value2 = Double.parseDouble(String.valueOf(arrayWithNumbers2Topic.get(i)));
             sumCol2 += Math.round(value2 * 100) / 100.0;
         }
     }
@@ -345,7 +360,6 @@ public class TopicOneCountFragment extends Fragment {
             sumOf20 += Math.round(value * 100) / 100.0;
         }
     }
-
 
     private void countColomnThree() {
 
@@ -389,7 +403,7 @@ public class TopicOneCountFragment extends Fragment {
         tvTableC3R17 = view.findViewById(R.id.tvR8C8_topic_1_view_fragment);
         tvTableC3R18 = view.findViewById(R.id.tvR9C8_topic_1_view_fragment);
         tvTableC3R19 = view.findViewById(R.id.tvR10C8_topic_1_view_fragment);
-        tvTableC3R20 = view.findViewById(R.id.tvR12C8_topic_1_view_fragment);
+        tvTableC3R20 = view.findViewById(R.id.tvR11C8_topic_1_view_fragment);
 
         tvTableC3R1.setText(String.valueOf(number1colomn3));
         tvTableC3R2.setText(String.valueOf(number2colomn3));
