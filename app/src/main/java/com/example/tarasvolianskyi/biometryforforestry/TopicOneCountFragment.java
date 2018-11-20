@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -159,9 +160,9 @@ public class TopicOneCountFragment extends Fragment {
     private double sumCol2;
     private double sumCol3;
     private double avarageOf20;
-    TextView sum1TextView;
-    TextView sum2TextView;
-    TextView sum3TextView;
+   private TextView sum1TextView;
+   private TextView sum2TextView;
+   private TextView sum3TextView;
 
     @Nullable
     @Override
@@ -176,17 +177,15 @@ public class TopicOneCountFragment extends Fragment {
     private void bussinessLogic() {
         getDataWithNumbersToTable1();
         putFirstColumnToTable();
-        putNumbersToArrays();
+        putDataToArrayWithNumbers1();
         countSumOf20();
         countAvarage();
+
+
+
+
         countAllTable();
 
-    }
-
-    private void putNumbersToArrays() {
-        putDataToArrayWithNumbers1();
-        putDataToArrayWithNumbers2();
-        putDataToArrayWithNumbers3();
     }
 
     private void putDataToArrayWithNumbers1() {
@@ -260,7 +259,6 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void initView() {
-
         sum1TextView = view.findViewById(R.id.tvR12C6_topic_1_view_fragment);
         sum1TextView.setText(String.valueOf(sumOf20));
 
@@ -320,13 +318,15 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countAvarage() {
-        avarageOf20 = sumOf20 / 20;
+        avarageOf20 = Math.round(sumOf20/20.0*100.0)/100.0;
         tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
     }
 
     private void countAllTable() {
         countColomnTwo();
+        putDataToArrayWithNumbers2();
         countColomnThree();
+        putDataToArrayWithNumbers3();
         countSumInTable();
     }
 
@@ -337,19 +337,19 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countSumOfColomn3() {
-        sumCol3 = 0d;
+        sumCol3 = 90d;
         for (int i = 0; i < arrayWithNumbers3Topic.size(); ++i) {
             final double value3 = Double.parseDouble(String.valueOf(arrayWithNumbers3Topic.get(i)));
-            sumCol3 += Math.round(value3 * 100) / 100.0;
+            sumCol3 =sumCol3 + Math.round(value3 * 100.0) / 100.0;
+            Toast.makeText(getContext(), String.valueOf(sumCol3), Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private void countSumOfColomn2() {
-        sumCol2 = 0d;
+        sumCol2 = 60d;
         for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
             final double value2 = Double.parseDouble(String.valueOf(arrayWithNumbers2Topic.get(i)));
-            sumCol2 += Math.round(value2 * 100) / 100.0;
+            sumCol2 += Math.round(value2 * 100.0) / 100.0;
         }
     }
 
@@ -357,7 +357,7 @@ public class TopicOneCountFragment extends Fragment {
         sumOf20 = 0d;
         for (int i = 0; i < arrayWithNumbers1Topic.size(); ++i) {
             final double value = Double.parseDouble(String.valueOf(arrayWithNumbers1Topic.get(i)));
-            sumOf20 += Math.round(value * 100) / 100.0;
+            sumOf20 += Math.round(value * 100.0) / 100.0;
         }
     }
 
