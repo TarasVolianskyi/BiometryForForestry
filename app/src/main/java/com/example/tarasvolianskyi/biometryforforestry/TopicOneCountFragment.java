@@ -160,9 +160,13 @@ public class TopicOneCountFragment extends Fragment {
     private double sumCol2;
     private double sumCol3;
     private double avarageOf20;
-   private TextView sum1TextView;
-   private TextView sum2TextView;
-   private TextView sum3TextView;
+    private double sigma;
+    private double koefMinl;
+    private double intervalArefm;
+    private double intervalKvadr;
+    private TextView sum1TextView;
+    private TextView sum2TextView;
+    private TextView sum3TextView;
 
     @Nullable
     @Override
@@ -170,7 +174,6 @@ public class TopicOneCountFragment extends Fragment {
         view = inflater.inflate(R.layout.topic_1_view_fragment, container, false);
         bussinessLogic();
         initView();
-
         return view;
     }
 
@@ -180,11 +183,30 @@ public class TopicOneCountFragment extends Fragment {
         putDataToArrayWithNumbers1();
         countSumOf20();
         countAvarage();
-
-
-
-
         countAllTable();
+
+        countSigma();
+        countKoefMinlv();
+        countIntArefm();
+        countIntKvadr();
+
+    }
+
+    private void countIntKvadr() {
+    }
+
+    private void countIntArefm() {
+
+
+    }
+
+    private void countKoefMinlv() {
+        koefMinl = Math.round(sigma / avarageOf20 * 100) / 100;
+    }
+
+    private void countSigma() {
+
+        sigma = Math.round(sumCol3 / 19 * 100) / 100;
 
     }
 
@@ -318,7 +340,7 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countAvarage() {
-        avarageOf20 = Math.round(sumOf20/20.0*100.0)/100.0;
+        avarageOf20 = Math.round(sumOf20 / 20.0 * 100.0) / 100.0;
         tvAvarage.setText(String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20));
     }
 
@@ -337,19 +359,19 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countSumOfColomn3() {
-        sumCol3 = 90d;
+        sumCol3 = 0d;
         for (int i = 0; i < arrayWithNumbers3Topic.size(); ++i) {
             final double value3 = Double.parseDouble(String.valueOf(arrayWithNumbers3Topic.get(i)));
-            sumCol3 =sumCol3 + Math.round(value3 * 100.0) / 100.0;
-            Toast.makeText(getContext(), String.valueOf(sumCol3), Toast.LENGTH_SHORT).show();
+            sumCol3 = Math.round((sumCol3 + value3) * 100.0) / 100.0;
+            //Toast.makeText(getContext(), String.valueOf(sumCol3), Toast.LENGTH_SHORT).show();
         }
     }
 
     private void countSumOfColomn2() {
-        sumCol2 = 60d;
+        sumCol2 = 0d;
         for (int i = 0; i < arrayWithNumbers2Topic.size(); ++i) {
             final double value2 = Double.parseDouble(String.valueOf(arrayWithNumbers2Topic.get(i)));
-            sumCol2 += Math.round(value2 * 100.0) / 100.0;
+            sumCol2 = Math.round((sumCol2 + value2) * 100.0) / 100.0;
         }
     }
 
