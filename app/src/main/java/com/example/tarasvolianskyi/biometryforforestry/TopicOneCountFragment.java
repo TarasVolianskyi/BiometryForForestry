@@ -162,11 +162,25 @@ public class TopicOneCountFragment extends Fragment {
     private double avarageOf20;
     private double sigma;
     private double koefMinl;
-    private double intervalArefm;
-    private double intervalKvadr;
+    private double intervalArefmN;
+    private double intervalArefmV;
+    private double intervalKvadrN;
+    private double intervalKvadrV;
+    private double koefX1;
+    private double koefX2;
     private TextView sum1TextView;
     private TextView sum2TextView;
     private TextView sum3TextView;
+    private TextView tvSigma;
+    private TextView tvKoefMinl;
+    private TextView tvIntervalArefm2;
+    private TextView tvIntervalArefm3;
+    private TextView tvIntervalKvadr2;
+    private TextView tvIntervalKvadr3;
+    private TextView tvKoefX1;
+    private TextView tvKoefX2;
+
+    private double koefT = 2.093;
 
     @Nullable
     @Override
@@ -201,12 +215,12 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void countKoefMinlv() {
-        koefMinl = Math.round(sigma / avarageOf20 * 100) / 100;
+        koefMinl = Math.round(sigma / avarageOf20 * 10000) / 100;
     }
 
     private void countSigma() {
 
-        sigma = Math.round(sumCol3 / 19 * 100) / 100;
+        sigma = Math.round(Math.sqrt(sumCol3 / 19.0) * 100.0) / 100.0;
 
     }
 
@@ -289,6 +303,25 @@ public class TopicOneCountFragment extends Fragment {
 
         sum3TextView = view.findViewById(R.id.tvR12C8_topic_1_view_fragment);
         sum3TextView.setText(String.valueOf(sumCol3));
+
+        tvSigma = view.findViewById(R.id.tvSigma_topic_1_view_fragment);
+        tvSigma.setText(String.valueOf(sigma) + " см");
+
+        tvKoefMinl = view.findViewById(R.id.tvKoef_minl_topic_1_view_fragment);
+        tvKoefMinl.setText(String.valueOf(sigma) + " / " + String.valueOf(avarageOf20) + " * 100% = " + String.valueOf(koefMinl) + " %");
+
+        tvIntervalArefm2 = view.findViewById(R.id.tvSer_arefm_2_topic_1_view_fragment);
+        tvIntervalArefm2.setText(String.valueOf(tvIntervalArefm2));
+
+        tvIntervalArefm3 = view.findViewById(R.id.tvSer_arefm_3_topic_1_view_fragment);
+        tvIntervalArefm3.setText(String.valueOf(tvIntervalArefm3));
+
+        tvIntervalKvadr2 = view.findViewById(R.id.tvSer_kvdr_2_topic_1_view_fragment);
+        tvIntervalKvadr2.setText(String.valueOf(tvIntervalKvadr2));
+
+        tvIntervalKvadr3 = view.findViewById(R.id.tvSer_kvdr_3_topic_1_view_fragment);
+        tvIntervalKvadr3.setText(String.valueOf(tvIntervalKvadr3));
+
     }
 
     private void putFirstColumnToTable() {
@@ -314,6 +347,12 @@ public class TopicOneCountFragment extends Fragment {
         tvTableC1R20 = view.findViewById(R.id.tvR11C6_topic_1_view_fragment);
 
         tvAvarage = view.findViewById(R.id.tvAvarage_topic_1_view_fragment);
+        tvAvarage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), String.valueOf(sumOf20) + " / 20 = " + String.valueOf(avarageOf20), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         tvTableC1R1.setText(String.valueOf(number1));
         tvTableC1R2.setText(String.valueOf(number2));

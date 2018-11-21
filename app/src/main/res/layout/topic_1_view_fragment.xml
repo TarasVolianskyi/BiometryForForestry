@@ -884,6 +884,8 @@
                 android:text="@string/topic_one_form_1" />
 
             <TextView
+                android:clickable="true"
+                android:onClick="onClick"
                 android:id="@+id/tvAvarage_topic_1_view_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -898,6 +900,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/topic_one_form_2" />
 
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSigma_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
@@ -906,6 +916,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/topic_one_form_3" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvKoef_minl_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
             <View
                 android:layout_width="match_parent"
@@ -921,10 +939,27 @@
                 android:layout_height="wrap_content"
                 android:text="@string/topic_one_form_5" />
 
-            <ImageView
-                android:id="@+id/iv_for_topic_one_form_5"
-                android:layout_width="wrap_content"
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_arefm_1_topic_1_view_fragment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_arefm_2_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_arefm_3_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
             <View
                 android:layout_width="match_parent"
@@ -935,6 +970,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/topic_one_form_6" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_kvdr_1_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_kvdr_2_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:clickable="true"
+                android:onClick="onClick"
+                android:id="@+id/tvSer_kvdr_3_topic_1_view_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <View
                 android:layout_width="match_parent"
