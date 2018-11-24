@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -52,4 +58,12 @@
         android:layout_height="wrap_content"
         android:text="Topic one" />
 
+    <Button
+        android:id="@+id/btn_223column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic two" />
+
 </LinearLayout>
+
+

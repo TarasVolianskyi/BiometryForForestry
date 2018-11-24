@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -68,17 +70,14 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 break;
             case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:
                 IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
-
                 Bundle bundle = new Bundle();
                 bundle.putInt("ttt", 1);
                 incomingDataFormForOneColumn.setArguments(bundle);
-
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-
                 break;
         }
 

@@ -374,8 +374,6 @@ public class TopicOneCountFragment extends Fragment {
         tvTableC1R18.setText(String.valueOf(number18));
         tvTableC1R19.setText(String.valueOf(number19));
         tvTableC1R20.setText(String.valueOf(number20));
-
-
     }
 
     private void countAvarage() {
