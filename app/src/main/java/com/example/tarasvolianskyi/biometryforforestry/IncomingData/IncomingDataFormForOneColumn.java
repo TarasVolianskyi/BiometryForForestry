@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.example.tarasvolianskyi.biometryforforestry.FireBaseAdapter.CellPojo;
@@ -30,10 +33,17 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     private Button btnSentDataToFB;
     private View view;
     private EditText editTextTask;
-    private ArrayList<Double> arrayListOfDataDiameter;
-    private ArrayList<Double> arrayListOfDataHeight;
-    private ArrayList<Double> arrayListOfDataValue;
+
+    private ArrayList <Double> arrayListColumnOne;
+    private ArrayList <Double> arrayListColumnTwo;
+    private ArrayList <Double> arrayListColumnThree;
+
+    private ArrayList <Double> arrayListOfDataDiameter;
+    private ArrayList <Double> arrayListOfDataHeight;
+    private ArrayList <Double> arrayListOfDataValue;
     private DatabaseReference databaseReferenceUsers;
+    private TableLayout tableLayout;
+
 
     private String userId;
     int myBundleFromPreviousPage;
@@ -198,22 +208,26 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.incoming_data_form_for_one_column_fragment, container, false);
-
+        arrayListColumnOne = new ArrayList <>();
 
         Bundle bundle = getArguments();
         if (bundle != null) {
 
             myInt = bundle.getInt("ttt", 77);
         }
-        initView();
+        // initView();
+        tableLayout = view.findViewById(R.id.tlDataIncomingFragment);
+        btnSentDataToFB = view.findViewById(R.id.btn_sent_data_to_fb_fragment);
+        btnSentDataToFB.setOnClickListener(this);
+
         return view;
     }
 
     private void initView() {
         databaseReferenceUsers = FirebaseDatabase.getInstance().getReference("biometry");
-        btnSentDataToFB = view.findViewById(R.id.btn_sent_data_to_fb_fragment);
-        btnSentDataToFB.setOnClickListener(this);
+        //  btnSentDataToFB = view.findViewById(R.id.btn_sent_data_to_fb_fragment);
         userId = databaseReferenceUsers.push().getKey();
+        // tableLayout=view.findViewById(R.id.tlDataIncomingFragment);
 
         etR1C1 = view.findViewById(R.id.et_r1c1);
         etR2C1 = view.findViewById(R.id.et_r2c1);
@@ -292,170 +306,18 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
 
     }
 
-    private void addDataToArrayValue() {
-        aDoubleR1C3 = Double.valueOf(etR1C3.getText().toString());
-        aDoubleR2C3 = Double.valueOf(etR2C3.getText().toString());
-        aDoubleR3C3 = Double.valueOf(etR3C3.getText().toString());
-        aDoubleR4C3 = Double.valueOf(etR4C3.getText().toString());
-        aDoubleR5C3 = Double.valueOf(etR5C3.getText().toString());
-        aDoubleR6C3 = Double.valueOf(etR6C3.getText().toString());
-        aDoubleR7C3 = Double.valueOf(etR7C3.getText().toString());
-        aDoubleR8C3 = Double.valueOf(etR8C3.getText().toString());
-        aDoubleR9C3 = Double.valueOf(etR9C3.getText().toString());
-        aDoubleR10C3 = Double.valueOf(etR10C3.getText().toString());
-        aDoubleR11C3 = Double.valueOf(etR11C3.getText().toString());
-        aDoubleR12C3 = Double.valueOf(etR12C3.getText().toString());
-        aDoubleR13C3 = Double.valueOf(etR13C3.getText().toString());
-        aDoubleR14C3 = Double.valueOf(etR14C3.getText().toString());
-        aDoubleR15C3 = Double.valueOf(etR15C3.getText().toString());
-        aDoubleR16C3 = Double.valueOf(etR16C3.getText().toString());
-        aDoubleR17C3 = Double.valueOf(etR17C3.getText().toString());
-        aDoubleR18C3 = Double.valueOf(etR18C3.getText().toString());
-        aDoubleR19C3 = Double.valueOf(etR19C3.getText().toString());
-        aDoubleR20C3 = Double.valueOf(etR20C3.getText().toString());
-        aDoubleR21C3 = Double.valueOf(etR21C3.getText().toString());
-        aDoubleR22C3 = Double.valueOf(etR22C3.getText().toString());
-        aDoubleR23C3 = Double.valueOf(etR23C3.getText().toString());
-        aDoubleR24C3 = Double.valueOf(etR24C3.getText().toString());
-
-        arrayListOfDataValue = new ArrayList<>();
-        arrayListOfDataValue.add(aDoubleR1C3);
-        arrayListOfDataValue.add(aDoubleR2C3);
-        arrayListOfDataValue.add(aDoubleR3C3);
-        arrayListOfDataValue.add(aDoubleR4C3);
-        arrayListOfDataValue.add(aDoubleR5C3);
-        arrayListOfDataValue.add(aDoubleR6C3);
-        arrayListOfDataValue.add(aDoubleR7C3);
-        arrayListOfDataValue.add(aDoubleR8C3);
-        arrayListOfDataValue.add(aDoubleR9C3);
-        arrayListOfDataValue.add(aDoubleR10C3);
-        arrayListOfDataValue.add(aDoubleR11C3);
-        arrayListOfDataValue.add(aDoubleR12C3);
-        arrayListOfDataValue.add(aDoubleR13C3);
-        arrayListOfDataValue.add(aDoubleR14C3);
-        arrayListOfDataValue.add(aDoubleR15C3);
-        arrayListOfDataValue.add(aDoubleR16C3);
-        arrayListOfDataValue.add(aDoubleR17C3);
-        arrayListOfDataValue.add(aDoubleR18C3);
-        arrayListOfDataValue.add(aDoubleR19C3);
-        arrayListOfDataValue.add(aDoubleR20C3);
-        arrayListOfDataValue.add(aDoubleR21C3);
-        arrayListOfDataValue.add(aDoubleR22C3);
-        arrayListOfDataValue.add(aDoubleR23C3);
-        arrayListOfDataValue.add(aDoubleR24C3);
-    }
 
 
-    private void addDataToArrayHeight() {
-        aDoubleR1C2 = Double.valueOf(etR1C2.getText().toString());
-        aDoubleR2C2 = Double.valueOf(etR2C2.getText().toString());
-        aDoubleR3C2 = Double.valueOf(etR3C2.getText().toString());
-        aDoubleR4C2 = Double.valueOf(etR4C2.getText().toString());
-        aDoubleR5C2 = Double.valueOf(etR5C2.getText().toString());
-        aDoubleR6C2 = Double.valueOf(etR6C2.getText().toString());
-        aDoubleR7C2 = Double.valueOf(etR7C2.getText().toString());
-        aDoubleR8C2 = Double.valueOf(etR8C2.getText().toString());
-        aDoubleR9C2 = Double.valueOf(etR9C2.getText().toString());
-        aDoubleR10C2 = Double.valueOf(etR10C2.getText().toString());
-        aDoubleR11C2 = Double.valueOf(etR11C2.getText().toString());
-        aDoubleR12C2 = Double.valueOf(etR12C2.getText().toString());
-        aDoubleR13C2 = Double.valueOf(etR13C2.getText().toString());
-        aDoubleR14C2 = Double.valueOf(etR14C2.getText().toString());
-        aDoubleR15C2 = Double.valueOf(etR15C2.getText().toString());
-        aDoubleR16C2 = Double.valueOf(etR16C2.getText().toString());
-        aDoubleR17C2 = Double.valueOf(etR17C2.getText().toString());
-        aDoubleR18C2 = Double.valueOf(etR18C2.getText().toString());
-        aDoubleR19C2 = Double.valueOf(etR19C2.getText().toString());
-        aDoubleR20C2 = Double.valueOf(etR20C2.getText().toString());
-        aDoubleR21C2 = Double.valueOf(etR21C2.getText().toString());
-        aDoubleR22C2 = Double.valueOf(etR22C2.getText().toString());
-        aDoubleR23C2 = Double.valueOf(etR23C2.getText().toString());
-        aDoubleR24C2 = Double.valueOf(etR24C2.getText().toString());
-
-        arrayListOfDataHeight = new ArrayList<>();
-        arrayListOfDataHeight.add(aDoubleR1C2);
-        arrayListOfDataHeight.add(aDoubleR2C2);
-        arrayListOfDataHeight.add(aDoubleR3C2);
-        arrayListOfDataHeight.add(aDoubleR4C2);
-        arrayListOfDataHeight.add(aDoubleR5C2);
-        arrayListOfDataHeight.add(aDoubleR6C2);
-        arrayListOfDataHeight.add(aDoubleR7C2);
-        arrayListOfDataHeight.add(aDoubleR8C2);
-        arrayListOfDataHeight.add(aDoubleR9C2);
-        arrayListOfDataHeight.add(aDoubleR10C2);
-        arrayListOfDataHeight.add(aDoubleR11C2);
-        arrayListOfDataHeight.add(aDoubleR12C2);
-        arrayListOfDataHeight.add(aDoubleR13C2);
-        arrayListOfDataHeight.add(aDoubleR14C2);
-        arrayListOfDataHeight.add(aDoubleR15C2);
-        arrayListOfDataHeight.add(aDoubleR16C2);
-        arrayListOfDataHeight.add(aDoubleR17C2);
-        arrayListOfDataHeight.add(aDoubleR18C2);
-        arrayListOfDataHeight.add(aDoubleR19C2);
-        arrayListOfDataHeight.add(aDoubleR20C2);
-        arrayListOfDataHeight.add(aDoubleR21C2);
-        arrayListOfDataHeight.add(aDoubleR22C2);
-        arrayListOfDataHeight.add(aDoubleR23C2);
-        arrayListOfDataHeight.add(aDoubleR24C2);
-    }
-
-    private void addDataToArrayDiameter() {
-        if (etR1C1.getText().toString() != "") {
-            aDoubleR1C1 = Double.valueOf(etR1C1.getText().toString());
+    private ArrayList <Double> addDataToArray(int type) {
+        ArrayList <Double> arrayListResult = new ArrayList <>();
+        for (int i = 0; i < tableLayout.getChildCount(); i++) {
+            EditText etCurrent = (EditText) ((TableRow) tableLayout.getChildAt(i)).getChildAt(type);
+            if (etCurrent.getText() != null && !etCurrent.getText().toString().equals("")) {
+                arrayListResult.add(Double.valueOf(etCurrent.getText().toString()));
+            }
         }
-        aDoubleR2C1 = Double.valueOf(etR2C1.getText().toString());
-        aDoubleR3C1 = Double.valueOf(etR3C1.getText().toString());
-        aDoubleR4C1 = Double.valueOf(etR4C1.getText().toString());
-        aDoubleR5C1 = Double.valueOf(etR5C1.getText().toString());
-        aDoubleR6C1 = Double.valueOf(etR6C1.getText().toString());
-        aDoubleR7C1 = Double.valueOf(etR7C1.getText().toString());
-        aDoubleR8C1 = Double.valueOf(etR8C1.getText().toString());
-        aDoubleR9C1 = Double.valueOf(etR9C1.getText().toString());
-        aDoubleR10C1 = Double.valueOf(etR10C1.getText().toString());
-        aDoubleR11C1 = Double.valueOf(etR11C1.getText().toString());
-        aDoubleR12C1 = Double.valueOf(etR12C1.getText().toString());
-        aDoubleR13C1 = Double.valueOf(etR13C1.getText().toString());
-        aDoubleR14C1 = Double.valueOf(etR14C1.getText().toString());
-        aDoubleR15C1 = Double.valueOf(etR15C1.getText().toString());
-        aDoubleR16C1 = Double.valueOf(etR16C1.getText().toString());
-        aDoubleR17C1 = Double.valueOf(etR17C1.getText().toString());
-        aDoubleR18C1 = Double.valueOf(etR18C1.getText().toString());
-        aDoubleR19C1 = Double.valueOf(etR19C1.getText().toString());
-        aDoubleR20C1 = Double.valueOf(etR20C1.getText().toString());
-        aDoubleR21C1 = Double.valueOf(etR21C1.getText().toString());
-        aDoubleR22C1 = Double.valueOf(etR22C1.getText().toString());
-        aDoubleR23C1 = Double.valueOf(etR23C1.getText().toString());
-        aDoubleR24C1 = Double.valueOf(etR24C1.getText().toString());
-
-        arrayListOfDataDiameter = new ArrayList<>();
-        arrayListOfDataDiameter.add(aDoubleR1C1);
-        arrayListOfDataDiameter.add(aDoubleR2C1);
-        arrayListOfDataDiameter.add(aDoubleR3C1);
-        arrayListOfDataDiameter.add(aDoubleR4C1);
-        arrayListOfDataDiameter.add(aDoubleR5C1);
-        arrayListOfDataDiameter.add(aDoubleR6C1);
-        arrayListOfDataDiameter.add(aDoubleR7C1);
-        arrayListOfDataDiameter.add(aDoubleR8C1);
-        arrayListOfDataDiameter.add(aDoubleR9C1);
-        arrayListOfDataDiameter.add(aDoubleR10C1);
-        arrayListOfDataDiameter.add(aDoubleR11C1);
-        arrayListOfDataDiameter.add(aDoubleR12C1);
-        arrayListOfDataDiameter.add(aDoubleR13C1);
-        arrayListOfDataDiameter.add(aDoubleR14C1);
-        arrayListOfDataDiameter.add(aDoubleR15C1);
-        arrayListOfDataDiameter.add(aDoubleR16C1);
-        arrayListOfDataDiameter.add(aDoubleR17C1);
-        arrayListOfDataDiameter.add(aDoubleR18C1);
-        arrayListOfDataDiameter.add(aDoubleR19C1);
-        arrayListOfDataDiameter.add(aDoubleR20C1);
-        arrayListOfDataDiameter.add(aDoubleR21C1);
-        arrayListOfDataDiameter.add(aDoubleR22C1);
-        arrayListOfDataDiameter.add(aDoubleR23C1);
-        arrayListOfDataDiameter.add(aDoubleR24C1);
-
-
-        Toast.makeText(getContext(), "add data to array D", Toast.LENGTH_SHORT).show();
-
+        Log.d("colomnOne", "Values: " + arrayListColumnOne);
+        return arrayListResult;
 
     }
 
@@ -468,7 +330,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         return myBundleFromPreviousPage;
     }*/
 
-    private void saveDataFromTableToFB(String cellT, ArrayList<Double> arrayListDouble) {
+    private void saveDataFromTableToFB(String cellT, ArrayList <Double> arrayListDouble) {
 
 
         String cellType = cellT;
@@ -498,13 +360,15 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     @Override
     public void onClick(View v) {
         //Toast.makeText(getContext(), "Click button add task", Toast.LENGTH_SHORT).show();
-        addDataToArrayDiameter();
-        addDataToArrayHeight();
-        addDataToArrayValue();
+        arrayListColumnOne = addDataToArray(0);
+        arrayListColumnTwo = addDataToArray(1);
+        arrayListColumnThree = addDataToArray(2);
+        // addDataToArrayHeight();
+        //addDataToArrayValue();
 
 
-        saveDataFromTableToFB(DIAMETR, arrayListOfDataDiameter);
-        saveDataFromTableToFB(HEIGHT, arrayListOfDataHeight);
-        saveDataFromTableToFB(VOLUME, arrayListOfDataValue);
+        //  saveDataFromTableToFB(DIAMETR, arrayListOfDataDiameter);
+        //saveDataFromTableToFB(HEIGHT, arrayListOfDataHeight);
+        //saveDataFromTableToFB(VOLUME, arrayListOfDataValue);
     }
 }
