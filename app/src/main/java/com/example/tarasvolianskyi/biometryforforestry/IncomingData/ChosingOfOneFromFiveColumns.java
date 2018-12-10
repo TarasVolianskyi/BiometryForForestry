@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
+import com.example.tarasvolianskyi.biometryforforestry.TopicTwoCountFragment;
 
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
@@ -67,6 +68,16 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 fragmentTransaction1.addToBackStack(null);
                 fragmentTransaction1.commit();
                 break;
+
+            case R.id.btn_222column_5_chosing_of_one_from_five_columns_fragment:
+                TopicTwoCountFragment topicTwoCountFragment = new TopicTwoCountFragment();
+                FragmentManager fragmentManager2 = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+                fragmentTransaction2.replace(R.id.flMainActivity, topicTwoCountFragment, "timeForReservation");
+                fragmentTransaction2.addToBackStack(null);
+                fragmentTransaction2.commit();
+                break;
+
             case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:
                 shareInfoOfColomn(1);
                 break;

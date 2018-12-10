@@ -1,14 +1,12 @@
 package com.example.tarasvolianskyi.biometryforforestry;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -150,11 +148,11 @@ public class TopicOneCountFragment extends Fragment {
     private TextView tvTableC3R20;
 
     private TextView tvAvarage;
+    private ListView listViewest;
 
-
-    List<Double> arrayWithNumbers1Topic = new ArrayList<>();
-    List<Double> arrayWithNumbers2Topic = new ArrayList<>();
-    List<Double> arrayWithNumbers3Topic = new ArrayList<>();
+    List <Double> arrayWithNumbers1Topic = new ArrayList <>();
+    List <Double> arrayWithNumbers2Topic = new ArrayList <>();
+    List <Double> arrayWithNumbers3Topic = new ArrayList <>();
 
     private double sumOf20;
     private double sumCol2;
@@ -295,6 +293,10 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void initView() {
+
+        listViewest = view.findViewById(R.id.lvTopic1TestDataFromFB);
+
+
         sum1TextView = view.findViewById(R.id.tvR12C6_topic_1_view_fragment);
         sum1TextView.setText(String.valueOf(sumOf20));
 

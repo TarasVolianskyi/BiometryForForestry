@@ -81,4 +81,6 @@
     <string name="firebaseui_title_text">FirebaseUI Auth</string>
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
+    <string name="topic_2_1_subject">Робота 2. Зведення результатів «великої» кількості спостережень</string>
+    <string name="text2">Теоретична кількість розрядів</string>
 </resources>

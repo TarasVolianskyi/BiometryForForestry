@@ -10,6 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <ListView
+            android:id="@+id/lvTopic1TestDataFromFB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -884,11 +893,11 @@
                 android:text="@string/topic_one_form_1" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvAvarage_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
 
             <View
@@ -901,11 +910,11 @@
                 android:text="@string/topic_one_form_2" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSigma_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
 
             <View
@@ -918,11 +927,11 @@
                 android:text="@string/topic_one_form_3" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvKoef_minl_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
 
             <View
@@ -940,25 +949,25 @@
                 android:text="@string/topic_one_form_5" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_arefm_1_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_arefm_2_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_arefm_3_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
 
             <View
@@ -972,25 +981,25 @@
                 android:text="@string/topic_one_form_6" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_kvdr_1_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_kvdr_2_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
             <TextView
-                android:clickable="true"
-                android:onClick="onClick"
                 android:id="@+id/tvSer_kvdr_3_topic_1_view_fragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick" />
 
             <View
                 android:layout_width="match_parent"

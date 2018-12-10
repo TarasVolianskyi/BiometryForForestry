@@ -59,7 +59,7 @@
         android:text="Topic one" />
 
     <Button
-        android:id="@+id/btn_223column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_222column_5_chosing_of_one_from_five_columns_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Topic two" />
