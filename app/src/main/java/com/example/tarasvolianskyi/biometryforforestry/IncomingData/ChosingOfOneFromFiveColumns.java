@@ -42,7 +42,6 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         btnColumn4.setOnClickListener(this);
         btnColumn5.setOnClickListener(this);
 
-
         //test
         Button btnColumn5d = (Button) view.findViewById(R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment);
         btnColumn5d.setOnClickListener(this);
@@ -69,17 +68,33 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 fragmentTransaction1.commit();
                 break;
             case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:
-                IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
-                Bundle bundle = new Bundle();
-                bundle.putInt("ttt", 1);
-                incomingDataFormForOneColumn.setArguments(bundle);
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                shareInfoOfColomn(1);
+                break;
+            case R.id.btn_column_2_chosing_of_one_from_five_columns_fragment:
+                shareInfoOfColomn(2);
+                break;
+            case R.id.btn_column_3_chosing_of_one_from_five_columns_fragment:
+                shareInfoOfColomn(3);
+                break;
+            case R.id.btn_column_4_chosing_of_one_from_five_columns_fragment:
+                shareInfoOfColomn(4);
+                break;
+            case R.id.btn_column_5_chosing_of_one_from_five_columns_fragment:
+                shareInfoOfColomn(5);
                 break;
         }
 
+    }
+
+    public void shareInfoOfColomn(int num) {
+        IncomingDataFormForOneColumn incomingDataFormForOneColumn = new IncomingDataFormForOneColumn();
+        Bundle bundle = new Bundle();
+        bundle.putInt("ttt", num);
+        incomingDataFormForOneColumn.setArguments(bundle);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.flMainActivity, incomingDataFormForOneColumn, "timeForReservation");
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

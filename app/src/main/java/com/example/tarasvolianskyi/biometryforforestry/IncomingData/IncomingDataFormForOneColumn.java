@@ -30,6 +30,10 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     public static final String HEIGHT = "Height";
     public static final String VOLUME = "Volume";
 
+    public static final int COLOMN_DIAMETR = 1;
+    public static final int COLOMN_HEIGHT = 2;
+    public static final int COLOMN_VOLUME = 3;
+
     private Button btnSentDataToFB;
     private View view;
     private EditText editTextTask;
@@ -125,80 +129,6 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     private EditText etR23C3;
     private EditText etR24C3;
 
-    private Double aDoubleR1C1;
-    private Double aDoubleR2C1;
-    private Double aDoubleR3C1;
-    private Double aDoubleR4C1;
-    private Double aDoubleR5C1;
-    private Double aDoubleR6C1;
-    private Double aDoubleR7C1;
-    private Double aDoubleR8C1;
-    private Double aDoubleR9C1;
-    private Double aDoubleR10C1;
-    private Double aDoubleR11C1;
-    private Double aDoubleR12C1;
-    private Double aDoubleR13C1;
-    private Double aDoubleR14C1;
-    private Double aDoubleR15C1;
-    private Double aDoubleR16C1;
-    private Double aDoubleR17C1;
-    private Double aDoubleR18C1;
-    private Double aDoubleR19C1;
-    private Double aDoubleR20C1;
-    private Double aDoubleR21C1;
-    private Double aDoubleR22C1;
-    private Double aDoubleR23C1;
-    private Double aDoubleR24C1;
-
-    private Double aDoubleR1C2;
-    private Double aDoubleR2C2;
-    private Double aDoubleR3C2;
-    private Double aDoubleR4C2;
-    private Double aDoubleR5C2;
-    private Double aDoubleR6C2;
-    private Double aDoubleR7C2;
-    private Double aDoubleR8C2;
-    private Double aDoubleR9C2;
-    private Double aDoubleR10C2;
-    private Double aDoubleR11C2;
-    private Double aDoubleR12C2;
-    private Double aDoubleR13C2;
-    private Double aDoubleR14C2;
-    private Double aDoubleR15C2;
-    private Double aDoubleR16C2;
-    private Double aDoubleR17C2;
-    private Double aDoubleR18C2;
-    private Double aDoubleR19C2;
-    private Double aDoubleR20C2;
-    private Double aDoubleR21C2;
-    private Double aDoubleR22C2;
-    private Double aDoubleR23C2;
-    private Double aDoubleR24C2;
-
-    private Double aDoubleR1C3;
-    private Double aDoubleR2C3;
-    private Double aDoubleR3C3;
-    private Double aDoubleR4C3;
-    private Double aDoubleR5C3;
-    private Double aDoubleR6C3;
-    private Double aDoubleR7C3;
-    private Double aDoubleR8C3;
-    private Double aDoubleR9C3;
-    private Double aDoubleR10C3;
-    private Double aDoubleR11C3;
-    private Double aDoubleR12C3;
-    private Double aDoubleR13C3;
-    private Double aDoubleR14C3;
-    private Double aDoubleR15C3;
-    private Double aDoubleR16C3;
-    private Double aDoubleR17C3;
-    private Double aDoubleR18C3;
-    private Double aDoubleR19C3;
-    private Double aDoubleR20C3;
-    private Double aDoubleR21C3;
-    private Double aDoubleR22C3;
-    private Double aDoubleR23C3;
-    private Double aDoubleR24C3;
 
     int value;
     Bundle bundle;
@@ -215,19 +145,17 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
 
             myInt = bundle.getInt("ttt", 77);
         }
-        // initView();
+        initView();
         tableLayout = view.findViewById(R.id.tlDataIncomingFragment);
+        databaseReferenceUsers = FirebaseDatabase.getInstance().getReference("biometry");
         btnSentDataToFB = view.findViewById(R.id.btn_sent_data_to_fb_fragment);
+        userId = databaseReferenceUsers.push().getKey();
         btnSentDataToFB.setOnClickListener(this);
 
         return view;
     }
 
     private void initView() {
-        databaseReferenceUsers = FirebaseDatabase.getInstance().getReference("biometry");
-        //  btnSentDataToFB = view.findViewById(R.id.btn_sent_data_to_fb_fragment);
-        userId = databaseReferenceUsers.push().getKey();
-        // tableLayout=view.findViewById(R.id.tlDataIncomingFragment);
 
         etR1C1 = view.findViewById(R.id.et_r1c1);
         etR2C1 = view.findViewById(R.id.et_r2c1);
@@ -303,10 +231,7 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         etR22C3 = view.findViewById(R.id.et_r22c3);
         etR23C3 = view.findViewById(R.id.et_r23c3);
         etR24C3 = view.findViewById(R.id.et_r24c3);
-
     }
-
-
 
     private ArrayList <Double> addDataToArray(int type) {
         ArrayList <Double> arrayListResult = new ArrayList <>();
@@ -318,11 +243,8 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         }
         Log.d("colomnOne", "Values: " + arrayListColumnOne);
         return arrayListResult;
-
     }
-
    /* public int bundleGetData() {
-
         bundle = this.getArguments();
         if (bundle != null) {
             myBundleFromPreviousPage = bundle.getInt("numberForCellIdColumn", 7);
@@ -331,13 +253,9 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
     }*/
 
     private void saveDataFromTableToFB(String cellT, ArrayList <Double> arrayListDouble) {
-
-
         String cellType = cellT;
-
         int numForId1of5Column = myInt;
         int numR;
-
         for (int i = 0; i < arrayListDouble.size(); i++) {
             numR = i + 1;
             String cellId;
@@ -352,23 +270,16 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
             databaseReferenceUsers.child(userId).child(cellType).child(cellId).setValue(cellPojo);
             Toast.makeText(getContext(), i + "GOOD " + numForId1of5Column, Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
 
     @Override
     public void onClick(View v) {
-        //Toast.makeText(getContext(), "Click button add task", Toast.LENGTH_SHORT).show();
         arrayListColumnOne = addDataToArray(0);
         arrayListColumnTwo = addDataToArray(1);
         arrayListColumnThree = addDataToArray(2);
-        // addDataToArrayHeight();
-        //addDataToArrayValue();
-
-
-        //  saveDataFromTableToFB(DIAMETR, arrayListOfDataDiameter);
-        //saveDataFromTableToFB(HEIGHT, arrayListOfDataHeight);
-        //saveDataFromTableToFB(VOLUME, arrayListOfDataValue);
+        saveDataFromTableToFB(DIAMETR, arrayListColumnOne);
+        saveDataFromTableToFB(HEIGHT, arrayListColumnTwo);
+        saveDataFromTableToFB(VOLUME, arrayListColumnThree);
     }
 }
