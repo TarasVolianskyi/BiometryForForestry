@@ -8,12 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
+
+import java.util.ArrayList;
+
 public class TopicTwoCountFragment extends Fragment {
 
     View view;
     private TextView textViewTest;
 
-
+    private ArrayList <Double> arrayListDiametr;
     private int numberOfTrees;
     private double lgN;
     private double exectNumbOfRozrad;
@@ -31,25 +35,43 @@ public class TopicTwoCountFragment extends Fragment {
     private double VgranX;
     private double VgranY;
 
+    private TextView tvNumberOfTrees;
+    private TextView tvLgN;
+    private TextView tvExectNumbOfRozrad;
+    private TextView tvNumbRozradRounded;
+    private TextView tvXmax;
+    private TextView tvXmin;
+    private TextView tvYmax;
+    private TextView tvYmin;
+    private TextView tvCx;
+    private TextView tvCy;
+    private TextView tvX1;
+    private TextView tvY1;
+    private TextView tvNgranX;
+    private TextView tvNgranY;
+    private TextView tvVgranX;
+    private TextView tvVgranY;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.topic_1_view_fragment, container, false);
+        view = inflater.inflate(R.layout.topic_2_1_view_frament, container, false);
         bussinessLogic();
         initView();
         return view;
     }
 
     private void initView() {
-        textViewTest = view.findViewById(R.id.tvTest);
-        textViewTest.setText(String.valueOf(lgN));
+        tvLgN = view.findViewById(R.id.tvTestLog_topic_2_1_view_fragment);
+        tvLgN.setText(String.valueOf(lgN));
     }
 
     private void bussinessLogic() {
-        numberOfTrees = 105;
+        MyArrayData myArrayData = new MyArrayData();
+        arrayListDiametr = myArrayData.getRandomArray();
+        numberOfTrees = arrayListDiametr.size();
         lgN = Math.log10(numberOfTrees);
 
     }
-
 
 }

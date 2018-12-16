@@ -148,7 +148,6 @@ public class TopicOneCountFragment extends Fragment {
     private TextView tvTableC3R20;
 
     private TextView tvAvarage;
-    private ListView listViewest;
 
     List <Double> arrayWithNumbers1Topic = new ArrayList <>();
     List <Double> arrayWithNumbers2Topic = new ArrayList <>();
@@ -201,7 +200,6 @@ public class TopicOneCountFragment extends Fragment {
         countKoefMinlv();
         countIntArefm();
         countIntKvadr();
-
     }
 
     private void countIntKvadr() {
@@ -293,10 +291,6 @@ public class TopicOneCountFragment extends Fragment {
     }
 
     private void initView() {
-
-        listViewest = view.findViewById(R.id.lvTopic1TestDataFromFB);
-
-
         sum1TextView = view.findViewById(R.id.tvR12C6_topic_1_view_fragment);
         sum1TextView.setText(String.valueOf(sumOf20));
 

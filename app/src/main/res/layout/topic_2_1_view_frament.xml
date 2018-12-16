@@ -14,16 +14,31 @@
 
 
     <TextView
-        android:id="@+id/tvR1C2_topic_2_view_fragment"
+        android:id="@+id/tvR1C2_topic_2_1_view_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="@string/text2" />
 
-<TextView
-    android:id="@+id/tvTest"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tvTestLog_topic_2_1_view_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTest2_topic_2_1_view_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTest3_topic_2_1_view_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTest4_topic_2_1_view_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>

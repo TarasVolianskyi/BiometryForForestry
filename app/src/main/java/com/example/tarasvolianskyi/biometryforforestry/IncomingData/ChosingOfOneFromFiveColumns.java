@@ -42,19 +42,17 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         btnColumn3.setOnClickListener(this);
         btnColumn4.setOnClickListener(this);
         btnColumn5.setOnClickListener(this);
-
         //test
-        Button btnColumn5d = (Button) view.findViewById(R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment);
-        btnColumn5d.setOnClickListener(this);
-
+        Button btnTopic1 = (Button) view.findViewById(R.id.btn_22column_5_chosing_of_one_from_five_columns_fragment);
+        btnTopic1.setOnClickListener(this);
+        Button btnTopic21 = (Button) view.findViewById(R.id.btn_222column_5_chosing_of_one_from_five_columns_fragment);
+        btnTopic21.setOnClickListener(this);
 
     }
 
     public void bundleSetData(int value) {
 
-
     }
-
 
     @Override
     public void onClick(View view) {
@@ -94,7 +92,6 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 shareInfoOfColomn(5);
                 break;
         }
-
     }
 
     public void shareInfoOfColomn(int num) {
