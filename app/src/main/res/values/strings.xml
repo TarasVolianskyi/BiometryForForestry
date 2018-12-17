@@ -83,4 +83,8 @@
     <string name="email_fmt">Email: %s</string>
     <string name="topic_2_1_subject">Робота 2. Зведення результатів «великої» кількості спостережень</string>
     <string name="text2">Теоретична кількість розрядів</string>
+    <string name="topic_2_1_text2">Величина розряду:</string>
+    <string name="topic_2_1_text3">- для діаметру</string>
+    <string name="topic_2_1_text4">- для висоти</string>
+    <string name="topic_2_1_text5">Середнє значення першого розряду</string>
 </resources>

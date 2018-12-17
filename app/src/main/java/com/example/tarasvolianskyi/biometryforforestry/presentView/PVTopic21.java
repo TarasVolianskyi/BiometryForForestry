@@ -1,4 +1,5 @@
-package com.example.tarasvolianskyi.biometryforforestry;
+package com.example.tarasvolianskyi.biometryforforestry.presentView;
+
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,31 +10,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
+import com.example.tarasvolianskyi.biometryforforestry.R;
+import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic21;
 
 import java.util.ArrayList;
 
-public class TopicTwoCountFragment extends Fragment {
-/*
+public class PVTopic21 extends Fragment {
+
     View view;
     private TextView textViewTest;
-
-    private ArrayList <Double> arrayListDiametr;
-    private int numberOfTrees;
-    private double lgN;
-    private double exectNumbOfRozrad;
-    private double numbRozradRounded;
-    private double Xmax;
-    private double Xmin;
-    private double Ymax;
-    private double Ymin;
-    private double Cx;
-    private double Cy;
-    private double X1;
-    private double Y1;
-    private double NgranX;
-    private double NgranY;
-    private double VgranX;
-    private double VgranY;
 
     private TextView tvNumberOfTrees;
     private TextView tvLgN;
@@ -52,27 +37,21 @@ public class TopicTwoCountFragment extends Fragment {
     private TextView tvVgranX;
     private TextView tvVgranY;
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_2_1_view_frament, container, false);
-        bussinessLogic();
+
         initView();
         return view;
     }
 
     private void initView() {
-        tvLgN = view.findViewById(R.id.tvTestLog_topic_2_1_view_fragment);
-        tvLgN.setText(String.valueOf(lgN));
+        tvLgN = view.findViewById(R.id.tv_lgn_topic_2_1_view_fragment);
+        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()));
     }
 
-    private void bussinessLogic() {
-        MyArrayData myArrayData = new MyArrayData();
-        arrayListDiametr = myArrayData.getRandomArray();
-        numberOfTrees = arrayListDiametr.size();
-        lgN = Math.log10(numberOfTrees);
-
-    }
-    */
 
 }

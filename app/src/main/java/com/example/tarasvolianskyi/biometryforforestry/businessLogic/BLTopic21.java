@@ -82,7 +82,13 @@ public class BLTopic21 {
     }
 
     public double countX1() {
-        return 2.0;
+        X1 = countXmin() - countCx();
+        do {
+            X1 -= countCx();
+        } while (X1 == 0.0 || X1 < 0.0);
+        X1 += countCx();
+        X1 = countXmin() - X1;
+        return X1;
     }
 
     public double countY1() {
@@ -90,7 +96,8 @@ public class BLTopic21 {
     }
 
     public double countNgranX() {
-        return 2.0;
+        NgranX = countX1() - 0.5 * countCx();
+        return NgranX;
     }
 
     public double countNgranY() {
@@ -98,7 +105,8 @@ public class BLTopic21 {
     }
 
     public double countVgranX() {
-        return 2.0;
+        VgranX = countX1() + 0.5 * countCx() - 0.1;
+        return VgranX;
     }
 
     public double countVgranY() {
