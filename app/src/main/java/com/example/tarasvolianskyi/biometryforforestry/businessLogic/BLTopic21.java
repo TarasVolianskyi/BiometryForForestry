@@ -37,7 +37,8 @@ public class BLTopic21 {
 
 
     public double countLgN() {
-        lgN = Math.round((Math.log10(numberOfTrees) * 1000.0) / 1000.0);
+      //  lgN = Math.round(Math.log10(numberOfTrees) * 1000) / 1000;
+        lgN = Math.round(Math.log10((double)numberOfTrees) * 1000.0) / 1000.0;
         return lgN;
     }
 
