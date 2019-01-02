@@ -87,4 +87,12 @@
     <string name="topic_2_1_text3">- для діаметру</string>
     <string name="topic_2_1_text4">- для висоти</string>
     <string name="topic_2_1_text5">Середнє значення першого розряду</string>
+    <string name="nugna_granutsa">Нижня границя першогого розряду</string>
+    <string name="verhna_granutsa">Верхня границя першогого розряду</string>
+    <string name="title_of_table21">2.1. Ряд розподілу діаметра</string>
+    <string name="granutsi_rozradiv">Границі розрядів, см</string>
+    <string name="ser_znach_rozradiv">Середні значення розрядів, см (     )</string>
+    <string name="zvedennya">Зведення</string>
+    <string name="chastotu">Частоти            (      )</string>
+    <string name="nakopuch_chastot">Накопичені частоти (∑      )</string>
 </resources>
