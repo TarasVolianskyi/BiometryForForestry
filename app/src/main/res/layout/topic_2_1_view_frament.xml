@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="left" />
 
+
     <TextView
         android:id="@+id/tv3_topic_2_1_view_fragment"
         android:layout_width="match_parent"

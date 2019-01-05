@@ -51,8 +51,8 @@ public class PVTopic21 extends Fragment {
        // tvLgN = view.findViewById(R.id.tv_lgn_topic_2_1_view_fragment);
         //tvCx = view.findViewById(R.id.tvCx_topic_2_1_view_fragment);
 
-        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()));
-        tvCx.setText("" +"tttt"/* String.valueOf(new BLTopic21().countCx())*/);
+//        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()));
+  //      tvCx.setText("" +"tttt"/* String.valueOf(new BLTopic21().countCx())*/);
     }
 
 
