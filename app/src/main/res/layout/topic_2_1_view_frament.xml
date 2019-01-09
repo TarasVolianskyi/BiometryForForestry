@@ -18,15 +18,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:text="@string/text2" />
+        android:text="@string/text2"
+        android:textSize="16dp" />
 
 
     <TextView
         android:id="@+id/tv2_topic_2_1_view_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left" />
+        android:gravity="left"
+        android:textSize="14dp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
 
     <TextView
         android:id="@+id/tv3_topic_2_1_view_fragment"
@@ -121,15 +126,14 @@
         android:text="@string/title_of_table21"
         android:textStyle="bold" />
 
-    <TableLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/tl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
         android:background="@android:color/white"
-        android:padding="2dp">
+        android:padding="2dp"
+        tools:context=".MainActivity">
 
         <TableRow android:background="@drawable/table_row_bg">
 

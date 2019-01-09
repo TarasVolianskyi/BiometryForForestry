@@ -8,9 +8,9 @@ import java.util.Collections;
 public class BLTopic21 {
 
     private MyArrayData myArrayData = new MyArrayData();
-    private ArrayList <Double> arrayListDiametr;
-    private ArrayList <Double> arrayListHeight;
-    private int numberOfTrees;
+    private ArrayList<Double> arrayListDiametr;
+    private ArrayList<Double> arrayListHeight;
+    public int numberOfTrees = 107;
     private double lgN;
     private double exectNumbOfRozrad;
     private double numbRozradRounded;
@@ -35,10 +35,14 @@ public class BLTopic21 {
         return numberOfTrees = arrayListDiametr.size();
     }
 
+    public static double roundAvoid(double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+    }
 
     public double countLgN() {
-      //  lgN = Math.round(Math.log10(numberOfTrees) * 1000) / 1000;
-        lgN = Math.round(Math.log10((double)numberOfTrees) * 1000.0) / 1000.0;
+        lgN = Math.round(Math.log10(numberOfTrees) * 1000.0) / 1000.0;
+        //  lgN = Math.round(Math.log10((double)numberOfTrees));
         return lgN;
     }
 
