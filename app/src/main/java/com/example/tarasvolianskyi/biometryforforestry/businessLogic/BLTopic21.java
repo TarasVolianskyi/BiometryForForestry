@@ -79,16 +79,16 @@ public class BLTopic21 {
     }
 
     public double countYmax() {
-        Ymax = Collections.max(arrayListHeight);
+        Ymax = Math.round(Collections.max(getRandomArray()) * 10.0) / 10.0;
         return Ymax;
     }
 
     public double countYmin() {
-        Ymin = Collections.min(arrayListHeight);
+        Ymin = Math.round(Collections.min(getRandomArray()) * 10.0) / 10.0;
         return Ymin;
     }
 
-    public double countCxWitoutRound() {
+    public double countCxWithoutRound() {
         CxWitoutRound = Math.round(((countXmax() - countXmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
         return CxWitoutRound;
     }
@@ -99,12 +99,12 @@ public class BLTopic21 {
     }
 
     public double countCx() {
-        Cx = Math.round(CxWitoutRound);
+        Cx = Math.round(countCxWithoutRound());
         return Cx;
     }
 
     public double countCy() {
-        Cy = Math.round(CyWitoutRound);
+        Cy = Math.round(countCyWithoutRound());
         return Cy;
     }
 
@@ -115,7 +115,7 @@ public class BLTopic21 {
             X1 -= countCx();
         } while (X1 == 0.0 || X1 < 0.0);
         X1 += countCx();
-        X1 = countXmin() - X1;
+       // X1 = countXmin() - X1;
         return X1;
     }
 

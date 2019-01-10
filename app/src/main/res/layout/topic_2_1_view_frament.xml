@@ -31,7 +31,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp" />
 
     <TextView
         android:id="@+id/tv3_topic_2_1_view_fragment"
@@ -84,6 +84,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/topic_2_1_text4" />
+
+    <TextView
+        android:id="@+id/tv11a_topic_2_1_view_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv12_topic_2_1_view_fragment"
