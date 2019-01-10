@@ -112,9 +112,9 @@ public class BLTopic21 {
     public double countX1() {
         X1 = countXmin() - countCx();
         do {
-            X1 -= countCx();
-        } while (X1 == 0.0 || X1 < 0.0);
-        X1 += countCx();
+            X1 =X1- countCx();
+        } while ( X1 < 0.0);
+        //X1 += countCx();
        // X1 = countXmin() - X1;
         return X1;
     }
