@@ -42,20 +42,29 @@ public class PVTopic21 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_2_1_view_frament, container, false);
-
+        getArray();
         initView();
         return view;
+    }
+
+    private void getArray() {
+        new BLTopic21().putDataToArrayFromBD();
     }
 
     private void initView() {
         tvLgN = view.findViewById(R.id.tv2_topic_2_1_view_fragment);
         tvCx = view.findViewById(R.id.tv5_topic_2_1_view_fragment);
 
-        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()) + " " + Constants.NEAR_EQUAL +
+        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()) + " " +
+                Constants.NEAR_EQUAL +
                 " " + String.valueOf(new BLTopic21().countExectNumberOfRozrad()) + " = " +
                 String.valueOf(new BLTopic21().countNumberOfRozrad()));
 
-        //tvCx.setText("" +"tttt"+String.valueOf(new BLTopic21().countCx()));
+        tvCx.setText("( " + String.valueOf(new BLTopic21().countXmax()) + " - "
+                + String.valueOf(new BLTopic21().countXmin()) + " ) / "
+                + String.valueOf(new BLTopic21().countExectNumberOfRozrad())
+                + Constants.NEAR_EQUAL + String.valueOf(new BLTopic21().countCxWitoutRound())
+                + " = " + String.valueOf(new BLTopic21().countCx()) + " см;");
     }
 
 

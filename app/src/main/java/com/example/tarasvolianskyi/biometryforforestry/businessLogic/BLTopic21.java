@@ -4,6 +4,7 @@ import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class BLTopic21 {
 
@@ -18,6 +19,8 @@ public class BLTopic21 {
     private double Xmin;
     private double Ymax;
     private double Ymin;
+    private double CxWitoutRound;
+    private double CyWitoutRound;
     private double Cx;
     private double Cy;
     private double X1;
@@ -28,12 +31,22 @@ public class BLTopic21 {
     private double VgranY;
 
     public void putDataToArrayFromBD() {
-        arrayListDiametr = myArrayData.getRandomArray();
+        arrayListDiametr = getRandomArray();
     }
 
-    public int countMainSize() {
-        return numberOfTrees = arrayListDiametr.size();
+    public ArrayList<Double> getRandomArray() {
+        ArrayList<Double> myDoubleData = new ArrayList<>();
+        for (int i = 0; i < 106; i++) {
+            Random r = new Random();
+            double randomValue = 20.0 + (50.0 - 20.0) * r.nextDouble();
+            myDoubleData.add(randomValue);
+        }
+        return myDoubleData;
     }
+
+    /*public int countMainSize() {
+        return numberOfTrees = arrayListDiametr.size();
+    }*/
 
     public static double roundAvoid(double value, int places) {
         double scale = Math.pow(10, places);
@@ -42,7 +55,6 @@ public class BLTopic21 {
 
     public double countLgN() {
         lgN = Math.round(Math.log10(numberOfTrees) * 1000.0) / 1000.0;
-        //  lgN = Math.round(Math.log10((double)numberOfTrees));
         return lgN;
     }
 
@@ -57,12 +69,12 @@ public class BLTopic21 {
     }
 
     public double countXmax() {
-        Xmax = Collections.max(arrayListDiametr);
+        Xmax = Math.round(Collections.max(getRandomArray()) * 10.0) / 10.0;
         return Xmax;
     }
 
     public double countXmin() {
-        Xmin = Collections.min(arrayListDiametr);
+        Xmin = Math.round(Collections.min(getRandomArray()) * 10.0) / 10.0;
         return Xmin;
     }
 
@@ -77,14 +89,25 @@ public class BLTopic21 {
     }
 
     public double countCx() {
-        Cx = Math.round((countXmax() - countXmin()) / countNumberOfRozrad());
+        Cx = Math.round(CxWitoutRound * 10.0) / 10.0;
         return Cx;
     }
 
     public double countCy() {
-        Cy = Math.round((countYmax() - countYmin()) / countNumberOfRozrad());
+        Cy = Math.round(CyWitoutRound);
         return Cy;
     }
+
+    public double countCxWitoutRound() {
+        CxWitoutRound = Math.round(((countXmax() - countXmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
+        return CxWitoutRound;
+    }
+
+    public double countCyWithoutRound() {
+        CyWitoutRound = Math.round(((countYmax() - countYmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
+        return CyWitoutRound;
+    }
+
 
     public double countX1() {
         X1 = countXmin() - countCx();
