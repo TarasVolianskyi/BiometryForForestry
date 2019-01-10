@@ -88,16 +88,6 @@ public class BLTopic21 {
         return Ymin;
     }
 
-    public double countCx() {
-        Cx = Math.round(CxWitoutRound * 10.0) / 10.0;
-        return Cx;
-    }
-
-    public double countCy() {
-        Cy = Math.round(CyWitoutRound);
-        return Cy;
-    }
-
     public double countCxWitoutRound() {
         CxWitoutRound = Math.round(((countXmax() - countXmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
         return CxWitoutRound;
@@ -106,6 +96,16 @@ public class BLTopic21 {
     public double countCyWithoutRound() {
         CyWitoutRound = Math.round(((countYmax() - countYmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
         return CyWitoutRound;
+    }
+
+    public double countCx() {
+        Cx = Math.round(CxWitoutRound);
+        return Cx;
+    }
+
+    public double countCy() {
+        Cy = Math.round(CyWitoutRound);
+        return Cy;
     }
 
 
