@@ -38,7 +38,7 @@ public class BLTopic21 {
         ArrayList<Double> myDoubleData = new ArrayList<>();
         for (int i = 0; i < 106; i++) {
             Random r = new Random();
-            double randomValue = 20.0 + (50.0 - 20.0) * r.nextDouble();
+            double randomValue = Math.round((20.0 + (50.0 - 20.0) * r.nextDouble()) * 10.0) / 10.0;
             myDoubleData.add(randomValue);
         }
         return myDoubleData;
@@ -110,12 +110,9 @@ public class BLTopic21 {
 
 
     public double countX1() {
-        X1 = countXmin() - countCx();
-        do {
-            X1 =X1- countCx();
-        } while ( X1 < 0.0);
-        //X1 += countCx();
-       // X1 = countXmin() - X1;
+      //  X1 = (Math.round(countXmin() * 10.0) / 10.0)/* - (Math.floor(countXmin() / countCx()) * countCx())*/;
+
+         X1 = countXmin();
         return X1;
     }
 
