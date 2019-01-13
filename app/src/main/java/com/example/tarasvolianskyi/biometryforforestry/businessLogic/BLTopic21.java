@@ -110,32 +110,40 @@ public class BLTopic21 {
 
 
     public double countX1() {
-      //  X1 = (Math.round(countXmin() * 10.0) / 10.0)/* - (Math.floor(countXmin() / countCx()) * countCx())*/;
-
-         X1 = countXmin();
-        return X1;
+        X1 = Math.round((countXmin() - (Math.floor(countXmin() / countCx()) * countCx())) * 10.0) / 10.0;
+        double y = 80;
+        if (X1 < Math.round(countCx() / 2 * 100.0) / 100.0) {
+            y = 111 + 1;
+        } else if (X1 > Math.round(countCx() / 2 * 100.0) / 100.0) {
+            y = 222 + 1;
+        }
+        //X1 = countXmin();
+        //return X1;
+        return 24.0;
     }
 
     public double countY1() {
-        return 2.0;
+        return 24.0;
     }
 
     public double countNgranX() {
-        NgranX = countX1() - 0.5 * countCx();
+        NgranX = Math.round((countX1() - 0.5 * countCx()) * 10.0) / 10.0;
         return NgranX;
     }
 
     public double countNgranY() {
-        return 2.0;
+        NgranY = Math.round((countY1() - 0.5 * countCy()) * 10.0) / 10.0;
+        return NgranY;
     }
 
     public double countVgranX() {
-        VgranX = countX1() + 0.5 * countCx() - 0.1;
+        VgranX = Math.round((countX1() + 0.5 * countCx() - 0.1) * 10.0) / 10.0;
         return VgranX;
     }
 
     public double countVgranY() {
-        return 2.0;
+        VgranY = Math.round((countY1() + 0.5 * countCy() - 0.1) * 10.0) / 10.0;
+        return VgranY;
     }
 
 }

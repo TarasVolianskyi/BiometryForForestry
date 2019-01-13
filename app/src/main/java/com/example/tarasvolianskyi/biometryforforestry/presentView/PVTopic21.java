@@ -55,15 +55,18 @@ public class PVTopic21 extends Fragment {
         tvLgN = view.findViewById(R.id.tv2_topic_2_1_view_fragment);
         tvCx = view.findViewById(R.id.tv5_topic_2_1_view_fragment);
         tvCy = view.findViewById(R.id.tv7_topic_2_1_view_fragment);
-        tvX1 =view.findViewById(R.id.tv10_topic_2_1_view_fragment);
-        tvY1 =view.findViewById(R.id.tv11a_topic_2_1_view_fragment);
+        tvX1 = view.findViewById(R.id.tv10_topic_2_1_view_fragment);
+        tvY1 = view.findViewById(R.id.tv11a_topic_2_1_view_fragment);
+        tvNgranX = view.findViewById(R.id.tv13_topic_2_1_view_fragment);
+        tvNgranY = view.findViewById(R.id.tv14_topic_2_1_view_fragment);
+        tvVgranX = view.findViewById(R.id.tv16_topic_2_1_view_fragment);
+        tvVgranY = view.findViewById(R.id.tv17_topic_2_1_view_fragment);
 
 
-
-        tvLgN.setText(Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()) + " " +
+        tvLgN.setText((Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()) + " " +
                 Constants.NEAR_EQUAL +
                 " " + String.valueOf(new BLTopic21().countExectNumberOfRozrad()) + " = " +
-                String.valueOf(new BLTopic21().countNumberOfRozrad()));
+                String.valueOf(new BLTopic21().countNumberOfRozrad())).toString());
 
         tvCx.setText(("( " + String.valueOf(new BLTopic21().countXmax()) + " - "
                 + String.valueOf(new BLTopic21().countXmin()) + " ) / "
@@ -77,7 +80,22 @@ public class PVTopic21 extends Fragment {
                 + Constants.NEAR_EQUAL + String.valueOf(new BLTopic21().countCyWithoutRound())
                 + " = " + String.valueOf(new BLTopic21().countCy()) + " м;").toString());
 
-        tvX1.setText("X1 = "+String.valueOf(new BLTopic21().countX1()) + " см;");
+        tvX1.setText(("X1 = " + String.valueOf(new BLTopic21().countX1()) + " см;").toString());
+        tvY1.setText(("Y1 = " + String.valueOf(new BLTopic21().countY1()) + " м;").toString());
+
+        tvNgranX.setText((String.valueOf(new BLTopic21().countX1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCx())
+                + " = " + String.valueOf(new BLTopic21().countNgranX()) + " см;").toString());
+
+        tvNgranY.setText((String.valueOf(new BLTopic21().countY1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCy())
+                + " = " + String.valueOf(new BLTopic21().countNgranY()) + " м;").toString());
+
+        tvVgranX.setText((String.valueOf(new BLTopic21().countX1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCx())
+                + " - 0,1 = " + String.valueOf(new BLTopic21().countVgranX()) + " см;").toString());
+
+        tvVgranY.setText((String.valueOf(new BLTopic21().countY1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCy())
+                + " - 0,1 = " + String.valueOf(new BLTopic21().countVgranY()) + " м;").toString());
+
+
     }
 
 
