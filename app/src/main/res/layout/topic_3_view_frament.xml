@@ -57,6 +57,8 @@
                         android:text="@string/xi_cm" />
 
 
+
+
                     <TextView
                         android:id="@+id/tv_C2R1_Table3_view_fragment"
                         android:layout_width="0dp"
@@ -230,6 +232,9 @@
                 android:gravity="left"
                 android:text="@string/title_of_chapter_35"
                 android:textStyle="bold" />
+
+
+
 
 
         </LinearLayout>
