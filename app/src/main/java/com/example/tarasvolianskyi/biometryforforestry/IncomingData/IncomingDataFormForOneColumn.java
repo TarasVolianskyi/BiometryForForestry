@@ -244,13 +244,13 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         Log.d("colomnOne", "Values: " + arrayListColumnOne);
         return arrayListResult;
     }
-   /* public int bundleGetData() {
+    public int bundleGetData() {
         bundle = this.getArguments();
         if (bundle != null) {
             myBundleFromPreviousPage = bundle.getInt("numberForCellIdColumn", 7);
         }
         return myBundleFromPreviousPage;
-    }*/
+    }
 
     private void saveDataFromTableToFB(String cellT, ArrayList <Double> arrayListDouble) {
         String cellType = cellT;
@@ -281,5 +281,5 @@ public class IncomingDataFormForOneColumn extends Fragment implements View.OnCli
         saveDataFromTableToFB(DIAMETR, arrayListColumnOne);
         saveDataFromTableToFB(HEIGHT, arrayListColumnTwo);
         saveDataFromTableToFB(VOLUME, arrayListColumnThree);
-    }
-}
+    }}
+

@@ -106,4 +106,6 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-}
+    }
+
+

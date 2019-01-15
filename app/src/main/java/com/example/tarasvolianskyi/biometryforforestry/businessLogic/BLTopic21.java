@@ -30,6 +30,8 @@ public class BLTopic21 {
     private double VgranX;
     private double VgranY;
 
+    private ArrayList<Double> arrayListTestAdapter;
+
     public void putDataToArrayFromBD() {
         arrayListDiametr = getRandomArray();
     }
@@ -145,5 +147,19 @@ public class BLTopic21 {
         VgranY = Math.round((countY1() + 0.5 * countCy() - 0.1) * 10.0) / 10.0;
         return VgranY;
     }
+
+
+    public void showListInTable() {
+
+        arrayListTestAdapter = new ArrayList<>();
+        for (double i = 0; i < countNumberOfRozrad(); i++) {
+            arrayListTestAdapter.add(i);
+
+        }
+
+
+
+    }
+
 
 }

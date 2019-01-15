@@ -95,4 +95,22 @@
     <string name="zvedennya">Зведення</string>
     <string name="chastotu">Частоти            (      )</string>
     <string name="nakopuch_chastot">Накопичені частоти (∑      )</string>
+    <string name="topic_3_subject">Робота 3. Обчислення статистик ряду розподілу випадкової величини</string>
+    <string name="title_of_table31">Обчислення статистик ряду розподілу діаметра</string>
+    <string name="xi_cm">Xi, см</string>
+    <string name="ni">ni</string>
+    <string name="x_shtrh_i">x\' i</string>
+    <string name="x_shtrh_i_mltpl_ni">x\' i * n i</string>
+    <string name="x_shtrh_i_2__mltpl_ni">(x\' i)^2 * n i</string>
+    <string name="x_shtrh_i_3__mltpl_ni">(x\' i)^3 * n i</string>
+    <string name="x_shtrh_i_4__mltpl_ni">(x\' i)^4 * n i</string>
+    <string name="x_shtrh_i_plus_1">x\' i +1</string>
+    <string name="x_shtrh_i_plus_1_2_mltpl_ni">(x\' i +1)^4 * n i</string>
+    <string name="title_of_chapter_35">3.5. Побудова довірчих інтервалів (р=0,95)</string>
+    <string name="title_of_chapter_34">3.4. Обчислення статистик розподілу та їхніх основних помилок</string>
+    <string name="title_of_chapter_33">3.3. Обчислення основних моментів</string>
+    <string name="title_of_chapter_32">3.2. Обчислення умовних центральних моментів</string>
+    <string name="title_of_chapter_31">3.1. Обчислення умовних початкових моментів</string>
+    <string name="control">Контроль</string>
+
 </resources>

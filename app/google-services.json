@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "376959453953-pn2h62b03f2a3oj9p0rmcbbiv265ob5a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tarasvolianskyi.biometryforforestry",
+            "certificate_hash": "eb0cb7c77f3e4787f47573ed6218253b6f3f4833"
+          }
+        },
+        {
           "client_id": "376959453953-o90tbqs5vvjd5as7e6gjun80vkgm7qv7.apps.googleusercontent.com",
           "client_type": 3
         }
