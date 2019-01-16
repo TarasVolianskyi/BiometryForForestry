@@ -121,7 +121,7 @@ public class BLTopic21 {
         }
         //X1 = countXmin();
         //return X1;
-        return 24.0;
+        return 27.0;
     }
 
     public double countY1() {
