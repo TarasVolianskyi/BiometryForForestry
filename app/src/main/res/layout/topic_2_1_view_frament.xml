@@ -161,12 +161,17 @@
 
             <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/tl"
+                android:id="@+id/tl_topic21_view_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"
                 android:padding="2dp"
                 tools:context=".MainActivity">
+
+                <!--
+
+
+
 
                 <TableRow android:background="@drawable/table_row_bg">
 
@@ -579,7 +584,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </TableRow>
-
+ -->
             </TableLayout>
 
 
