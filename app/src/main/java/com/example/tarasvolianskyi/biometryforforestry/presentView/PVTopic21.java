@@ -45,7 +45,6 @@ public class PVTopic21 extends Fragment {
 
 
     private ArrayList<POJOTableAdapter> arrayList;
-    private TableLayout tableLayout;
     private POJOTableAdapter pojoTableAdapter;
 
     @Nullable
@@ -53,8 +52,9 @@ public class PVTopic21 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_2_1_view_frament, container, false);
         getArray();
-        fillTableLayout();
         initView();
+        fillTableLayout();
+
         return view;
     }
 
@@ -110,32 +110,29 @@ public class PVTopic21 extends Fragment {
     }
 
 
-    @SuppressLint("SetTextI18n")
+   // @SuppressLint("SetTextI18n")
     private void fillTableLayout() {
-       // fillData();
-        for (int i = 0; i < 6; i++) {
-            TableRow localRow = new TableRow(getActivity());
+        fillData();
+        for (int i = 0; i < 5; i++) {
+            TableRow localRow = new TableRow(getContext());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
             //fillLocalRow(localRow, arrayList.get(i));
             //TextView textView = new TextView(getActivity());
-
-            TextView tv1 = new TextView(getActivity());
-         /*   TextView tv2 = new TextView(getActivity());
+            TextView tv1 = new TextView(getContext());
+         /* TextView tv2 = new TextView(getActivity());
             TextView tv3 = new TextView(getActivity());
             TextView tv4 = new TextView(getActivity());
-            TextView tv5 = new TextView(getActivity());
-*/
-            tv1.setText("1rrr");
-         /*   tv2.setText("r2rr");
+            TextView tv5 = new TextView(getActivity());*/
+            tv1.setText(pojoTableAdapter.getTextOne());
+         /* tv2.setText("r2rr");
             tv3.setText("rr3r");
             tv4.setText("rrr4");
-            tv5.setText("rrr5");
-*/
+            tv5.setText("rrr5");*/
 
-            // textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
+            //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());
             localRow.addView(tv1);
-       /*     localRow.addView(tv2);
+       /*   localRow.addView(tv2);
             localRow.addView(tv3);
             localRow.addView(tv4);
             localRow.addView(tv5);
@@ -143,27 +140,27 @@ public class PVTopic21 extends Fragment {
             //Log.d("log apartm", arrayList.get(i).toString());
             //Log.d("log apartm", "Table chield " + tableLayout.getChildCount());
             localRow.setBackgroundColor(Color.GREEN);
-            tableLayout.addView(localRow, i);
+           tableLayout21.addView(localRow, i);
         }
     }
 
 
     private void fillData() {
-      /*  arrayList = new ArrayList<>();
+        arrayList = new ArrayList<>();
         arrayList.add(new POJOTableAdapter("ttt", 23, "ttt", 230000, 333));
         arrayList.add(new POJOTableAdapter("rr", 33, "www", 250000, 44));
         arrayList.add(new POJOTableAdapter("yyh", 43, "xxx", 210000, 555));
         arrayList.add(new POJOTableAdapter("vvv", 53, "ggg", 560000, 232));
         arrayList.add(new POJOTableAdapter("ywyh", 443, "xxfdx", 213000, 505));
-*/
 
-/*            pojoTableAdapter.setTextOne("eee");
-            pojoTableAdapter.setTextOne("eee");
-            pojoTableAdapter.setTextOne("eee");
+        pojoTableAdapter = new POJOTableAdapter();
+            pojoTableAdapter.setTextOne("e111ee");
+            //pojoTableAdapter.setTextOne("ee2e");
+           // pojoTableAdapter.setTextOne("eee");
             pojoTableAdapter.setTextThree("eeqqs");
             pojoTableAdapter.setTextThree("eeqqs");
 
-*/
+
 
 
     }
