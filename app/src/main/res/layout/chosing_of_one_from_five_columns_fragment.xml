@@ -64,6 +64,38 @@
         android:layout_height="wrap_content"
         android:text="Topic two" />
 
+
+    <Button
+        android:id="@+id/btn_33column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic three" />
+
+
+    <Button
+        android:id="@+id/btn_44column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic four" />
+
+
+    <Button
+        android:id="@+id/btn_55column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic five" />
+
+    <Button
+        android:id="@+id/btn_66column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic six" />
+
+    <Button
+        android:id="@+id/btn_77column_5_chosing_of_one_from_five_columns_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic seven" />
 </LinearLayout>
 
 

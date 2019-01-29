@@ -18,6 +18,7 @@ import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
 import com.example.tarasvolianskyi.biometryforforestry.TopicTwoCountFragment;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.PVTopic21;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.PVTopic3;
 
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
@@ -75,6 +76,16 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 fragmentTransaction2.replace(R.id.flMainActivity, pvTopic21, "timeForReservation");
                 fragmentTransaction2.addToBackStack(null);
                 fragmentTransaction2.commit();
+                break;
+
+
+            case R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment:
+                PVTopic3 pvTopic3 = new PVTopic3();
+                FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
+                fragmentTransaction3.replace(R.id.flMainActivity, pvTopic3, "timeForReservation");
+                fragmentTransaction3.addToBackStack(null);
+                fragmentTransaction3.commit();
                 break;
 
             case R.id.btn_column_1_chosing_of_one_from_five_columns_fragment:

@@ -160,7 +160,7 @@ public class PVTopic21 extends Fragment {
         arrayList.add(new POJOTableAdapter("yyh", 43, "xxx", 210000, 555));
         arrayList.add(new POJOTableAdapter("vvv", 53, "ggg", 560000, 232));
         arrayList.add(new POJOTableAdapter("ywyh", 443, "xxfdx", 213000, 505));
-/*
+
         pojoTableAdapter = new POJOTableAdapter();
         pojoTableAdapter.setTextOne("e111ee");
         //pojoTableAdapter.setTextOne("ee2e");
@@ -168,8 +168,7 @@ public class PVTopic21 extends Fragment {
         pojoTableAdapter.setTextThree("eeqqs");
         pojoTableAdapter.setTextThree("eeqqs");
 
-*/
 
-pojoTableAdapter.setNum2(3);
+//pojoTableAdapter.setNum2(3);
     }
 }
