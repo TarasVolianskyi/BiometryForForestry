@@ -223,7 +223,7 @@
                             android:text="@string/nakopuch_chastot" />
                     </TableRow>
 
-                    <TableRow>
+                 <TableRow>
 
                         <TextView
                             android:id="@+id/tv_C1R2_Table1_view_fragment"

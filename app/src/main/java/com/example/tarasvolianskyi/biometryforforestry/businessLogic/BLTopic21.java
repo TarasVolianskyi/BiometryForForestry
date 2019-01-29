@@ -1,6 +1,10 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +35,7 @@ public class BLTopic21 {
     private double VgranY;
 
     private ArrayList<Double> arrayListTestAdapter;
+    private POJOTableAdapter pojoTableAdapter;
 
     public void putDataToArrayFromBD() {
         arrayListDiametr = getRandomArray();
@@ -150,16 +155,12 @@ public class BLTopic21 {
 
 
     public void showListInTable() {
-
         arrayListTestAdapter = new ArrayList<>();
-        for (double i = 0; i < countNumberOfRozrad(); i++) {
-            arrayListTestAdapter.add(i);
+        for (double i = countXmin(); i < 4+countNumberOfRozrad(); i += 4.0) {
+           // arrayListTestAdapter.add(i);
+            pojoTableAdapter.setNum2(i);
+
 
         }
-
-
-
     }
-
-
 }
