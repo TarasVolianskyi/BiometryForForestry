@@ -13,6 +13,8 @@ import com.example.tarasvolianskyi.biometryforforestry.R;
 
 import java.util.ArrayList;
 
+import static com.example.tarasvolianskyi.biometryforforestry.R.layout.topic_3_view_frament;
+
 public class ViewTopic3 extends Fragment {
 
     View view;
@@ -20,7 +22,7 @@ public class ViewTopic3 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.topic_3_view_frament, container, false);
+        view = inflater.inflate(topic_3_view_frament, container, false);
         initView();
         return view;
     }

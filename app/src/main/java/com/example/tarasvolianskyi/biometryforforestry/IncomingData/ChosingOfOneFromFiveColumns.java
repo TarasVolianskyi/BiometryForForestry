@@ -44,6 +44,8 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         btnTopic1.setOnClickListener(this);
         Button btnTopic21 = (Button) view.findViewById(R.id.btn_222column_5_chosing_of_one_from_five_columns_fragment);
         btnTopic21.setOnClickListener(this);
+        Button btnTopic3 = (Button) view.findViewById(R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment);
+        btnTopic3.setOnClickListener(this);
 
     }
 
@@ -112,6 +114,6 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-    }
+}
 
 
