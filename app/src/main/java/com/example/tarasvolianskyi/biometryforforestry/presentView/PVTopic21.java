@@ -47,6 +47,8 @@ public class PVTopic21 extends Fragment {
     private ArrayList<POJOTableAdapter> arrayList;
     private POJOTableAdapter pojoTableAdapter;
 
+    BLTopic21 blTopic21=new BLTopic21();
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -75,16 +77,16 @@ public class PVTopic21 extends Fragment {
         tvVgranY = view.findViewById(R.id.tv17_topic_2_1_view_fragment);
         tableLayout21 = view.findViewById(R.id.tl_topic21_view_fragment);
 
-        tvLgN.setText((Constants.K_FIRST_KOEF + String.valueOf(new BLTopic21().countLgN()) + " " +
+        tvLgN.setText((Constants.K_FIRST_KOEF + String.valueOf(blTopic21.countLgN()) + " " +
                 Constants.NEAR_EQUAL +
-                " " + String.valueOf(new BLTopic21().countExectNumberOfRozrad()) + " = " +
-                String.valueOf(new BLTopic21().countNumberOfRozrad())).toString());
+                " " + String.valueOf(blTopic21.countExectNumberOfRozrad()) + " = " +
+                String.valueOf(blTopic21.countNumberOfRozrad())));
 
         tvCx.setText(("( " + String.valueOf(new BLTopic21().countXmax()) + " - "
                 + String.valueOf(new BLTopic21().countXmin()) + " ) / "
                 + String.valueOf(new BLTopic21().countExectNumberOfRozrad())
                 + Constants.NEAR_EQUAL + String.valueOf(new BLTopic21().countCxWithoutRound())
-                + " = " + String.valueOf(new BLTopic21().countCx()) + " см;").toString());
+                + " = " + String.valueOf(new BLTopic21().countCx()) + " см;"));
 
         tvCy.setText(("( " + String.valueOf(new BLTopic21().countYmax()) + " - "
                 + String.valueOf(new BLTopic21().countYmin()) + " ) / "
@@ -108,7 +110,7 @@ public class PVTopic21 extends Fragment {
                 + " - 0,1 = " + String.valueOf(new BLTopic21().countVgranY()) + " м;").toString());
 
 
-        new BLTopic21().showListInTable();
+        blTopic21.showListInTable();
 
 
     }
@@ -117,7 +119,9 @@ public class PVTopic21 extends Fragment {
     // @SuppressLint("SetTextI18n")
     private void fillTableLayout() {
         fillData();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            pojoTableAdapter = arrayList.get(i);
+
             TableRow localRow = new TableRow(getActivity());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
 
@@ -133,11 +137,11 @@ public class PVTopic21 extends Fragment {
             tv4.setWidth(300);
             tv5.setWidth(300);
 
-            tv1.setText(pojoTableAdapter.getTextOne()+"");
-            tv2.setText(pojoTableAdapter.getNum2()+"");
-            tv3.setText(pojoTableAdapter.getTextThree()+"");
-            tv4.setText(pojoTableAdapter.getNum4()+"");
-            tv5.setText(pojoTableAdapter.getNum5()+"");
+            tv1.setText(pojoTableAdapter.getTextOne() + "");
+            tv2.setText(pojoTableAdapter.getNum2() + "");
+            tv3.setText(pojoTableAdapter.getTextThree() + "");
+            tv4.setText(pojoTableAdapter.getNum4() + "");
+            tv5.setText(pojoTableAdapter.getNum5() + "");
 
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());
@@ -154,20 +158,25 @@ public class PVTopic21 extends Fragment {
 
 
     private void fillData() {
-        arrayList = new ArrayList<>();
+
+        arrayList = new BLTopic21().showListInTable();
+
+
+
+    /*    arrayList = new ArrayList<>();
         arrayList.add(new POJOTableAdapter("ttt", 23, "ttt", 230000, 333));
         arrayList.add(new POJOTableAdapter("rr", 33, "www", 250000, 44));
         arrayList.add(new POJOTableAdapter("yyh", 43, "xxx", 210000, 555));
         arrayList.add(new POJOTableAdapter("vvv", 53, "ggg", 560000, 232));
         arrayList.add(new POJOTableAdapter("ywyh", 443, "xxfdx", 213000, 505));
 
-        pojoTableAdapter = new POJOTableAdapter();
+        pojoTableAdapter = new BLTopic21().showListInTable();
         pojoTableAdapter.setTextOne("e111ee");
-        //pojoTableAdapter.setTextOne("ee2e");
+        pojoTableAdapter.setNum2(333);
         //pojoTableAdapter.setTextOne("eee");
         pojoTableAdapter.setTextThree("eeqqs");
         pojoTableAdapter.setTextThree("eeqqs");
-
+*/
 
 //pojoTableAdapter.setNum2(3);
     }

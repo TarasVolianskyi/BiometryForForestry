@@ -35,7 +35,7 @@ public class BLTopic21 {
     private double VgranY;
 
     private ArrayList<Double> arrayListTestAdapter;
-    private POJOTableAdapter pojoTableAdapter;
+    private POJOTableAdapter pojoTableAdapter = new POJOTableAdapter();
 
     public void putDataToArrayFromBD() {
         arrayListDiametr = getRandomArray();
@@ -154,13 +154,16 @@ public class BLTopic21 {
     }
 
 
-    public void showListInTable() {
-        arrayListTestAdapter = new ArrayList<>();
-        for (double i = countXmin(); i < 4+countNumberOfRozrad(); i += 4.0) {
-           // arrayListTestAdapter.add(i);
-            pojoTableAdapter.setNum2(i);
+    public ArrayList<POJOTableAdapter> showListInTable() {
+        ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
+        //  arrayListTestAdapter = new ArrayList<>();
+        //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
+        for (double i  = countXmin(); i < 50; i += 4.0) {
+            // arrayListTestAdapter.add(i);
+            arrayListPOJO.add(new POJOTableAdapter("ttt", i, "ttt", 230000, 333));
 
 
         }
+        return arrayListPOJO;
     }
 }
