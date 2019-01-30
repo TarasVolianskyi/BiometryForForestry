@@ -1,4 +1,4 @@
 package com.example.tarasvolianskyi.biometryforforestry.presentView;
 
-public class PVTopic5 {
+public class ViewTopic5 {
 }

@@ -158,10 +158,10 @@ public class BLTopic21 {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
         //  arrayListTestAdapter = new ArrayList<>();
         //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
-        for (double i  = countXmin(); i < 50; i += 4.0) {
+        for (double i = countX1(); i < 50; i += 4.0) {
             // arrayListTestAdapter.add(i);
-            arrayListPOJO.add(new POJOTableAdapter("ttt", i, "ttt", 230000, 333));
-
+            arrayListPOJO.add(new POJOTableAdapter((i - countCx() / 2) + " - " + ((i + countCx() / 2) - 0.1),
+                    i, "    ", 230000, 333));
 
         }
         return arrayListPOJO;

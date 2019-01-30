@@ -13,7 +13,7 @@ import com.example.tarasvolianskyi.biometryforforestry.R;
 
 import java.util.ArrayList;
 
-public class PVTopic3 extends Fragment {
+public class ViewTopic3 extends Fragment {
 
     View view;
 

@@ -20,7 +20,7 @@ import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic21;
 
 import java.util.ArrayList;
 
-public class PVTopic21 extends Fragment {
+public class ViewTopic21 extends Fragment {
 
     View view;
     private TextView textViewTest;
@@ -82,32 +82,32 @@ public class PVTopic21 extends Fragment {
                 " " + String.valueOf(blTopic21.countExectNumberOfRozrad()) + " = " +
                 String.valueOf(blTopic21.countNumberOfRozrad())));
 
-        tvCx.setText(("( " + String.valueOf(new BLTopic21().countXmax()) + " - "
-                + String.valueOf(new BLTopic21().countXmin()) + " ) / "
-                + String.valueOf(new BLTopic21().countExectNumberOfRozrad())
-                + Constants.NEAR_EQUAL + String.valueOf(new BLTopic21().countCxWithoutRound())
-                + " = " + String.valueOf(new BLTopic21().countCx()) + " см;"));
+        tvCx.setText(("( " + String.valueOf(blTopic21.countXmax()) + " - "
+                + String.valueOf(blTopic21.countXmin()) + " ) / "
+                + String.valueOf(blTopic21.countExectNumberOfRozrad())
+                + Constants.NEAR_EQUAL + String.valueOf(blTopic21.countCxWithoutRound())
+                + " = " + String.valueOf(blTopic21.countCx()) + " см;"));
 
-        tvCy.setText(("( " + String.valueOf(new BLTopic21().countYmax()) + " - "
-                + String.valueOf(new BLTopic21().countYmin()) + " ) / "
-                + String.valueOf(new BLTopic21().countExectNumberOfRozrad())
-                + Constants.NEAR_EQUAL + String.valueOf(new BLTopic21().countCyWithoutRound())
-                + " = " + String.valueOf(new BLTopic21().countCy()) + " м;").toString());
+        tvCy.setText(("( " + String.valueOf(blTopic21.countYmax()) + " - "
+                + String.valueOf(blTopic21.countYmin()) + " ) / "
+                + String.valueOf(blTopic21.countExectNumberOfRozrad())
+                + Constants.NEAR_EQUAL + String.valueOf(blTopic21.countCyWithoutRound())
+                + " = " + String.valueOf(blTopic21.countCy()) + " м;").toString());
 
-        tvX1.setText(("X1 = " + String.valueOf(new BLTopic21().countX1()) + " см;").toString());
-        tvY1.setText(("Y1 = " + String.valueOf(new BLTopic21().countY1()) + " м;").toString());
+        tvX1.setText(("X1 = " + String.valueOf(blTopic21.countX1()) + " см;").toString());
+        tvY1.setText(("Y1 = " + String.valueOf(blTopic21.countY1()) + " м;").toString());
 
-        tvNgranX.setText((String.valueOf(new BLTopic21().countX1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCx())
-                + " = " + String.valueOf(new BLTopic21().countNgranX()) + " см;").toString());
+        tvNgranX.setText((String.valueOf(blTopic21.countX1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCx())
+                + " = " + String.valueOf(blTopic21.countNgranX()) + " см;").toString());
 
-        tvNgranY.setText((String.valueOf(new BLTopic21().countY1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCy())
-                + " = " + String.valueOf(new BLTopic21().countNgranY()) + " м;").toString());
+        tvNgranY.setText((String.valueOf(blTopic21.countY1()) + " - 1/2 * " + String.valueOf(new BLTopic21().countCy())
+                + " = " + String.valueOf(blTopic21.countNgranY()) + " м;").toString());
 
-        tvVgranX.setText((String.valueOf(new BLTopic21().countX1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCx())
-                + " - 0,1 = " + String.valueOf(new BLTopic21().countVgranX()) + " см;").toString());
+        tvVgranX.setText((String.valueOf(blTopic21.countX1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCx())
+                + " - 0,1 = " + String.valueOf(blTopic21.countVgranX()) + " см;").toString());
 
-        tvVgranY.setText((String.valueOf(new BLTopic21().countY1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCy())
-                + " - 0,1 = " + String.valueOf(new BLTopic21().countVgranY()) + " м;").toString());
+        tvVgranY.setText((String.valueOf(blTopic21.countY1()) + " + 1/2 * " + String.valueOf(new BLTopic21().countCy())
+                + " - 0,1 = " + String.valueOf(blTopic21.countVgranY()) + " м;").toString());
 
 
         blTopic21.showListInTable();

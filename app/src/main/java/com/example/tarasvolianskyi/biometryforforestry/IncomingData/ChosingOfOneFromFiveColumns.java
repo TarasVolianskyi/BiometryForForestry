@@ -1,6 +1,5 @@
 package com.example.tarasvolianskyi.biometryforforestry.IncomingData;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,16 +8,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
-import com.example.tarasvolianskyi.biometryforforestry.TopicTwoCountFragment;
-import com.example.tarasvolianskyi.biometryforforestry.presentView.PVTopic21;
-import com.example.tarasvolianskyi.biometryforforestry.presentView.PVTopic3;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.ViewTopic21;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.ViewTopic3;
 
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
@@ -70,20 +65,20 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
                 break;
 
             case R.id.btn_222column_5_chosing_of_one_from_five_columns_fragment:
-                PVTopic21 pvTopic21 = new PVTopic21();
+                ViewTopic21 viewTopic21 = new ViewTopic21();
                 FragmentManager fragmentManager2 = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
-                fragmentTransaction2.replace(R.id.flMainActivity, pvTopic21, "timeForReservation");
+                fragmentTransaction2.replace(R.id.flMainActivity, viewTopic21, "timeForReservation");
                 fragmentTransaction2.addToBackStack(null);
                 fragmentTransaction2.commit();
                 break;
 
 
             case R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment:
-                PVTopic3 pvTopic3 = new PVTopic3();
+                ViewTopic3 viewTopic3 = new ViewTopic3();
                 FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
-                fragmentTransaction3.replace(R.id.flMainActivity, pvTopic3, "timeForReservation");
+                fragmentTransaction3.replace(R.id.flMainActivity, viewTopic3, "timeForReservation");
                 fragmentTransaction3.addToBackStack(null);
                 fragmentTransaction3.commit();
                 break;
