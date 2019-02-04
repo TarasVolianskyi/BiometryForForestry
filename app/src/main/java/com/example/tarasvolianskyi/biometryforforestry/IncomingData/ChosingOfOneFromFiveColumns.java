@@ -50,7 +50,7 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
     }
 
     public void bundleSetData(int value) {
-
+int r=7;
     }
 
     @Override
