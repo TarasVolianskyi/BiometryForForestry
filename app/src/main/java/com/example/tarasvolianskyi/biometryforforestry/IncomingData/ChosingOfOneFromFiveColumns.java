@@ -75,7 +75,6 @@ int r=7;
                 fragmentTransaction2.commit();
                 break;
 
-
             case R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment:
                 ViewTopic3 viewTopic3 = new ViewTopic3();
                 FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
