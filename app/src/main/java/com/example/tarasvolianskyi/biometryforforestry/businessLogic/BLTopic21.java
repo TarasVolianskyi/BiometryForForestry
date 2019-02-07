@@ -15,7 +15,7 @@ public class BLTopic21 {
     private MyArrayData myArrayData = new MyArrayData();
     private ArrayList<Double> arrayListDiametr;
     private ArrayList<Double> arrayListHeight;
-    public int numberOfTrees = 107;
+    public int numberOfTrees;
     private double lgN;
     private double exectNumbOfRozrad;
     private double numbRozradRounded;
@@ -34,26 +34,16 @@ public class BLTopic21 {
     private double VgranX;
     private double VgranY;
 
-    private ArrayList<Double> arrayListTestAdapter;
+    private ArrayList<Double> arrayListOfDataDiametr = new MyArrayData().getDataArrayDiametr();
     private POJOTableAdapter pojoTableAdapter = new POJOTableAdapter();
 
     public void putDataToArrayFromBD() {
-        arrayListDiametr = getRandomArray();
+        arrayListDiametr = arrayListOfDataDiametr;
     }
 
-    public ArrayList<Double> getRandomArray() {
-        ArrayList<Double> myDoubleData = new ArrayList<>();
-        for (int i = 0; i < 106; i++) {
-            Random r = new Random();
-            double randomValue = Math.round((20.0 + (50.0 - 20.0) * r.nextDouble()) * 10.0) / 10.0;
-            myDoubleData.add(randomValue);
-        }
-        return myDoubleData;
+    public int countNumberOfTrees() {
+        return numberOfTrees = arrayListOfDataDiametr.size();
     }
-
-    /*public int countMainSize() {
-        return numberOfTrees = arrayListDiametr.size();
-    }*/
 
     public static double roundAvoid(double value, int places) {
         double scale = Math.pow(10, places);
@@ -61,7 +51,7 @@ public class BLTopic21 {
     }
 
     public double countLgN() {
-        lgN = Math.round(Math.log10(numberOfTrees) * 1000.0) / 1000.0;
+        lgN = Math.round(Math.log10(countNumberOfTrees()) * 1000.0) / 1000.0;
         return lgN;
     }
 
@@ -76,22 +66,22 @@ public class BLTopic21 {
     }
 
     public double countXmax() {
-        Xmax = Math.round(Collections.max(getRandomArray()) * 10.0) / 10.0;
+        Xmax = Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
         return Xmax;
     }
 
     public double countXmin() {
-        Xmin = Math.round(Collections.min(getRandomArray()) * 10.0) / 10.0;
+        Xmin = Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
         return Xmin;
     }
 
     public double countYmax() {
-        Ymax = Math.round(Collections.max(getRandomArray()) * 10.0) / 10.0;
+        Ymax = Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
         return Ymax;
     }
 
     public double countYmin() {
-        Ymin = Math.round(Collections.min(getRandomArray()) * 10.0) / 10.0;
+        Ymin = Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
         return Ymin;
     }
 
@@ -126,7 +116,7 @@ public class BLTopic21 {
         }
         //X1 = countXmin();
         //return X1;
-        return 27.0;
+        return 24.0;
     }
 
     public double countY1() {

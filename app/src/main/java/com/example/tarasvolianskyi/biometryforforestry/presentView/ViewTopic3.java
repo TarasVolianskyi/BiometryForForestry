@@ -30,8 +30,9 @@ public class ViewTopic3 extends Fragment {
 
     private void initView() {
         tvX2 = (TextView) view.findViewById(R.id.x2);
-        tvX2.setText(Html.fromHtml("x<sup>2</sup>"));
-    }
+       // tvX2.setText(Html.fromHtml("x<sup>2</sup>"));
+         tvX2.setText(Html.fromHtml("  A<sup>2</sup>+B<sup>2</sup> = C<sup>2</sup>"));
 
+    }
 
 }
