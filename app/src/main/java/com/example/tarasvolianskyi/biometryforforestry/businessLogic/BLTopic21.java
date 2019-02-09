@@ -156,4 +156,27 @@ public class BLTopic21 {
         }
         return arrayListPOJO;
     }
+
+
+    public ArrayList<Double> countDiametrForCategory(Double x1,Double Cx, ArrayList<Double> arrayListDiametr){
+
+
+
+
+
+
+
+        return null;
+    }
+
+    public int findRozradOfDiametr(Double x1, Double cx, Double oneDiametr) {
+        int res = 0;
+        for (int i = 1; i < 25; i++) {
+            if (oneDiametr < x1 + i * cx) {
+                //res = i;
+                return res = i;
+            }
+        }
+        return res;
+    }
 }

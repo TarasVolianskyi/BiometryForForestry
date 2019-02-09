@@ -17,7 +17,6 @@ public class MyArrayData {
 
     public ArrayList<Double> getDataArrayDiametr() {
         ArrayList<Double> myDoubleDataDiametr = new ArrayList<>();
-
         myDoubleDataDiametr.add(44.1);
         myDoubleDataDiametr.add(53.0);
         myDoubleDataDiametr.add(31.9);
