@@ -1,14 +1,16 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
+import android.app.Activity;
 import android.content.Context;
-import android.widget.Toast;
-
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapter;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class BLTopic21 {
 
@@ -33,6 +35,8 @@ public class BLTopic21 {
     private double NgranY;
     private double VgranX;
     private double VgranY;
+    private ListView listView;
+
 
     private ArrayList<Double> arrayListOfDataDiametr = new MyArrayData().getDataArrayDiametr();
     private POJOTableAdapter pojoTableAdapter = new POJOTableAdapter();
@@ -146,6 +150,8 @@ public class BLTopic21 {
 
     public ArrayList<POJOTableAdapter> showListInTable() {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
+        sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
+
         //  arrayListTestAdapter = new ArrayList<>();
         //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
         for (double i = countX1(); i < 50; i += 4.0) {
@@ -158,16 +164,40 @@ public class BLTopic21 {
     }
 
 
-    public ArrayList<Double> countDiametrForCategory(Double x1,Double Cx, ArrayList<Double> arrayListDiametr){
 
-
-
-
-
-
-
-        return null;
+    public List<Integer> findNumbOfRozradForAllItems(ArrayList<Double> realDiametrs) {
+        List<Integer> arrayListOfRozrads = new ArrayList<>();
+        for (int i = 0; i < realDiametrs.size(); i++) {
+            arrayListOfRozrads.add(findRozradOfDiametr(24.0, 4.0, realDiametrs.get(i)));
+          //  ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, arrayListOfRozrads);
+            //listView.setAdapter(arrayAdapter);
+        }
+        return arrayListOfRozrads;
     }
+
+    public void sortDuplicatsOfRozrads(List<Integer> rozradOfItem) {
+        List<Integer> arrayListOfRozrads = new ArrayList<>();
+        Map<Integer, Integer> duplicates = new HashMap<Integer, Integer>();
+
+        for (int integer : rozradOfItem) {
+            if (duplicates.containsKey(integer)) {
+                duplicates.put(integer, duplicates.get(integer) + 1);
+            } else {
+                duplicates.put(integer, 1);
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry : duplicates.entrySet()) {
+            arrayListOfRozrads.add(entry.getValue());
+        }
+
+
+        ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(
+                this, android.R.layout.simple_list_item_1,
+                arrayListOfRozrads);
+        listView.setAdapter(arrayAdapter);
+    }
+
 
     public int findRozradOfDiametr(Double x1, Double cx, Double oneDiametr) {
         int res = 0;
