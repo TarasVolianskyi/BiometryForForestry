@@ -5,11 +5,11 @@ public class POJOTableAdapter {
     private String textOne;
     private double num2;
     private String textThree;
-    private double num4;
+    private int num4;
     private double num5;
 
 
-    public POJOTableAdapter(String textOne, double num2, String textThree, double num4, double num5) {
+    public POJOTableAdapter(String textOne, double num2, String textThree, int num4, double num5) {
         this.textOne = textOne;
         this.num2 = num2;
         this.textThree = textThree;
@@ -33,7 +33,7 @@ public class POJOTableAdapter {
         this.textThree = textThree;
     }
 
-    public void setNum4(double num4) {
+    public void setNum4(int num4) {
         this.num4 = num4;
     }
 

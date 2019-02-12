@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -150,35 +152,34 @@ public class BLTopic21 {
 
     public ArrayList<POJOTableAdapter> showListInTable() {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
-        sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
+        ArrayList<Integer> arrayListOfCountedRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
 
         //  arrayListTestAdapter = new ArrayList<>();
         //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
-        for (double i = countX1(); i < 50; i += 4.0) {
+        for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             // arrayListTestAdapter.add(i);
-            arrayListPOJO.add(new POJOTableAdapter((i - countCx() / 2) + " - " + ((i + countCx() / 2) - 0.1),
-                    i, "    ", 230000, 333));
+            arrayListPOJO.add(new POJOTableAdapter((countX1()+countCx()*i  - countCx() / 2) + " - " + ((countX1()+countCx()*i  + countCx() / 2) - 0.1),
+                    countX1()+countCx()*i, "    ", arrayListOfCountedRozrads.get(i), 333));
 
         }
+        //arrayListOfCountedRozrads.get((int) i)
         return arrayListPOJO;
     }
-
 
 
     public List<Integer> findNumbOfRozradForAllItems(ArrayList<Double> realDiametrs) {
         List<Integer> arrayListOfRozrads = new ArrayList<>();
         for (int i = 0; i < realDiametrs.size(); i++) {
             arrayListOfRozrads.add(findRozradOfDiametr(24.0, 4.0, realDiametrs.get(i)));
-          //  ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, arrayListOfRozrads);
+            //  ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, arrayListOfRozrads);
             //listView.setAdapter(arrayAdapter);
         }
         return arrayListOfRozrads;
     }
 
-    public void sortDuplicatsOfRozrads(List<Integer> rozradOfItem) {
+    public List<Integer> sortDuplicatsOfRozrads(List<Integer> rozradOfItem) {
         List<Integer> arrayListOfRozrads = new ArrayList<>();
         Map<Integer, Integer> duplicates = new HashMap<Integer, Integer>();
-
         for (int integer : rozradOfItem) {
             if (duplicates.containsKey(integer)) {
                 duplicates.put(integer, duplicates.get(integer) + 1);
@@ -186,16 +187,10 @@ public class BLTopic21 {
                 duplicates.put(integer, 1);
             }
         }
-
         for (Map.Entry<Integer, Integer> entry : duplicates.entrySet()) {
             arrayListOfRozrads.add(entry.getValue());
         }
-
-
-        ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(
-                this, android.R.layout.simple_list_item_1,
-                arrayListOfRozrads);
-        listView.setAdapter(arrayAdapter);
+        return arrayListOfRozrads;
     }
 
 
