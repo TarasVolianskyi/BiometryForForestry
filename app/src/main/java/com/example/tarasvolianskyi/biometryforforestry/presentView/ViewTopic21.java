@@ -48,7 +48,7 @@ public class ViewTopic21 extends Fragment {
     private ArrayList<POJOTableAdapter> arrayList;
     private POJOTableAdapter pojoTableAdapter;
 
-    BLTopic21 blTopic21=new BLTopic21();
+    BLTopic21 blTopic21 = new BLTopic21();
 
     @Nullable
     @Override
@@ -163,22 +163,5 @@ public class ViewTopic21 extends Fragment {
         arrayList = new BLTopic21().showListInTable();
 
 
-
-    /*    arrayList = new ArrayList<>();
-        arrayList.add(new POJOTableAdapter("ttt", 23, "ttt", 230000, 333));
-        arrayList.add(new POJOTableAdapter("rr", 33, "www", 250000, 44));
-        arrayList.add(new POJOTableAdapter("yyh", 43, "xxx", 210000, 555));
-        arrayList.add(new POJOTableAdapter("vvv", 53, "ggg", 560000, 232));
-        arrayList.add(new POJOTableAdapter("ywyh", 443, "xxfdx", 213000, 505));
-
-        pojoTableAdapter = new BLTopic21().showListInTable();
-        pojoTableAdapter.setTextOne("e111ee");
-        pojoTableAdapter.setNum2(333);
-        //pojoTableAdapter.setTextOne("eee");
-        pojoTableAdapter.setTextThree("eeqqs");
-        pojoTableAdapter.setTextThree("eeqqs");
-*/
-
-//pojoTableAdapter.setNum2(3);
     }
 }

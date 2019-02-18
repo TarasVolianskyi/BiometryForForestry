@@ -1,8 +1,5 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
-import android.app.Activity;
-import android.content.Context;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
@@ -19,6 +16,9 @@ public class BLTopic21 {
     private MyArrayData myArrayData = new MyArrayData();
     private ArrayList<Double> arrayListDiametr;
     private ArrayList<Double> arrayListHeight;
+    private ArrayList<Integer> myArrayDiameterInRozrads;
+    private ArrayList<Integer> myArrayHeightInRozrads;
+
     public int numberOfTrees;
     private double lgN;
     private double exectNumbOfRozrad;
@@ -153,13 +153,13 @@ public class BLTopic21 {
     public ArrayList<POJOTableAdapter> showListInTable() {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
         ArrayList<Integer> arrayListOfCountedRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
-
+        ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
         //  arrayListTestAdapter = new ArrayList<>();
         //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             // arrayListTestAdapter.add(i);
-            arrayListPOJO.add(new POJOTableAdapter((countX1()+countCx()*i  - countCx() / 2) + " - " + ((countX1()+countCx()*i  + countCx() / 2) - 0.1),
-                    countX1()+countCx()*i, "    ", arrayListOfCountedRozrads.get(i), 333));
+            arrayListPOJO.add(new POJOTableAdapter((countX1() + countCx() * i - countCx() / 2) + " - " + ((countX1() + countCx() * i + countCx() / 2) - 0.1),
+                    countX1() + countCx() * i, "    ", arrayListOfCountedRozrads.get(i), arrayListLastColomn.get(i)));
 
         }
         //arrayListOfCountedRozrads.get((int) i)
@@ -197,11 +197,28 @@ public class BLTopic21 {
     public int findRozradOfDiametr(Double x1, Double cx, Double oneDiametr) {
         int res = 0;
         for (int i = 1; i < 25; i++) {
-            if (oneDiametr < x1 + i * cx) {
+            if (oneDiametr < x1 + ((i - 1) * cx) + (cx / 2 - 0.1)) {
                 //res = i;
                 return res = i;
             }
         }
         return res;
     }
+
+    public List<Integer> lastColomnTopic21(List<Integer> listForCount) {
+        int sumItem = 0;
+        List<Integer> resultList = new ArrayList<>();
+        for (int i = 0; i < listForCount.size(); i++) {
+            sumItem += listForCount.get(i);
+            resultList.add(sumItem);
+        }
+
+        return resultList;
+    }
+
+    public ArrayList<Integer> getArrayWithDiametrRozrads() {
+          myArrayDiameterInRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
+        return  myArrayDiameterInRozrads;
+    }
+
 }
