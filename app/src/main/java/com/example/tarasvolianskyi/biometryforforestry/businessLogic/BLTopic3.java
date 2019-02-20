@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class BLTopic3 {
 
     private ArrayList<Integer> myArrayDiametrRozrads = new BLTopic21().getArrayWithDiametrRozrads();
-    private ArrayList<Integer> myArrayDiametrChastotu;
-    private ArrayList<Integer> myArrayDiametrSymuChastot;
+    private ArrayList<Integer> myArrayDiametrChastotu = new BLTopic21().getArrayWithDiametrRozrads();
+    private ArrayList<Integer> myArrayDiametrSymuChastotjre = new BLTopic21().getArrayWithDiametrRozrads();
+
+
+
 }
