@@ -58,9 +58,12 @@ public class ViewTopic21 extends Fragment {
 
         initView();
         fillTableLayout();
+        fillTableLayout2();
 
         return view;
     }
+
+
 
     private void getArray() {
         new BLTopic21().putDataToArrayFromBD();
@@ -121,12 +124,12 @@ public class ViewTopic21 extends Fragment {
     private void fillTableLayout() {
         fillData();
         for (int i = 0; i < arrayList.size(); i++) {
-            pojoTableAdapter = arrayList.get(i);
+            //pojoTableAdapter = arrayList.get(i);
 
             TableRow localRow = new TableRow(getActivity());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
 
-          TextView tv1 = new TextView(getActivity());
+            TextView tv1 = new TextView(getActivity());
             TextView tv2 = new TextView(getActivity());
             TextView tv3 = new TextView(getActivity());
             TextView tv4 = new TextView(getActivity());
@@ -138,12 +141,18 @@ public class ViewTopic21 extends Fragment {
             tv4.setWidth(300);
             tv5.setWidth(300);
 
-             tv1.setText(pojoTableAdapter.getTextOne() + "");
+          /*  tv1.setText(pojoTableAdapter.getTextOne() + "");
             tv2.setText(pojoTableAdapter.getNum2() + "");
             tv3.setText(pojoTableAdapter.getTextThree() + "");
             tv4.setText(pojoTableAdapter.getNum4() + "");
             tv5.setText(pojoTableAdapter.getNum5() + "");
+            */
 
+            tv1.setText(  "w1");
+            tv2.setText( "w2");
+            tv3.setText( "w3");
+            tv4.setText("w4");
+            tv5.setText( "w5");
 
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());
@@ -160,10 +169,11 @@ public class ViewTopic21 extends Fragment {
     }
 
 
+    private void fillTableLayout2() {
+    }
+
+
     private void fillData() {
-
         arrayList = new BLTopic21().showListInTable();
-
-
     }
 }

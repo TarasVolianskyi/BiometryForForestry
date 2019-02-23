@@ -1,13 +1,18 @@
 package com.example.tarasvolianskyi.biometryforforestry.presentView;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
@@ -23,6 +28,9 @@ public class ViewTopic3 extends Fragment {
     private TextView tvTest3;
     View view;
     BLTopic3 blTopic3 = new BLTopic3();
+    private TableLayout tableLayout3;
+    private ArrayList<Integer> arrayListTopic3 = blTopic3.createArrayColomn3();
+
 
     @Nullable
     @Override
@@ -33,14 +41,69 @@ public class ViewTopic3 extends Fragment {
     }
 
     private void initView() {
+        tableLayout3 = view.findViewById(R.id.tl_topic3_view_fragment);
+
         tvX2 = (TextView) view.findViewById(R.id.x2);
         //tvX2.setText(Html.fromHtml("x<sup>2</sup>"));
         tvX2.setText(Html.fromHtml("  A<sup>2</sup>+B<sup>2</sup> = C<sup>2</sup>"));
         tvTest3 = (TextView) view.findViewById(R.id.testTopic3);
-        tvTest3.setText(blTopic3.findPlaceWithZeroForColomn3Table3()+"");
+        tvTest3.setText(blTopic3.findPlaceWithZeroForColomn3Table3() + "");
 
-        blTopic3.showListInTable();
+        //blTopic3.showListInTable();
+        fillTableLayout();
 
     }
+
+    private void fillTableLayout() {
+        for (int i = 0; i < arrayListTopic3.size(); i++) {
+            //pojoTableAdapter = arrayList.get(i);
+
+            TableRow localRow = new TableRow(getActivity());
+            localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
+
+            TextView tv1 = new TextView(getActivity());
+            TextView tv2 = new TextView(getActivity());
+            TextView tv3 = new TextView(getActivity());
+            TextView tv4 = new TextView(getActivity());
+            TextView tv5 = new TextView(getActivity());
+
+            tv1.setWidth(300);
+            tv2.setWidth(300);
+            tv3.setWidth(300);
+            tv4.setWidth(300);
+            tv5.setWidth(300);
+
+          /*  tv1.setText(pojoTableAdapter.getTextOne() + "");
+            tv2.setText(pojoTableAdapter.getNum2() + "");
+            tv3.setText(pojoTableAdapter.getTextThree() + "");
+            tv4.setText(pojoTableAdapter.getNum4() + "");
+            tv5.setText(pojoTableAdapter.getNum5() + "");
+            */
+
+            tv1.setText("w1");
+            tv2.setText("w2");
+            tv3.setText("w3");
+            tv4.setText("w4");
+            tv5.setText("w5");
+
+            //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
+            //textView.setText(arrayList.get(i).toString());
+
+            localRow.addView(tv1);
+            localRow.addView(tv2);
+            localRow.addView(tv3);
+            localRow.addView(tv4);
+            localRow.addView(tv5);
+
+            localRow.setBackgroundColor(Color.GREEN);
+            tableLayout3.addView(localRow, i);
+        }
+    }
+
+
+    private void fillTableLayout2() {
+    }
+
+
 
 }
