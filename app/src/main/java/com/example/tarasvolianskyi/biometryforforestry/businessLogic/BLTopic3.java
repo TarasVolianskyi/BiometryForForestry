@@ -1,5 +1,8 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -20,16 +23,20 @@ public class BLTopic3 {
     private ArrayList<Integer> arrayListColomn8Tab3 = new ArrayList<>();
     private ArrayList<Integer> arrayListColomn9Tab3 = new ArrayList<>();
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public ArrayList<String> showListInTable() {
         ArrayList<String> arrayListPOJO = new ArrayList<>();
         ArrayList<Integer> arrayListOfCountedRozrads = myArrayDiametrChastotu;
+        countAllTable();
         // ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
         //  arrayListTestAdapter = new ArrayList<>();
         //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             // arrayListTestAdapter.add(i);
             // arrayListPOJO.add(myArrayDiametrChastotu.get(i)));
-            arrayListPOJO.add("ff");
+            arrayListPOJO.add(myArrayDiametrChastotu.get(i) + "  " + arrayListColomn3Tab3.get(i)
+                    + "  " + arrayListColomn4Tab3.get(i) + "  " + arrayListColomn5Tab3.get(i) + "  " + arrayListColomn6Tab3.get(i) + "  " + arrayListColomn7Tab3.get(i)
+            );
         }
         //arrayListOfCountedRozrads.get((int) i)
         return arrayListPOJO;
@@ -46,7 +53,7 @@ public class BLTopic3 {
             }
         }
         //res = Collections.min(itemsBiggerThanHalf);
-        res = itemsBiggerThanHalf.get(0)+1;
+        res = itemsBiggerThanHalf.get(0) + 1;
         return res;
     }
 
@@ -55,5 +62,30 @@ public class BLTopic3 {
         return Math.round(value * scale) / scale;
     }
 
+    public ArrayList<Integer> createArrayColomn3() {
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            arrayListColomn3Tab3.add(i - findPlaceWithZeroForColomn3Table3());
+            resArray.add(i - findPlaceWithZeroForColomn3Table3());
+        }
+        return resArray;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArray(int stepin) {
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            resArray.add(Math.multiplyExact((int) Math.pow(createArrayColomn3().get(i), stepin), myArrayDiametrChastotu.get(i)));
+        }
+        return resArray;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void countAllTable() {
+        arrayListColomn4Tab3 = countArray(1);
+        arrayListColomn5Tab3 = countArray(2);
+        arrayListColomn6Tab3 = countArray(3);
+        arrayListColomn7Tab3 = countArray(4);
+    }
 
 }

@@ -126,7 +126,7 @@ public class ViewTopic21 extends Fragment {
             TableRow localRow = new TableRow(getActivity());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
 
-            TextView tv1 = new TextView(getActivity());
+          TextView tv1 = new TextView(getActivity());
             TextView tv2 = new TextView(getActivity());
             TextView tv3 = new TextView(getActivity());
             TextView tv4 = new TextView(getActivity());
@@ -138,14 +138,16 @@ public class ViewTopic21 extends Fragment {
             tv4.setWidth(300);
             tv5.setWidth(300);
 
-            tv1.setText(pojoTableAdapter.getTextOne() + "");
+             tv1.setText(pojoTableAdapter.getTextOne() + "");
             tv2.setText(pojoTableAdapter.getNum2() + "");
             tv3.setText(pojoTableAdapter.getTextThree() + "");
             tv4.setText(pojoTableAdapter.getNum4() + "");
             tv5.setText(pojoTableAdapter.getNum5() + "");
 
+
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());
+
             localRow.addView(tv1);
             localRow.addView(tv2);
             localRow.addView(tv3);

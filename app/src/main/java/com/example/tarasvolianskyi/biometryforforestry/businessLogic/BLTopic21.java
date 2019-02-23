@@ -154,15 +154,11 @@ public class BLTopic21 {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
         ArrayList<Integer> arrayListOfCountedRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
         ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
-        //  arrayListTestAdapter = new ArrayList<>();
-        //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
-        for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
-            // arrayListTestAdapter.add(i);
+          for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             arrayListPOJO.add(new POJOTableAdapter((countX1() + countCx() * i - countCx() / 2) + " - " + ((countX1() + countCx() * i + countCx() / 2) - 0.1),
                     countX1() + countCx() * i, "    ", arrayListOfCountedRozrads.get(i), arrayListLastColomn.get(i)));
 
         }
-        //arrayListOfCountedRozrads.get((int) i)
         return arrayListPOJO;
     }
 
@@ -171,8 +167,6 @@ public class BLTopic21 {
         List<Integer> arrayListOfRozrads = new ArrayList<>();
         for (int i = 0; i < realDiametrs.size(); i++) {
             arrayListOfRozrads.add(findRozradOfDiametr(24.0, 4.0, realDiametrs.get(i)));
-            //  ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, arrayListOfRozrads);
-            //listView.setAdapter(arrayAdapter);
         }
         return arrayListOfRozrads;
     }

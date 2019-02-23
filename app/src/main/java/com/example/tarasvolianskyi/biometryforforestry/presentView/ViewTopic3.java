@@ -38,6 +38,9 @@ public class ViewTopic3 extends Fragment {
         tvX2.setText(Html.fromHtml("  A<sup>2</sup>+B<sup>2</sup> = C<sup>2</sup>"));
         tvTest3 = (TextView) view.findViewById(R.id.testTopic3);
         tvTest3.setText(blTopic3.findPlaceWithZeroForColomn3Table3()+"");
+
+        blTopic3.showListInTable();
+
     }
 
 }
