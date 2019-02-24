@@ -1,23 +1,20 @@
 package com.example.tarasvolianskyi.biometryforforestry.presentView;
 
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic21;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter;
 
 import java.util.ArrayList;
 

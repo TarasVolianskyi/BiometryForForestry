@@ -1,4 +1,4 @@
-package com.example.tarasvolianskyi.biometryforforestry.presentView;
+package com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters;
 
 public class POJOTableAdapter {
 

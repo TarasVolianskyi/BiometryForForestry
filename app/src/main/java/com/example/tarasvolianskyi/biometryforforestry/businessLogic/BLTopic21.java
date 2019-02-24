@@ -3,7 +3,7 @@ package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 import android.widget.ListView;
 
 import com.example.tarasvolianskyi.biometryforforestry.IncomingData.MyArrayData;
-import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapter;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;

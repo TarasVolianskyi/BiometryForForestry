@@ -1,4 +1,4 @@
-package com.example.tarasvolianskyi.biometryforforestry.presentView;
+package com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters;
 
 public class POJOTableAdapter3 {
     private int colomn1;
@@ -24,6 +24,10 @@ public class POJOTableAdapter3 {
                 ", colomn8=" + colomn8 +
                 ", colomn9=" + colomn9 +
                 '}';
+    }
+
+    public POJOTableAdapter3() {
+
     }
 
     public POJOTableAdapter3(int colomn1, int colomn2, int colomn3, int colomn4, int colomn5, int colomn6, int colomn7, int colomn8, int colomn9) {
