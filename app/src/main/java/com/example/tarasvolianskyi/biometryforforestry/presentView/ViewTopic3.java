@@ -60,6 +60,7 @@ public class ViewTopic3 extends Fragment {
     }
 
     private void fillTableLayout() {
+        fillData();
         for (int i = 0; i < arrayList.size(); i++) {
           pojoTableAdapter3 = arrayList.get(i);
             int width = 150;
@@ -128,7 +129,11 @@ public class ViewTopic3 extends Fragment {
 
 
     private void fillTableLayout2() {
+
     }
 
-
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void fillData() {
+        arrayList = new BLTopic3().showListInTable();
+    }
 }

@@ -3,6 +3,9 @@ package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter;
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter3;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -24,22 +27,16 @@ public class BLTopic3 {
     private ArrayList<Integer> arrayListColomn9Tab3 = new ArrayList<>();
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public ArrayList<String> showListInTable() {
-        ArrayList<String> arrayListPOJO = new ArrayList<>();
+    public ArrayList<POJOTableAdapter3> showListInTable() {
+        ArrayList<POJOTableAdapter3> arrayListPOJO3 = new ArrayList<>();
         ArrayList<Integer> arrayListOfCountedRozrads = myArrayDiametrChastotu;
         countAllTable();
-        // ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
-        //  arrayListTestAdapter = new ArrayList<>();
-        //   for (double i = countXmin(); i < 4 + countNumberOfRozrad(); i += 4.0) {
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
-            // arrayListTestAdapter.add(i);
-            // arrayListPOJO.add(myArrayDiametrChastotu.get(i)));
-            arrayListPOJO.add(myArrayDiametrChastotu.get(i) + "  " + arrayListColomn3Tab3.get(i)
-                    + "  " + arrayListColomn4Tab3.get(i) + "  " + arrayListColomn5Tab3.get(i) + "  " + arrayListColomn6Tab3.get(i) + "  " + arrayListColomn7Tab3.get(i)
-            );
+            arrayListPOJO3.add(new POJOTableAdapter3(myArrayDiametrChastotu.get(i), arrayListColomn3Tab3.get(i)
+                    , arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i), arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i), 1, 1
+            ));
         }
-        //arrayListOfCountedRozrads.get((int) i)
-        return arrayListPOJO;
+        return arrayListPOJO3;
     }
 
     public int findPlaceWithZeroForColomn3Table3() {

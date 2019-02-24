@@ -30,7 +30,7 @@ public class POJOTableAdapter3 {
 
     }
 
-    public POJOTableAdapter3(int colomn1, int colomn2, int colomn3, int colomn4, int colomn5, int colomn6, int colomn7, int colomn8, int colomn9) {
+    public POJOTableAdapter3(int colomn1, int colomn2, int colomn3, int colomn4, int colomn5, int colomn6, int colomn7, int colomn8) {
         this.colomn1 = colomn1;
         this.colomn2 = colomn2;
         this.colomn3 = colomn3;
