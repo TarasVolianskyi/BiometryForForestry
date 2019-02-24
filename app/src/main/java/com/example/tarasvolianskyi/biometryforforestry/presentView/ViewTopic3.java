@@ -57,7 +57,7 @@ public class ViewTopic3 extends Fragment {
     private void fillTableLayout() {
         for (int i = 0; i < arrayListTopic3.size(); i++) {
             //pojoTableAdapter = arrayList.get(i);
-
+            int width = 150;
             TableRow localRow = new TableRow(getActivity());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
 
@@ -66,14 +66,23 @@ public class ViewTopic3 extends Fragment {
             TextView tv3 = new TextView(getActivity());
             TextView tv4 = new TextView(getActivity());
             TextView tv5 = new TextView(getActivity());
+            TextView tv6 = new TextView(getActivity());
+            TextView tv7 = new TextView(getActivity());
+            TextView tv8 = new TextView(getActivity());
+            TextView tv9 = new TextView(getActivity());
 
-            tv1.setWidth(300);
-            tv2.setWidth(300);
-            tv3.setWidth(300);
-            tv4.setWidth(300);
-            tv5.setWidth(300);
 
-          /*  tv1.setText(pojoTableAdapter.getTextOne() + "");
+            tv1.setWidth(width);
+            tv2.setWidth(width);
+            tv3.setWidth(width);
+            tv4.setWidth(width);
+            tv5.setWidth(width);
+            tv6.setWidth(width);
+            tv7.setWidth(width);
+            tv8.setWidth(width);
+            tv9.setWidth(width);
+
+          /*tv1.setText(pojoTableAdapter.getTextOne() + "");
             tv2.setText(pojoTableAdapter.getNum2() + "");
             tv3.setText(pojoTableAdapter.getTextThree() + "");
             tv4.setText(pojoTableAdapter.getNum4() + "");
@@ -85,6 +94,10 @@ public class ViewTopic3 extends Fragment {
             tv3.setText("w3");
             tv4.setText("w4");
             tv5.setText("w5");
+            tv6.setText("w6");
+            tv7.setText("w7");
+            tv8.setText("w8");
+            tv9.setText("w9");
 
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());
@@ -94,6 +107,10 @@ public class ViewTopic3 extends Fragment {
             localRow.addView(tv3);
             localRow.addView(tv4);
             localRow.addView(tv5);
+            localRow.addView(tv6);
+            localRow.addView(tv7);
+            localRow.addView(tv8);
+            localRow.addView(tv9);
 
             localRow.setBackgroundColor(Color.GREEN);
             tableLayout3.addView(localRow, i);
@@ -103,7 +120,6 @@ public class ViewTopic3 extends Fragment {
 
     private void fillTableLayout2() {
     }
-
 
 
 }
