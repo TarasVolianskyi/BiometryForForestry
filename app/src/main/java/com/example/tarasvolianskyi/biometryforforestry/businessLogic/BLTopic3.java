@@ -33,7 +33,7 @@ public class BLTopic3 {
         countAllTable();
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             arrayListPOJO3.add(new POJOTableAdapter3(myArrayDiametrChastotu.get(i), arrayListColomn3Tab3.get(i)
-                    , arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i), arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i), 1, 1
+                    , arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i), arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i),1, 1, 1
             ));
         }
         return arrayListPOJO3;

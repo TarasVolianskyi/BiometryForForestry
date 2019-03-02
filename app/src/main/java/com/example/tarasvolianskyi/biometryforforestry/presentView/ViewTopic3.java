@@ -60,7 +60,7 @@ public class ViewTopic3 extends Fragment {
     }
 
     private void fillTableLayout() {
-        fillData();
+        //fillData();
         for (int i = 0; i < arrayList.size(); i++) {
           pojoTableAdapter3 = arrayList.get(i);
             int width = 150;
@@ -88,7 +88,7 @@ public class ViewTopic3 extends Fragment {
             tv8.setWidth(width);
             tv9.setWidth(width);
 
-            tv1.setText(pojoTableAdapter3.getColomn1());
+/*            tv1.setText(pojoTableAdapter3.getColomn1());
             tv2.setText(pojoTableAdapter3.getColomn2());
             tv3.setText(pojoTableAdapter3.getColomn3());
             tv4.setText(pojoTableAdapter3.getColomn4());
@@ -97,7 +97,7 @@ public class ViewTopic3 extends Fragment {
             tv7.setText(pojoTableAdapter3.getColomn7());
             tv8.setText(pojoTableAdapter3.getColomn8());
             tv9.setText(pojoTableAdapter3.getColomn9());
-
+*/
 
             tv1.setText("w1");
             tv2.setText("w2");
