@@ -1,5 +1,6 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
+import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
@@ -13,7 +14,7 @@ import java.util.Collections;
 public class BLTopic3 {
 
     private int numberOfTrees = 105;
-
+    private POJOTableAdapter3 pojoTableAdapter3 = new POJOTableAdapter3();
     private ArrayList<Integer> myArrayDiametrRozrads = new BLTopic21().getArrayWithDiametrRozrads();// TODO change
     private ArrayList<Integer> myArrayDiametrChastotu = (ArrayList<Integer>) new BLTopic21().getArrayWithDiametrRozrads();
     private ArrayList<Integer> myArrayDiametrChastotuSumm = (ArrayList<Integer>) new BLTopic21().lastColomnTopic21(myArrayDiametrChastotu);
@@ -32,9 +33,11 @@ public class BLTopic3 {
         ArrayList<Integer> arrayListOfCountedRozrads = myArrayDiametrChastotu;
         countAllTable();
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
+            //todo - fix this code
             arrayListPOJO3.add(new POJOTableAdapter3(myArrayDiametrChastotu.get(i), arrayListColomn3Tab3.get(i)
-                    , arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i), arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i),1, 1, 1
+                    , arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i), arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i), 1, 1, 1
             ));
+
         }
         return arrayListPOJO3;
     }
@@ -60,10 +63,13 @@ public class BLTopic3 {
     }
 
     public ArrayList<Integer> createArrayColomn3() {
+        int res;
         ArrayList<Integer> resArray = new ArrayList<>();
         for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
             arrayListColomn3Tab3.add(i - findPlaceWithZeroForColomn3Table3());
-            resArray.add(i - findPlaceWithZeroForColomn3Table3());
+            res = i - findPlaceWithZeroForColomn3Table3();
+            resArray.add(res);
+            pojoTableAdapter3.setColomn3(res);
         }
         return resArray;
     }
@@ -76,6 +82,55 @@ public class BLTopic3 {
         }
         return resArray;
     }
+
+    @TargetApi(Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArrayColomn4() {
+        int res;
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            res = Math.multiplyExact((int) Math.pow(createArrayColomn3().get(i), 1), myArrayDiametrChastotu.get(i));
+            resArray.add(res);
+            pojoTableAdapter3.setColomn4(res);
+        }
+        return resArray;
+    }
+
+    @TargetApi(Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArrayColomn5() {
+        int res;
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            res = Math.multiplyExact((int) Math.pow(createArrayColomn3().get(i), 2), myArrayDiametrChastotu.get(i));
+            resArray.add(res);
+            pojoTableAdapter3.setColomn5(res);
+        }
+        return resArray;
+    }
+
+    @TargetApi(Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArrayColomn6() {
+        int res;
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            res = Math.multiplyExact((int) Math.pow(createArrayColomn3().get(i), 3), myArrayDiametrChastotu.get(i));
+            resArray.add(res);
+            pojoTableAdapter3.setColomn6(res);
+        }
+        return resArray;
+    }
+
+    @TargetApi(Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArrayColomn7() {
+        int res;
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            res = Math.multiplyExact((int) Math.pow(createArrayColomn3().get(i), 4), myArrayDiametrChastotu.get(i));
+            resArray.add(res);
+            pojoTableAdapter3.setColomn7(res);
+        }
+        return resArray;
+    }
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void countAllTable() {

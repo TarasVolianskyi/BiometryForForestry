@@ -32,11 +32,12 @@ public class ViewTopic3 extends Fragment {
     BLTopic3 blTopic3 = new BLTopic3();
     private TableLayout tableLayout3;
     private ArrayList<Integer> arrayListTopic3 = blTopic3.createArrayColomn3();
-    private POJOTableAdapter3 pojoTableAdapter3;
+    private POJOTableAdapter3 pojoTableAdapter3=new POJOTableAdapter3();
     private ArrayList<POJOTableAdapter3> arrayList;
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class ViewTopic3 extends Fragment {
         return view;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void initView() {
         tableLayout3 = view.findViewById(R.id.tl_topic3_view_fragment);
 
@@ -59,8 +61,9 @@ public class ViewTopic3 extends Fragment {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void fillTableLayout() {
-        //fillData();
+        fillData();
         for (int i = 0; i < arrayList.size(); i++) {
           pojoTableAdapter3 = arrayList.get(i);
             int width = 150;
@@ -77,7 +80,6 @@ public class ViewTopic3 extends Fragment {
             TextView tv8 = new TextView(getActivity());
             TextView tv9 = new TextView(getActivity());
 
-
             tv1.setWidth(width);
             tv2.setWidth(width);
             tv3.setWidth(width);
@@ -88,8 +90,8 @@ public class ViewTopic3 extends Fragment {
             tv8.setWidth(width);
             tv9.setWidth(width);
 
-/*            tv1.setText(pojoTableAdapter3.getColomn1());
-            tv2.setText(pojoTableAdapter3.getColomn2());
+/*          tv1.setText(pojoTableAdapter3.getColomn1());
+          tv2.setText(pojoTableAdapter3.getColomn2());
             tv3.setText(pojoTableAdapter3.getColomn3());
             tv4.setText(pojoTableAdapter3.getColomn4());
             tv5.setText(pojoTableAdapter3.getColomn5());
@@ -98,14 +100,13 @@ public class ViewTopic3 extends Fragment {
             tv8.setText(pojoTableAdapter3.getColomn8());
             tv9.setText(pojoTableAdapter3.getColomn9());
 */
-
             tv1.setText("w1");
             tv2.setText("w2");
-            tv3.setText("w3");
-            tv4.setText("w4");
-            tv5.setText("w5");
-            tv6.setText("w6");
-            tv7.setText("w7");
+            tv3.setText(pojoTableAdapter3.getColomn3()+"");
+            tv4.setText(pojoTableAdapter3.getColomn4()+"");
+            tv5.setText(pojoTableAdapter3.getColomn5()+"");
+            tv6.setText(pojoTableAdapter3.getColomn6()+"");
+            tv7.setText(pojoTableAdapter3.getColomn7()+"");
             tv8.setText("w8");
             tv9.setText("w9");
 
