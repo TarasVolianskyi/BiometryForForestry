@@ -32,9 +32,8 @@ public class ViewTopic3 extends Fragment {
     BLTopic3 blTopic3 = new BLTopic3();
     private TableLayout tableLayout3;
     private ArrayList<Integer> arrayListTopic3 = blTopic3.createArrayColomn3();
-    private POJOTableAdapter3 pojoTableAdapter3=new POJOTableAdapter3();
+    private POJOTableAdapter3 pojoTableAdapter3 = new POJOTableAdapter3();
     private ArrayList<POJOTableAdapter3> arrayList;
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -65,7 +64,7 @@ public class ViewTopic3 extends Fragment {
     private void fillTableLayout() {
         fillData();
         for (int i = 0; i < arrayList.size(); i++) {
-          pojoTableAdapter3 = arrayList.get(i);
+            pojoTableAdapter3 = arrayList.get(i);
             int width = 150;
             TableRow localRow = new TableRow(getActivity());
             localRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100));
@@ -91,7 +90,7 @@ public class ViewTopic3 extends Fragment {
             tv9.setWidth(width);
 
 /*          tv1.setText(pojoTableAdapter3.getColomn1());
-          tv2.setText(pojoTableAdapter3.getColomn2());
+            tv2.setText(pojoTableAdapter3.getColomn2());
             tv3.setText(pojoTableAdapter3.getColomn3());
             tv4.setText(pojoTableAdapter3.getColomn4());
             tv5.setText(pojoTableAdapter3.getColomn5());
@@ -102,11 +101,11 @@ public class ViewTopic3 extends Fragment {
 */
             tv1.setText("w1");
             tv2.setText("w2");
-            tv3.setText(pojoTableAdapter3.getColomn3()+"");
-            tv4.setText(pojoTableAdapter3.getColomn4()+"");
-            tv5.setText(pojoTableAdapter3.getColomn5()+"");
-            tv6.setText(pojoTableAdapter3.getColomn6()+"");
-            tv7.setText(pojoTableAdapter3.getColomn7()+"");
+            tv3.setText(pojoTableAdapter3.getColomn3() + "");
+            tv4.setText(pojoTableAdapter3.getColomn4() + "");
+            tv5.setText(pojoTableAdapter3.getColomn5() + "");
+            tv6.setText(pojoTableAdapter3.getColomn6() + "");
+            tv7.setText(pojoTableAdapter3.getColomn7() + "");
             tv8.setText("w8");
             tv9.setText("w9");
 

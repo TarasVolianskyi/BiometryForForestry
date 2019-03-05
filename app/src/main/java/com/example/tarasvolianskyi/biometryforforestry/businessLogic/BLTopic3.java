@@ -14,6 +14,14 @@ import java.util.Collections;
 public class BLTopic3 {
 
     private int numberOfTrees = 105;
+
+    private int sumColomn4;
+    private int sumColomn5;
+    private int sumColomn6;
+    private int sumColomn7;
+    private int sumColomn9;
+
+
     private POJOTableAdapter3 pojoTableAdapter3 = new POJOTableAdapter3();
     private ArrayList<Integer> myArrayDiametrRozrads = new BLTopic21().getArrayWithDiametrRozrads();// TODO change
     private ArrayList<Integer> myArrayDiametrChastotu = (ArrayList<Integer>) new BLTopic21().getArrayWithDiametrRozrads();
@@ -139,5 +147,13 @@ public class BLTopic3 {
         arrayListColomn6Tab3 = countArray(3);
         arrayListColomn7Tab3 = countArray(4);
     }
+
+    private double findSummOfArrayItems(ArrayList<Integer> arrayListOfItems) {
+        double sum = 0;
+        for (int i = 1; i < arrayListOfItems.size(); i++)
+            sum += arrayListOfItems.get(i);
+        return sum;
+    }
+
 
 }
