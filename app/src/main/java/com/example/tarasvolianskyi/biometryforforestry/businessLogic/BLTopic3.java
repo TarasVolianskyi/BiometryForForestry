@@ -15,12 +15,15 @@ public class BLTopic3 {
 
     private int numberOfTrees = 105;
 
-    private int sumColomn4;
-    private int sumColomn5;
-    private int sumColomn6;
-    private int sumColomn7;
-    private int sumColomn9;
-
+    private double sumColomn4;
+    private double sumColomn5;
+    private double sumColomn6;
+    private double sumColomn7;
+    private double sumColomn9;
+    private double m1;
+    private double m2;
+    private double m3;
+    private double m4;
 
     private POJOTableAdapter3 pojoTableAdapter3 = new POJOTableAdapter3();
     private ArrayList<Integer> myArrayDiametrRozrads = new BLTopic21().getArrayWithDiametrRozrads();// TODO change
@@ -155,5 +158,27 @@ public class BLTopic3 {
         return sum;
     }
 
+    public double getSumColomn4Topic3() {
+        return sumColomn4 = findSummOfArrayItems(countArrayColomn4());
+    }
 
+    public double getSumColomn5Topic3() {
+        return sumColomn4 = findSummOfArrayItems(countArrayColomn5());
+    }
+
+    public double getSumColomn6Topic3() {
+        return sumColomn4 = findSummOfArrayItems(countArrayColomn6());
+    }
+
+    public double getSumColomn7Topic3() {
+        return sumColomn4 = findSummOfArrayItems(countArrayColomn7());
+    }
+
+    public double getSumColomn9Topic3() {
+        return sumColomn4 = findSummOfArrayItems(countArrayColomn4());
+    }
+
+    public double getM1() {
+        return m1 = getSumColomn4Topic3() / (double) numberOfTrees;
+    }
 }
