@@ -53,7 +53,7 @@ public class ViewTopic3 extends Fragment {
         //tvX2.setText(Html.fromHtml("x<sup>2</sup>"));
         tvX2.setText(Html.fromHtml("  A<sup>2</sup>+B<sup>2</sup> = C<sup>2</sup>"));
         tvTest3 = (TextView) view.findViewById(R.id.testTopic3);
-        tvTest3.setText(blTopic3.getSumColomn4Topic3() + "");
+        tvTest3.setText(blTopic3.getM1() + " - " + blTopic3.getM2() + " - " + blTopic3.getM3() + " - " + blTopic3.getM4());
 
         //blTopic3.showListInTable();
         fillTableLayout();

@@ -179,6 +179,18 @@ public class BLTopic3 {
     }
 
     public double getM1() {
-        return m1 = getSumColomn4Topic3() / (double) numberOfTrees;
+        return m1 = Math.round((getSumColomn4Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
+    }
+
+    public double getM2() {
+        return m2 = Math.round((getSumColomn5Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
+    }
+
+    public double getM3() {
+        return m3 = Math.round((getSumColomn6Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
+    }
+
+    public double getM4() {
+        return m4 = Math.round((getSumColomn7Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
     }
 }
