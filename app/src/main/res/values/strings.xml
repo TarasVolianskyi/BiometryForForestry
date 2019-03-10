@@ -112,5 +112,6 @@
     <string name="title_of_chapter_32">3.2. Обчислення умовних центральних моментів</string>
     <string name="title_of_chapter_31">3.1. Обчислення умовних початкових моментів</string>
     <string name="control">Контроль</string>
+    <string name="controlText31">Оскільки М\'0 завжди дорівнює одиниці, злівої частини співвідношення контролю випливає:</string>
 
 </resources>

@@ -193,4 +193,8 @@ public class BLTopic3 {
     public double getM4() {
         return m4 = Math.round((getSumColomn7Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
     }
+
+    public int getNumberOfTrees(){
+        return numberOfTrees;
+    }
 }
