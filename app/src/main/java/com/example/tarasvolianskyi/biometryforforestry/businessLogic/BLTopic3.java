@@ -153,7 +153,7 @@ public class BLTopic3 {
 
     private double findSummOfArrayItems(ArrayList<Integer> arrayListOfItems) {
         double sum = 0;
-        for (int i = 1; i < arrayListOfItems.size(); i++)
+        for (int i = 0; i < arrayListOfItems.size(); i++)
             sum += arrayListOfItems.get(i);
         return sum;
     }
