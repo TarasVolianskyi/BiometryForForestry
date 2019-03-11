@@ -25,6 +25,10 @@ public class BLTopic3 {
     private double m3;
     private double m4;
 
+    private double mu2;
+    private double mu3;
+    private double mu4;
+
     private POJOTableAdapter3 pojoTableAdapter3 = new POJOTableAdapter3();
     private ArrayList<Integer> myArrayDiametrRozrads = new BLTopic21().getArrayWithDiametrRozrads();// TODO change
     private ArrayList<Integer> myArrayDiametrChastotu = (ArrayList<Integer>) new BLTopic21().getArrayWithDiametrRozrads();
@@ -194,7 +198,27 @@ public class BLTopic3 {
         return m4 = Math.round((getSumColomn7Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
     }
 
-    public int getNumberOfTrees(){
+    public int getNumberOfTrees() {
         return numberOfTrees;
+    }
+
+    public double getControlLeft() {
+        return Math.round((1.0 + 4 * getM1() + 6 * getM2() + 4 * getM3() + getM4()) * 10000.0) / 10000.0;
+    }
+
+    public double getControlRight() {
+        return Math.round((getSumColomn9Topic3() / (double) numberOfTrees) * 10000.0) / 10000.0;
+    }
+
+    public double getMu2() {
+        return Math.round((getM2() - Math.pow(getM1(), 2)) * 10000.0) / 10000.0;
+    }
+
+    public double getMu3() {
+        return Math.round((getM3() - 3 * getM1() * getM2() + 2 * Math.pow(getM1(), 3)) * 10000.0) / 10000.0;
+    }
+
+    public double getMu4() {
+        return Math.round((getM4() - 4 * getM1() * getM3() + 6 * Math.pow(getM1(), 2) * getM2() - 3 * Math.pow(getM1(), 4)) * 10000.0) / 10000.0;
     }
 }

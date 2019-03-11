@@ -63,12 +63,15 @@ public class ViewTopic3 extends Fragment {
         tvTest3.setText(blTopic3.getSumColomn4Topic3() + "");
         //blTopic3.showListInTable();
 
+        //3.1
         tvM1topic3 = view.findViewById(R.id.tv_chapter_31_M1_view_fragment);
         tvM2topic3 = view.findViewById(R.id.tv_chapter_31_M2_view_fragment);
         tvM3topic3 = view.findViewById(R.id.tv_chapter_31_M3_view_fragment);
         tvM4topic3 = view.findViewById(R.id.tv_chapter_31_M4_view_fragment);
         tvControlLeftTopic3 = view.findViewById(R.id.tv_chapter_31_control_left_view_fragment);
         tvControlRightTopic3 = view.findViewById(R.id.tv_chapter_31_control_right_view_fragment);
+
+        //3.2
 
 
         setTexts();
@@ -81,8 +84,9 @@ public class ViewTopic3 extends Fragment {
         tvM3topic3.setText("M3 = " + blTopic3.getSumColomn6Topic3() + " / " + blTopic3.getNumberOfTrees() + " = " + blTopic3.getM3());
         tvM4topic3.setText("M4 = " + blTopic3.getSumColomn7Topic3() + " / " + blTopic3.getNumberOfTrees() + " = " + blTopic3.getM4());
         tvControlLeftTopic3.setText("1 + 4 * " + blTopic3.getM1() + " + 6 * " + blTopic3.getM2() + " + 4 * "
-                + blTopic3.getM3() + " + " + blTopic3.getM4() + " = " + " ;");
-        tvControlRightTopic3.setText("а з правої - " + blTopic3.getSumColomn9Topic3() + " / " + blTopic3.getNumberOfTrees() + " = ");
+                + blTopic3.getM3() + " + " + blTopic3.getM4() + " = " + blTopic3.getControlLeft() + " ;");
+        tvControlRightTopic3.setText("а з правої - " + blTopic3.getSumColomn9Topic3() + " / " +
+                blTopic3.getNumberOfTrees() + " = " + blTopic3.getControlRight() + " .");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)

@@ -216,6 +216,10 @@
                     android:textStyle="italic" />
 
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -261,6 +265,11 @@
                     android:text="@string/title_of_chapter_32"
                     android:textStyle="bold" />
 
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -283,6 +292,10 @@
                     android:text="@string/title_of_chapter_33"
                     android:textStyle="bold" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -304,6 +317,10 @@
                     android:gravity="left"
                     android:text="@string/title_of_chapter_34"
                     android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
 
                 <TextView
                     android:layout_width="match_parent"
