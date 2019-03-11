@@ -265,6 +265,26 @@
                     android:text="@string/title_of_chapter_32"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/tv_chapter_32_Mu2_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_32_Mu3_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_32_Mu4_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
 
                 <View
                     android:layout_width="match_parent"
@@ -278,6 +298,19 @@
                     android:text="@string/control"
                     android:textStyle="italic" />
 
+                <TextView
+                    android:id="@+id/tv_chapter_32_Mu3_control_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_32_Mu4_control_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left" />
 
                 <View
                     android:layout_width="match_parent"

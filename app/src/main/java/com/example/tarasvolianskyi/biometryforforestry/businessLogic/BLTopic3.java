@@ -219,6 +219,15 @@ public class BLTopic3 {
     }
 
     public double getMu4() {
-        return Math.round((getM4() - 4 * getM1() * getM3() + 6 * Math.pow(getM1(), 2) * getM2() - 3 * Math.pow(getM1(), 4)) * 10000.0) / 10000.0;
+        return Math.round((getM4() - 4 * getM1() * getM3() + 6 * Math.pow(getM1(), 2) * getM2() -
+                3 * Math.pow(getM1(), 4)) * 10000.0) / 10000.0;
+    }
+
+    public double getMu3Control() {
+        return Math.round((getM3() - 3 * getM1() * getMu2() - Math.pow(getM1(), 3)) * 10000.0) / 10000.0;
+    }
+
+    public double getMu4Control() {
+        return Math.round((getM4() - 4 * getM1() * getMu3() - 6 * Math.pow(getM1(), 2) * getMu2() - Math.pow(getM1(), 4)) * 10000.0) / 10000.0;
     }
 }

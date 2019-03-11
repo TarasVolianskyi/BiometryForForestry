@@ -42,6 +42,11 @@ public class ViewTopic3 extends Fragment {
     private TextView tvM4topic3;
     private TextView tvControlLeftTopic3;
     private TextView tvControlRightTopic3;
+    private TextView tvMu2topic3;
+    private TextView tvMu3topic3;
+    private TextView tvMu4topic3;
+    private TextView tvMu3controlTopic3;
+    private TextView tvMu4controlTopic3;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -72,6 +77,13 @@ public class ViewTopic3 extends Fragment {
         tvControlRightTopic3 = view.findViewById(R.id.tv_chapter_31_control_right_view_fragment);
 
         //3.2
+        tvMu2topic3 = view.findViewById(R.id.tv_chapter_32_Mu2_view_fragment);
+        tvMu3topic3 = view.findViewById(R.id.tv_chapter_32_Mu3_view_fragment);
+        tvMu4topic3 = view.findViewById(R.id.tv_chapter_32_Mu4_view_fragment);
+        tvMu3controlTopic3 = view.findViewById(R.id.tv_chapter_32_Mu3_control_view_fragment);
+        tvMu4controlTopic3 = view.findViewById(R.id.tv_chapter_32_Mu4_control_view_fragment);
+
+        //3.3
 
 
         setTexts();
@@ -79,6 +91,7 @@ public class ViewTopic3 extends Fragment {
     }
 
     private void setTexts() {
+        //3.1
         tvM1topic3.setText("M1 = " + blTopic3.getSumColomn4Topic3() + " / " + blTopic3.getNumberOfTrees() + " = " + blTopic3.getM1());
         tvM2topic3.setText("M2 = " + blTopic3.getSumColomn5Topic3() + " / " + blTopic3.getNumberOfTrees() + " = " + blTopic3.getM2());
         tvM3topic3.setText("M3 = " + blTopic3.getSumColomn6Topic3() + " / " + blTopic3.getNumberOfTrees() + " = " + blTopic3.getM3());
@@ -87,6 +100,27 @@ public class ViewTopic3 extends Fragment {
                 + blTopic3.getM3() + " + " + blTopic3.getM4() + " = " + blTopic3.getControlLeft() + " ;");
         tvControlRightTopic3.setText("а з правої - " + blTopic3.getSumColomn9Topic3() + " / " +
                 blTopic3.getNumberOfTrees() + " = " + blTopic3.getControlRight() + " .");
+
+        //3.2
+        tvMu2topic3.setText(Html.fromHtml("Mu'2 = " + blTopic3.getM2() + " - ( " +
+                blTopic3.getM1() + " )<sup>2</sup> = " + blTopic3.getMu2() + " ;"));
+        tvMu3topic3.setText(Html.fromHtml("Mu'3 = " + blTopic3.getM3() + " - 3 * " +
+                blTopic3.getM1() + " * " + blTopic3.getM2() + " + 2 * ( " + blTopic3.getM1() +
+                " )<sup>3</sup> = " + blTopic3.getMu3()));
+        tvMu4topic3.setText(Html.fromHtml("Mu'4 = " + blTopic3.getM4() + " - $ * " +
+                blTopic3.getM1() + " * " + blTopic3.getM3() + " + 6 * ( " + blTopic3.getM1() +
+                " )<sup>2</sup>  * " + blTopic3.getM2() + " - 3 * ( " + blTopic3.getM1() +
+                " )<sup>4</sup> = " + blTopic3.getMu4()));
+        tvMu3controlTopic3.setText(Html.fromHtml(blTopic3.getM3() + " - 3 * " +
+                blTopic3.getM1() + " * " + blTopic3.getMu2() + " - ( " + blTopic3.getM1() +
+                " )<sup>3</sup> = " + blTopic3.getMu3Control() + " ;"));
+        tvMu4controlTopic3.setText(Html.fromHtml(blTopic3.getM4() + " - 4 * " +
+                blTopic3.getM1() + " * " + blTopic3.getMu3() + " - 6 * ( " + blTopic3.getM1() +
+                " )<sup>2</sup> * " + blTopic3.getMu2() + " - ( " + blTopic3.getM1() +
+                " )<sup>4</sup> = " + blTopic3.getMu4Control() + " ."));
+
+        //3.3
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
