@@ -107,7 +107,7 @@ public class ViewTopic3 extends Fragment {
         tvMu3topic3.setText(Html.fromHtml("Mu'3 = " + blTopic3.getM3() + " - 3 * " +
                 blTopic3.getM1() + " * " + blTopic3.getM2() + " + 2 * ( " + blTopic3.getM1() +
                 " )<sup>3</sup> = " + blTopic3.getMu3()));
-        tvMu4topic3.setText(Html.fromHtml("Mu'4 = " + blTopic3.getM4() + " - $ * " +
+        tvMu4topic3.setText(Html.fromHtml("Mu'4 = " + blTopic3.getM4() + " - 4 * " +
                 blTopic3.getM1() + " * " + blTopic3.getM3() + " + 6 * ( " + blTopic3.getM1() +
                 " )<sup>2</sup>  * " + blTopic3.getM2() + " - 3 * ( " + blTopic3.getM1() +
                 " )<sup>4</sup> = " + blTopic3.getMu4()));
