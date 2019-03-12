@@ -47,6 +47,12 @@ public class ViewTopic3 extends Fragment {
     private TextView tvMu4topic3;
     private TextView tvMu3controlTopic3;
     private TextView tvMu4controlTopic3;
+    private TextView tvChapt3Form1TopTopic3;
+    private TextView tvChapt3Form1DownTopic3;
+    private TextView tvR3Topic3;
+    private TextView tvChapt3Form2TopTopic3;
+    private TextView tvChapt3Form2DownTopic3;
+    private TextView tvR4Topic3;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -84,7 +90,12 @@ public class ViewTopic3 extends Fragment {
         tvMu4controlTopic3 = view.findViewById(R.id.tv_chapter_32_Mu4_control_view_fragment);
 
         //3.3
-
+        tvChapt3Form1TopTopic3 = view.findViewById(R.id.tv_chapter_33_form1_top_view_fragment);
+        tvChapt3Form1DownTopic3 = view.findViewById(R.id.tv_chapter_33_form1_down_view_fragment);
+        tvR3Topic3 = view.findViewById(R.id.tv_chapter_33_form1_res_view_fragment);
+        tvChapt3Form2TopTopic3 = view.findViewById(R.id.tv_chapter_33_form2_top_view_fragment);
+        tvChapt3Form2DownTopic3 = view.findViewById(R.id.tv_chapter_33_form2_down_view_fragment);
+        tvR4Topic3 = view.findViewById(R.id.tv_chapter_33_form2_res_view_fragment);
 
         setTexts();
         fillTableLayout();
@@ -120,6 +131,16 @@ public class ViewTopic3 extends Fragment {
                 " )<sup>4</sup> = " + blTopic3.getMu4Control() + " ."));
 
         //3.3
+        tvChapt3Form1TopTopic3.setText(blTopic3.getMu3() + "");
+        tvChapt3Form1DownTopic3.setText(Html.fromHtml("( " + blTopic3.getMu2() + " )<sup>3/2</sup> "));
+        tvR3Topic3.setText(blTopic3.getR3() + " ;");
+        tvChapt3Form2TopTopic3.setText(blTopic3.getMu4() + "");
+        tvChapt3Form2DownTopic3.setText(Html.fromHtml("( " + blTopic3.getMu2() + " )<sup>2</sup> "));
+        tvR4Topic3.setText(blTopic3.getR4() + " √ .");
+
+        //3.4
+
+
 
     }
 

@@ -113,5 +113,16 @@
     <string name="title_of_chapter_31">3.1. Обчислення умовних початкових моментів</string>
     <string name="control">Контроль</string>
     <string name="controlText31">Оскільки М\'0 завжди дорівнює одиниці, злівої частини співвідношення контролю випливає:</string>
+    <string name="ser_arefm">- середнє арифметичне значення</string>
+    <string name="ser_kvadratichne">- середнє квадратичне відхилення</string>
+    <string name="koef_minlv">- коефіцієнт мінливості</string>
+    <string name="pokaznk_asumetrii">- показник асиметрії</string>
+    <string name="pokaznik_ekscesy">- показник ексцесу</string>
+    <string name="osn_pomilk_ser_znach">- основна помилка середнього значення</string>
+    <string name="osn_pomilk_ser_kvdr_znach">- основна помилка середнього квадратичного відхилення</string>
+    <string name="osn_pomilk_koef_minlv">- основна помилка коефіцієнта мінливості</string>
+    <string name="osn_pomilk_pokazn_asimetrii">- основна помилка показника асиметрії</string>
+    <string name="osn_pomilk_pokazn_ekscesy">- основна помилка показника ексцесу</string>
+    <string name="pokazn_tochnosti_doslidy">- показник точності досліду</string>
 
 </resources>

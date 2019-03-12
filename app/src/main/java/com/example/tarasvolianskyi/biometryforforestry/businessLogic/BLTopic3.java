@@ -67,7 +67,6 @@ public class BLTopic3 {
                 itemsBiggerThanHalf.add(i);
             }
         }
-        //res = Collections.min(itemsBiggerThanHalf);
         res = itemsBiggerThanHalf.get(0) + 1;
         return res;
     }
@@ -230,4 +229,58 @@ public class BLTopic3 {
     public double getMu4Control() {
         return Math.round((getM4() - 4 * getM1() * getMu3() - 6 * Math.pow(getM1(), 2) * getMu2() - Math.pow(getM1(), 4)) * 10000.0) / 10000.0;
     }
+
+    public double getR3() {
+        return Math.round((getMu3() / Math.pow(getMu2(), 1.5)) * 1000.0) / 1000.0;
+    }
+
+    public double getR4() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res1() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res2() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res3() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res4() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res5() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res6() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res7() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res8() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res9() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res10() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+    public double getChapter35Res11() {
+        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    }
+
+
 }

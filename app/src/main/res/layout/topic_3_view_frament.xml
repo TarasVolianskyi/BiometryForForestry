@@ -270,21 +270,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="left" />
+                    android:gravity="left"
+                    android:padding="4dp" />
 
                 <TextView
                     android:id="@+id/tv_chapter_32_Mu3_view_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="left" />
+                    android:gravity="left"
+                    android:padding="4dp" />
 
                 <TextView
                     android:id="@+id/tv_chapter_32_Mu4_view_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="left" />
+                    android:gravity="left"
+                    android:padding="4dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -330,6 +333,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="=" />
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -353,9 +364,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="=" />
 
                     <TextView
                         android:id="@+id/tv_chapter_33_form1_res_view_fragment"
@@ -363,7 +383,65 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="25"
-                        android:gravity="center" />
+                        android:gravity="left" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="=" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_33_form2_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_33_form2_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_33_form2_res_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left" />
 
                 </LinearLayout>
 
@@ -372,18 +450,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
-                    android:text="@string/control"
-                    android:textStyle="italic" />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="15dp" />
 
                 <TextView
                     android:id="@+id/tv_chapter_34_title_view_fragment"
@@ -394,9 +460,214 @@
                     android:text="@string/title_of_chapter_34"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/ser_arefm" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res1_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/ser_kvadratichne" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res2_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/koef_minlv" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res3_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/pokaznk_asumetrii" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res4_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/pokaznik_ekscesy" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res5_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/osn_pomilk_ser_znach" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res6_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/osn_pomilk_ser_kvdr_znach" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res7_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/osn_pomilk_koef_minlv" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res8_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/osn_pomilk_pokazn_asimetrii" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res9_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/osn_pomilk_pokazn_ekscesy" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res10_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/pokazn_tochnosti_doslidy" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_34_res11_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -405,7 +676,6 @@
                     android:gravity="left"
                     android:text="@string/control"
                     android:textStyle="italic" />
-
 
                 <View
                     android:layout_width="match_parent"
@@ -419,8 +689,6 @@
                     android:gravity="left"
                     android:text="@string/title_of_chapter_35"
                     android:textStyle="bold" />
-
-
             </LinearLayout>
 
             <View
