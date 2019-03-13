@@ -14,7 +14,7 @@ import java.util.Collections;
 public class BLTopic3 {
 
     private int numberOfTrees = 105;
-
+    BLTopic21 blTopic21 = new BLTopic21();
     private double sumColomn4;
     private double sumColomn5;
     private double sumColomn6;
@@ -238,48 +238,55 @@ public class BLTopic3 {
         return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
     }
 
-    public double getChapter35Res1() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res1() {
+        return Math.round((getChapter34X0() + blTopic21.countCx() * getM1()) * 10.0) / 10.0;
     }
 
-    public double getChapter35Res2() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res2() {
+        return Math.round((blTopic21.countCx() * Math.sqrt(getM2())) * 100.0) / 100.0;
     }
 
-    public double getChapter35Res3() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res3() {
+        return Math.round((getChapter34Res2() / getChapter34Res1() * 100) * 10.0) / 10.0;
     }
 
-    public double getChapter35Res4() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res4() {
+        return Math.round(getR3() * 100.0) / 100.0;
     }
 
-    public double getChapter35Res5() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res5() {
+        return Math.round((getR4() - 3) * 100.0) / 100.0;
     }
 
-    public double getChapter35Res6() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res6() {
+        return Math.round((getChapter34Res2() / Math.sqrt(numberOfTrees)) * 100.0) / 100.0;
     }
 
-    public double getChapter35Res7() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res7() {
+        return Math.round((getChapter34Res2() / Math.sqrt(2 * numberOfTrees)) * 1000.0) / 1000.0;
     }
 
-    public double getChapter35Res8() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res8() {
+        return Math.round(((getChapter34Res3() / Math.sqrt(2 * numberOfTrees)) * Math.sqrt(1 + 2 * Math.pow(getChapter34Res3() / 100,
+                2))) * 10.0) / 10.0;
     }
 
-    public double getChapter35Res9() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res9() {
+        return Math.round(Math.sqrt(6 / (double)numberOfTrees) * 100.0) / 100.0;
     }
 
-    public double getChapter35Res10() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res10() {
+        return Math.round(2*Math.sqrt(6 / (double)numberOfTrees) * 100.0) / 100.0;
     }
 
-    public double getChapter35Res11() {
-        return Math.round((getMu4() / Math.pow(getMu2(), 2)) * 1000.0) / 1000.0;
+    public double getChapter34Res11() {
+        return Math.round((getChapter34Res6() / getChapter34Res1()*100) * 10.0) / 10.0;
+    }
+
+    public double getChapter34X0() {
+        double locX1 = blTopic21.countX1();
+        double locCx = blTopic21.countCx();
+        return locX1 + locCx * findPlaceWithZeroForColomn3Table3();
     }
 
 

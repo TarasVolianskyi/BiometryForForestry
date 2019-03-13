@@ -54,6 +54,18 @@ public class ViewTopic3 extends Fragment {
     private TextView tvChapt3Form2DownTopic3;
     private TextView tvR4Topic3;
 
+    private TextView tvCh34Res1Topic3;
+    private TextView tvCh34Res2Topic3;
+    private TextView tvCh34Res3Topic3;
+    private TextView tvCh34Res4Topic3;
+    private TextView tvCh34Res5Topic3;
+    private TextView tvCh34Res6Topic3;
+    private TextView tvCh34Res7Topic3;
+    private TextView tvCh34Res8Topic3;
+    private TextView tvCh34Res9Topic3;
+    private TextView tvCh34Res10Topic3;
+    private TextView tvCh34Res11Topic3;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Nullable
@@ -97,6 +109,19 @@ public class ViewTopic3 extends Fragment {
         tvChapt3Form2DownTopic3 = view.findViewById(R.id.tv_chapter_33_form2_down_view_fragment);
         tvR4Topic3 = view.findViewById(R.id.tv_chapter_33_form2_res_view_fragment);
 
+        //3.4
+        tvCh34Res1Topic3 = view.findViewById(R.id.tv_chapter_34_res1_view_fragment);
+        tvCh34Res2Topic3 = view.findViewById(R.id.tv_chapter_34_res2_view_fragment);
+        tvCh34Res3Topic3 = view.findViewById(R.id.tv_chapter_34_res3_view_fragment);
+        tvCh34Res4Topic3 = view.findViewById(R.id.tv_chapter_34_res4_view_fragment);
+        tvCh34Res5Topic3 = view.findViewById(R.id.tv_chapter_34_res5_view_fragment);
+        tvCh34Res6Topic3 = view.findViewById(R.id.tv_chapter_34_res6_view_fragment);
+        tvCh34Res7Topic3 = view.findViewById(R.id.tv_chapter_34_res7_view_fragment);
+        tvCh34Res8Topic3 = view.findViewById(R.id.tv_chapter_34_res8_view_fragment);
+        tvCh34Res9Topic3 = view.findViewById(R.id.tv_chapter_34_res9_view_fragment);
+        tvCh34Res10Topic3 = view.findViewById(R.id.tv_chapter_34_res10_view_fragment);
+        tvCh34Res11Topic3 = view.findViewById(R.id.tv_chapter_34_res11_view_fragment);
+
         setTexts();
         fillTableLayout();
     }
@@ -136,11 +161,20 @@ public class ViewTopic3 extends Fragment {
         tvR3Topic3.setText(blTopic3.getR3() + " ;");
         tvChapt3Form2TopTopic3.setText(blTopic3.getMu4() + "");
         tvChapt3Form2DownTopic3.setText(Html.fromHtml("( " + blTopic3.getMu2() + " )<sup>2</sup> "));
-        tvR4Topic3.setText(blTopic3.getR4() + " √ .");
+        tvR4Topic3.setText(blTopic3.getR4() + " √ ." + blTopic3.getChapter34X0());
 
         //3.4
-
-
+        tvCh34Res1Topic3.setText(blTopic3.getChapter34Res1() + "");
+        tvCh34Res2Topic3.setText(blTopic3.getChapter34Res2() + "");
+        tvCh34Res3Topic3.setText(blTopic3.getChapter34Res3() + "");
+        tvCh34Res4Topic3.setText(blTopic3.getChapter34Res4() + "");
+        tvCh34Res5Topic3.setText(blTopic3.getChapter34Res5() + "");
+        tvCh34Res6Topic3.setText(blTopic3.getChapter34Res6() + "");
+        tvCh34Res7Topic3.setText(blTopic3.getChapter34Res7() + "");
+        tvCh34Res8Topic3.setText(blTopic3.getChapter34Res8() + "");
+        tvCh34Res9Topic3.setText(blTopic3.getChapter34Res9() + "");
+        tvCh34Res10Topic3.setText(blTopic3.getChapter34Res10() + "");
+        tvCh34Res11Topic3.setText(blTopic3.getChapter34Res11() + "");
 
     }
 

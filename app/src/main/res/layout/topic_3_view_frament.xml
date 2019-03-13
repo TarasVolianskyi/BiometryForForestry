@@ -667,18 +667,6 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="5dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:gravity="left"
-                    android:text="@string/control"
-                    android:textStyle="italic" />
-
-                <View
-                    android:layout_width="match_parent"
                     android:layout_height="15dp" />
 
                 <TextView
@@ -689,6 +677,8 @@
                     android:gravity="left"
                     android:text="@string/title_of_chapter_35"
                     android:textStyle="bold" />
+
+
             </LinearLayout>
 
             <View
