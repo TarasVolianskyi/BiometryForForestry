@@ -124,5 +124,6 @@
     <string name="osn_pomilk_pokazn_asimetrii">- основна помилка показника асиметрії</string>
     <string name="osn_pomilk_pokazn_ekscesy">- основна помилка показника ексцесу</string>
     <string name="pokazn_tochnosti_doslidy">- показник точності досліду</string>
+    <string name="final_for_chapter_34">Одержані статистики та їхні помилки дозволяють будувати довірчі інтервали для відповідних цим статистикам параметрів, виходячи із співвідношення</string>
 
 </resources>

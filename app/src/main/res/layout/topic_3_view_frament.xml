@@ -665,6 +665,15 @@
                     android:gravity="left"
                     android:padding="4dp" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="@string/final_for_chapter_34" />
+
+
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="15dp" />
@@ -677,6 +686,46 @@
                     android:gravity="left"
                     android:text="@string/title_of_chapter_35"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_35_res1_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_35_res2_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_35_res3_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_35_res4_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_35_res5_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="4dp" />
 
 
             </LinearLayout>

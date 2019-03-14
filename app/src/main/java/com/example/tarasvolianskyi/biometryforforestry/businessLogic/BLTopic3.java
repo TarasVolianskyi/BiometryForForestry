@@ -272,15 +272,15 @@ public class BLTopic3 {
     }
 
     public double getChapter34Res9() {
-        return Math.round(Math.sqrt(6 / (double)numberOfTrees) * 100.0) / 100.0;
+        return Math.round(Math.sqrt(6 / (double) numberOfTrees) * 100.0) / 100.0;
     }
 
     public double getChapter34Res10() {
-        return Math.round(2*Math.sqrt(6 / (double)numberOfTrees) * 100.0) / 100.0;
+        return Math.round(2 * Math.sqrt(6 / (double) numberOfTrees) * 100.0) / 100.0;
     }
 
     public double getChapter34Res11() {
-        return Math.round((getChapter34Res6() / getChapter34Res1()*100) * 10.0) / 10.0;
+        return Math.round((getChapter34Res6() / getChapter34Res1() * 100) * 10.0) / 10.0;
     }
 
     public double getChapter34X0() {
@@ -289,5 +289,49 @@ public class BLTopic3 {
         return locX1 + locCx * findPlaceWithZeroForColomn3Table3();
     }
 
+    //3.5
+    public double getKvantul() {
+        return 1.96;
+    }
 
+
+    public double getLimitRes1Min() {
+        return Math.round((getChapter34Res1() - getKvantul() * getChapter34Res6()) * 100.0) / 100.0;
+    }
+
+    public double getLimitRes1Max() {
+        return Math.round((getChapter34Res1() + getKvantul() * getChapter34Res6()) * 100.0) / 100.0;
+    }
+
+    public double getLimitRes2Min() {
+        return Math.round((getChapter34Res2() - getKvantul() * getChapter34Res7()) * 10.0) / 10.0;
+    }
+
+    public double getLimitRes2Max() {
+        return Math.round((getChapter34Res2() + getKvantul() * getChapter34Res7()) * 10.0) / 10.0;
+    }
+
+    public double getLimitRes3Min() {
+        return Math.round((getChapter34Res3() - getKvantul() * getChapter34Res8()) * 10.0) / 10.0;
+    }
+
+    public double getLimitRes3Max() {
+        return Math.round((getChapter34Res3() + getKvantul() * getChapter34Res8()) * 10.0) / 10.0;
+    }
+
+    public double getLimitRes4Min() {
+        return Math.round((getChapter34Res4() - getKvantul() * getChapter34Res9()) * 100.0) / 100.0;
+    }
+
+    public double getLimitRes4Max() {
+        return Math.round((getChapter34Res4() + getKvantul() * getChapter34Res9()) * 100.0) / 100.0;
+    }
+
+    public double getLimitRes5Min() {
+        return Math.round((getChapter34Res5() - getKvantul() * getChapter34Res10()) * 100.0) / 100.0;
+    }
+
+    public double getLimitRes5Max() {
+        return Math.round((getChapter34Res5() + getKvantul() * getChapter34Res10()) * 100.0) / 100.0;
+    }
 }

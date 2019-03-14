@@ -66,6 +66,12 @@ public class ViewTopic3 extends Fragment {
     private TextView tvCh34Res10Topic3;
     private TextView tvCh34Res11Topic3;
 
+    private TextView tvCh35Res1Topic3;
+    private TextView tvCh35Res2Topic3;
+    private TextView tvCh35Res3Topic3;
+    private TextView tvCh35Res4Topic3;
+    private TextView tvCh35Res5Topic3;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Nullable
@@ -122,6 +128,13 @@ public class ViewTopic3 extends Fragment {
         tvCh34Res10Topic3 = view.findViewById(R.id.tv_chapter_34_res10_view_fragment);
         tvCh34Res11Topic3 = view.findViewById(R.id.tv_chapter_34_res11_view_fragment);
 
+        //3.5
+        tvCh35Res1Topic3 = view.findViewById(R.id.tv_chapter_35_res1_view_fragment);
+        tvCh35Res2Topic3 = view.findViewById(R.id.tv_chapter_35_res2_view_fragment);
+        tvCh35Res3Topic3 = view.findViewById(R.id.tv_chapter_35_res3_view_fragment);
+        tvCh35Res4Topic3 = view.findViewById(R.id.tv_chapter_35_res4_view_fragment);
+        tvCh35Res5Topic3 = view.findViewById(R.id.tv_chapter_35_res5_view_fragment);
+
         setTexts();
         fillTableLayout();
     }
@@ -175,6 +188,28 @@ public class ViewTopic3 extends Fragment {
         tvCh34Res9Topic3.setText(blTopic3.getChapter34Res9() + "");
         tvCh34Res10Topic3.setText(blTopic3.getChapter34Res10() + "");
         tvCh34Res11Topic3.setText(blTopic3.getChapter34Res11() + "");
+
+        //3.5
+        tvCh35Res1Topic3.setText("R1 = " + blTopic3.getChapter34Res1() + " ± " +
+                blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res6() + " = " +
+                blTopic3.getLimitRes1Min() + " ÷ " + blTopic3.getLimitRes1Max() + " см;");
+
+        tvCh35Res2Topic3.setText("R2 = " + blTopic3.getChapter34Res2() + " ± " +
+                blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res7() + " = " +
+                blTopic3.getLimitRes2Min() + " ÷ " + blTopic3.getLimitRes2Max() + " см;");
+
+        tvCh35Res3Topic3.setText("R3 = " + blTopic3.getChapter34Res3() + " ± " +
+                blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res8() + " = " +
+                blTopic3.getLimitRes3Min() + " ÷ " + blTopic3.getLimitRes3Max() + " %;");
+
+        tvCh35Res4Topic3.setText("R4 = " + blTopic3.getChapter34Res4() + " ± " +
+                blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res9() + " = " +
+                blTopic3.getLimitRes4Min() + " ÷ " + blTopic3.getLimitRes4Max() + " ;");
+
+        tvCh35Res5Topic3.setText("R5 = " + blTopic3.getChapter34Res5() + " ± " +
+                blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res10() + " = " +
+                blTopic3.getLimitRes5Min() + " ÷ " + blTopic3.getLimitRes5Max() + " .");
+
 
     }
 
