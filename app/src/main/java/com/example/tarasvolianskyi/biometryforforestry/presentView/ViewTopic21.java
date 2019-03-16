@@ -61,7 +61,6 @@ public class ViewTopic21 extends Fragment {
     }
 
 
-
     private void getArray() {
         new BLTopic21().putDataToArrayFromBD();
     }
@@ -145,11 +144,12 @@ public class ViewTopic21 extends Fragment {
             tv5.setText(pojoTableAdapter.getNum5() + "");
             */
 
-            tv1.setText(  "w1");
-            tv2.setText( "w2");
-            tv3.setText( "w3");
+            tv1.setText("w1");
+            tv2.setText("w2");
+            tv3.setText("w3");
             tv4.setText("w4");
-            tv5.setText( "w5");
+            tv5.setText("w5");
+
 
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());

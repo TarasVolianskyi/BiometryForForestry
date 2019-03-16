@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import com.example.tarasvolianskyi.biometryforforestry.presentView.ViewTopic3;
 
 public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClickListener {
     private View view;
-
+    private Button btnTopic3;
 
     @Nullable
     @Override
@@ -44,13 +45,13 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
         btnTopic1.setOnClickListener(this);
         Button btnTopic21 = (Button) view.findViewById(R.id.btn_222column_5_chosing_of_one_from_five_columns_fragment);
         btnTopic21.setOnClickListener(this);
-        Button btnTopic3 = (Button) view.findViewById(R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment);
+        btnTopic3 = (Button) view.findViewById(R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment);
         btnTopic3.setOnClickListener(this);
 
     }
 
     public void bundleSetData(int value) {
-int r=7;
+        int r = 7;
     }
 
     @Override
@@ -77,6 +78,9 @@ int r=7;
 
             case R.id.btn_33column_5_chosing_of_one_from_five_columns_fragment:
                 ViewTopic3 viewTopic3 = new ViewTopic3();
+
+                Pair[] pairs = new Pair[1];
+                pairs[0] = new Pair<View, String>(btnTopic3, "transformationName1");
                 FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
                 fragmentTransaction3.replace(R.id.flMainActivity, viewTopic3, "timeForReservation");

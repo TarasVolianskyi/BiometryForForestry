@@ -252,8 +252,8 @@ public class ViewTopic3 extends Fragment {
             tv8.setText(pojoTableAdapter3.getColomn8());
             tv9.setText(pojoTableAdapter3.getColomn9());
 */
-            tv1.setText("w1");
-            tv2.setText("w2");
+            tv1.setText(pojoTableAdapter3.getColomn1() + "");
+            tv2.setText(pojoTableAdapter3.getColomn2() + "");
             tv3.setText(pojoTableAdapter3.getColomn3() + "");
             tv4.setText(pojoTableAdapter3.getColomn4() + "");
             tv5.setText(pojoTableAdapter3.getColomn5() + "");

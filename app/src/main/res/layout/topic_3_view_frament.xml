@@ -28,6 +28,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/topic_3_subject"
+                    android:transitionName="transformationName1"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
