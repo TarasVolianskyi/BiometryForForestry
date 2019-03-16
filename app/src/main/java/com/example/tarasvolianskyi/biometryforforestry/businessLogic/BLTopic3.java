@@ -49,9 +49,9 @@ public class BLTopic3 {
         countAllTable();
         for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             //todo - fix this code
-            arrayListPOJO3.add(new POJOTableAdapter3(1, myArrayDiametrChastotu.get(i),
+            arrayListPOJO3.add(new POJOTableAdapter3((int) (blTopic21.countX1() + blTopic21.countCx() * i), myArrayDiametrChastotu.get(i),
                     arrayListColomn3Tab3.get(i), arrayListColomn4Tab3.get(i), arrayListColomn5Tab3.get(i),
-                    arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i), 21, 14));
+                    arrayListColomn6Tab3.get(i), arrayListColomn7Tab3.get(i), arrayListColomn8Tab3.get(i), arrayListColomn9Tab3.get(i)));
         }
         return arrayListPOJO3;
     }
@@ -144,6 +144,26 @@ public class BLTopic3 {
         return resArray;
     }
 
+    public ArrayList<Integer> countArrayColomn8() {
+        int res;
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            arrayListColomn8Tab3.add(i - findPlaceWithZeroForColomn3Table3());
+            res = i - findPlaceWithZeroForColomn3Table3() + 1;
+            resArray.add(res);
+            pojoTableAdapter3.setColomn8(res);
+        }
+        return resArray;
+    }
+    @TargetApi(Build.VERSION_CODES.N)
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public ArrayList<Integer> countArrayColomn9(int stepin) {
+        ArrayList<Integer> resArray = new ArrayList<>();
+        for (int i = 0; i < myArrayDiametrChastotu.size(); i++) {
+            resArray.add(Math.multiplyExact((int) Math.pow(countArrayColomn8().get(i), stepin), myArrayDiametrChastotu.get(i)));
+        }
+        return resArray;
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void countAllTable() {
@@ -151,6 +171,8 @@ public class BLTopic3 {
         arrayListColomn5Tab3 = countArray(2);
         arrayListColomn6Tab3 = countArray(3);
         arrayListColomn7Tab3 = countArray(4);
+        arrayListColomn8Tab3 = countArrayColomn8();
+        arrayListColomn9Tab3 = countArrayColomn9(4);
     }
 
     private double findSummOfArrayItems(ArrayList<Integer> arrayListOfItems) {

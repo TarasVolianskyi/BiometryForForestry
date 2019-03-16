@@ -259,8 +259,8 @@ public class ViewTopic3 extends Fragment {
             tv5.setText(pojoTableAdapter3.getColomn5() + "");
             tv6.setText(pojoTableAdapter3.getColomn6() + "");
             tv7.setText(pojoTableAdapter3.getColomn7() + "");
-            tv8.setText("w8");
-            tv9.setText("w9");
+            tv8.setText(pojoTableAdapter3.getColomn8() + "");
+            tv9.setText(pojoTableAdapter3.getColomn9() + "");
 
             //textView.setLayoutParams(new ViewGroup.LayoutParams(200, 100));
             //textView.setText(arrayList.get(i).toString());

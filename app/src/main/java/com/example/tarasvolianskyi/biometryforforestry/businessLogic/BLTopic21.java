@@ -156,7 +156,7 @@ public class BLTopic21 {
         ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
           for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             arrayListPOJO.add(new POJOTableAdapter((countX1() + countCx() * i - countCx() / 2) + " - " + ((countX1() + countCx() * i + countCx() / 2) - 0.1),
-                    countX1() + countCx() * i, "    ", arrayListOfCountedRozrads.get(i), arrayListLastColomn.get(i)));
+                    (countX1() + countCx() * i), "    ", arrayListOfCountedRozrads.get(i), arrayListLastColomn.get(i)));
 
         }
         return arrayListPOJO;
