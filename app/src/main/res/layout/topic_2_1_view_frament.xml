@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -227,7 +228,6 @@
                     android:layout_height="wrap_content">
 
 
-
                 </TableLayout>
 
 
@@ -244,9 +244,18 @@
 
 
                 <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph_topic_2_1_view_fragment"
                     android:layout_width="match_parent"
-                    android:layout_height="200dip"
-                    android:id="@+id/graph_topic_2_1_view_fragment" />
+                    android:layout_height="200dip" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph2_topic_2_1_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip" />
 
 
             </LinearLayout>
@@ -256,7 +265,6 @@
                 android:layout_height="match_parent" />
 
 
-
         </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </LinearLayout>

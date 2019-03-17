@@ -61,6 +61,7 @@ public class ViewTopic21 extends Fragment {
         fillTableLayout();
         fillTableLayout2();
 makeChart21();
+        makeChart21second();
         return view;
     }
 
@@ -202,7 +203,31 @@ makeChart21();
                 dataPoint
         );
         series.setColor(Color.BLACK);
-        graph.setBackgroundColor(Color.GREEN);
         graph.addSeries(seriesLine);
+        graph.animate();
+        graph.setTitle("Рис. 1. Гістограма");
+    }
+
+    private void makeChart21second(){
+        DataPoint[] dataPoint2 = new DataPoint[]{//LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+                new DataPoint(0, 1),
+                new DataPoint(1, 2),
+                new DataPoint(2, 3),
+                new DataPoint(3, 5),
+                new DataPoint(4, 6),
+                new DataPoint(5, 14),
+                new DataPoint(6, 20),
+                new DataPoint(7, 37)};
+
+
+        GraphView graph = (GraphView) view.findViewById(R.id.graph2_topic_2_1_view_fragment);
+
+
+        LineGraphSeries<DataPoint> seriesLine2 = new LineGraphSeries<DataPoint>(
+                dataPoint2
+        );
+        graph.addSeries(seriesLine2);
+        graph.animate();
+        graph.setTitle("Рис. 2. Кумулята");
     }
 }

@@ -125,5 +125,13 @@
     <string name="osn_pomilk_pokazn_ekscesy">- основна помилка показника ексцесу</string>
     <string name="pokazn_tochnosti_doslidy">- показник точності досліду</string>
     <string name="final_for_chapter_34">Одержані статистики та їхні помилки дозволяють будувати довірчі інтервали для відповідних цим статистикам параметрів, виходячи із співвідношення</string>
+    <string name="topic_4_subject">Робота 4. Моделювання емпіричних розподілів</string>
+    <string name="title_of_table4">4. Обчислення частот кривої нормального розподілу</string>
+    <string name="topic_4_text1_view_fragment">функція нормального розподілу (закон Муаврв-Гаусса-Лапласа)</string>
+    <string name="topic_4_text2_view_fragment">нормовані границі розрядів;</string>
+    <string name="topic_4_text3_view_fragment">функція нормованого нормального розподілу;</string>
+    <string name="topic_4_text4_view_fragment">властивість функції нормованого нормального розподілу;</string>
+    <string name="topic_4_text5_view_fragment">імовірність потрапляння випадкової величини в i-й розряд (одна із властивостей функції розподілу);</string>
+    <string name="topic_4_text6_view_fragment">теоретична частота i-го розряду (наслідок статестичного визначення ймовірності події).</string>
 
 </resources>

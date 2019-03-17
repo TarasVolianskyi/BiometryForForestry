@@ -154,7 +154,7 @@ public class BLTopic21 {
         ArrayList<POJOTableAdapter> arrayListPOJO = new ArrayList<>();
         ArrayList<Integer> arrayListOfCountedRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
         ArrayList<Integer> arrayListLastColomn = (ArrayList<Integer>) lastColomnTopic21(arrayListOfCountedRozrads);
-          for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
+        for (int i = 0; i < arrayListOfCountedRozrads.size(); i++) {
             arrayListPOJO.add(new POJOTableAdapter((countX1() + countCx() * i - countCx() / 2) + " - " + ((countX1() + countCx() * i + countCx() / 2) - 0.1),
                     (countX1() + countCx() * i), "    ", arrayListOfCountedRozrads.get(i), arrayListLastColomn.get(i)));
 
@@ -211,8 +211,8 @@ public class BLTopic21 {
     }
 
     public ArrayList<Integer> getArrayWithDiametrRozrads() {
-          myArrayDiameterInRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
-        return  myArrayDiameterInRozrads;
+        myArrayDiameterInRozrads = (ArrayList<Integer>) sortDuplicatsOfRozrads(findNumbOfRozradForAllItems(new MyArrayData().getDataArrayDiametr()));
+        return myArrayDiameterInRozrads;
     }
 
 }
