@@ -15,6 +15,10 @@ import android.widget.TextView;
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic21;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 
@@ -56,7 +60,7 @@ public class ViewTopic21 extends Fragment {
         initView();
         fillTableLayout();
         fillTableLayout2();
-
+makeChart21();
         return view;
     }
 
@@ -172,5 +176,33 @@ public class ViewTopic21 extends Fragment {
 
     private void fillData() {
         arrayList = new BLTopic21().showListInTable();
+    }
+
+    private void makeChart21(){
+        DataPoint[] dataPoint = new DataPoint[]{//LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+                new DataPoint(0, 1),
+                new DataPoint(1, 15),
+                new DataPoint(2, 3),
+                new DataPoint(3, 2),
+                new DataPoint(4, 2),
+                new DataPoint(5, 3),
+                new DataPoint(6, 2),
+                new DataPoint(7, 7),
+                new DataPoint(8, 2),
+                new DataPoint(9, 6)};
+
+
+        GraphView graph = (GraphView) view.findViewById(R.id.graph_topic_2_1_view_fragment);
+        BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(
+                dataPoint
+        );
+        graph.addSeries(series);
+
+        LineGraphSeries<DataPoint> seriesLine = new LineGraphSeries<DataPoint>(
+                dataPoint
+        );
+        series.setColor(Color.BLACK);
+        graph.setBackgroundColor(Color.GREEN);
+        graph.addSeries(seriesLine);
     }
 }

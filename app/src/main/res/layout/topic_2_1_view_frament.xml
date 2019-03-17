@@ -243,11 +243,18 @@
                     android:layout_height="wrap_content" />
 
 
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graph_topic_2_1_view_fragment" />
+
+
             </LinearLayout>
 
             <View
                 android:layout_width="10dp"
                 android:layout_height="match_parent" />
+
 
 
         </LinearLayout>
