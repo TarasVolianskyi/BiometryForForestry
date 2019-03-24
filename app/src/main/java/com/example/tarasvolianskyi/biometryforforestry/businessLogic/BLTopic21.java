@@ -57,8 +57,7 @@ public class BLTopic21 {
     }
 
     public double countLgN() {
-        lgN = Math.round(Math.log10(countNumberOfTrees()) * 1000.0) / 1000.0;
-        return lgN;
+        return Math.round(Math.log10(countNumberOfTrees()) * 1000.0) / 1000.0;
     }
 
     public double countExectNumberOfRozrad() {
@@ -67,48 +66,41 @@ public class BLTopic21 {
     }
 
     public double countNumberOfRozrad() {
-        numbRozradRounded = Math.round(countExectNumberOfRozrad());
-        return numbRozradRounded;
+        return Math.round(countExectNumberOfRozrad());
     }
 
     public double countXmax() {
-        Xmax = Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
-        return Xmax;
+        return Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
     }
 
     public double countXmin() {
-        Xmin = Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
-        return Xmin;
+        return Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
     }
 
     public double countYmax() {
-        Ymax = Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
-        return Ymax;
+        return Math.round(Collections.max(arrayListOfDataDiametr) * 10.0) / 10.0;
     }
 
     public double countYmin() {
-        Ymin = Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
-        return Ymin;
+        return Math.round(Collections.min(arrayListOfDataDiametr) * 10.0) / 10.0;
+
     }
 
     public double countCxWithoutRound() {
-        CxWitoutRound = Math.round(((countXmax() - countXmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
-        return CxWitoutRound;
+        return Math.round(((countXmax() - countXmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
+
     }
 
     public double countCyWithoutRound() {
-        CyWitoutRound = Math.round(((countYmax() - countYmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
-        return CyWitoutRound;
+        return Math.round(((countYmax() - countYmin()) / countNumberOfRozrad()) * 100.0) / 100.0;
     }
 
     public double countCx() {
-        Cx = Math.round(countCxWithoutRound());
-        return Cx;
+        return Math.round(countCxWithoutRound());
     }
 
     public double countCy() {
-        Cy = Math.round(countCyWithoutRound());
-        return Cy;
+        return Math.round(countCyWithoutRound());
     }
 
 

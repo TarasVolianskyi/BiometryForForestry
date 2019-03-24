@@ -1,9 +1,13 @@
 package com.example.tarasvolianskyi.biometryforforestry.businessLogic;
 
+import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter4;
+
 public class BLTopic4 {
 
     BLTopic3 blTopic3 = new BLTopic3();
     BLTopic21 blTopic21 = new BLTopic21();
+    private POJOTableAdapter4 pojoTableAdapter4 = new POJOTableAdapter4();
+
 
     private int numberOfTrees = blTopic3.getNumberOfTrees();
     private double XSerArefm = blTopic3.getChapter34Res1();
