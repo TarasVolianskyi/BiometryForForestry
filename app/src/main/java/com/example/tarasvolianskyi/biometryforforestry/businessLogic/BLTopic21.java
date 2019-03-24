@@ -61,8 +61,7 @@ public class BLTopic21 {
     }
 
     public double countExectNumberOfRozrad() {
-        exectNumbOfRozrad = Math.round(((1 + 3.322 * countLgN()) * 100.0) / 100.0);
-        return exectNumbOfRozrad;
+        return Math.round(((1 + 3.322 * countLgN()) * 100.0) / 100.0);
     }
 
     public double countNumberOfRozrad() {
