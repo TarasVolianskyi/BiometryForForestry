@@ -1,4 +1,6 @@
 package com.example.tarasvolianskyi.biometryforforestry.presentView;
 
-public class ViewTopic5 {
+import android.support.v4.app.Fragment;
+
+public class ViewTopic5 extends Fragment {
 }

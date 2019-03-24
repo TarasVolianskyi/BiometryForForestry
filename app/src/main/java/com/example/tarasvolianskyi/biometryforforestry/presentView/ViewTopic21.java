@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class ViewTopic21 extends Fragment {
 
-    View view;
+    private View view;
     private TextView textViewTest;
 
     private TextView tvNumberOfTrees;
@@ -60,7 +60,7 @@ public class ViewTopic21 extends Fragment {
         initView();
         fillTableLayout();
         fillTableLayout2();
-makeChart21();
+        makeChart21();
         makeChart21second();
         return view;
     }
@@ -179,7 +179,7 @@ makeChart21();
         arrayList = new BLTopic21().showListInTable();
     }
 
-    private void makeChart21(){
+    private void makeChart21() {
         DataPoint[] dataPoint = new DataPoint[]{//LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 new DataPoint(0, 1),
                 new DataPoint(1, 15),
@@ -208,7 +208,7 @@ makeChart21();
         graph.setTitle("Рис. 1. Гістограма");
     }
 
-    private void makeChart21second(){
+    private void makeChart21second() {
         DataPoint[] dataPoint2 = new DataPoint[]{//LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 new DataPoint(0, 1),
                 new DataPoint(1, 2),

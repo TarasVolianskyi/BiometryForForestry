@@ -53,20 +53,20 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_22column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_1_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Topic one" />
+        android:text="@string/topic_one_subject" />
 
     <Button
-        android:id="@+id/btn_222column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_21_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Topic two" />
+        android:text= "@string/topic_2_1_subject"/>
 
 
     <Button
-        android:id="@+id/btn_33column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_3_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:transitionName="transformationName1"
@@ -74,26 +74,26 @@
 
 
     <Button
-        android:id="@+id/btn_44column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_4_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Topic four" />
 
 
     <Button
-        android:id="@+id/btn_55column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_5_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Topic five" />
 
     <Button
-        android:id="@+id/btn_66column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_6_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Topic six" />
 
     <Button
-        android:id="@+id/btn_77column_5_chosing_of_one_from_five_columns_fragment"
+        android:id="@+id/btn_7_choose_from_all_topics_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Topic seven" />
