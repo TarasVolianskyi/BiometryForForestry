@@ -16,6 +16,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.tarasvolianskyi.biometryforforestry.MainActivity;
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic3;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter3;
@@ -136,7 +137,11 @@ public class ViewTopic3 extends Fragment {
         tvCh35Res5Topic3 = view.findViewById(R.id.tv_chapter_35_res5_view_fragment);
 //initImagesView();
         setTexts();
+        setStyle();
         fillTableLayout();
+    }
+
+    private void setStyle() {
     }
 
     private void initImagesView() {
@@ -157,12 +162,12 @@ public class ViewTopic3 extends Fragment {
                 blTopic3.getNumberOfTrees() + " = " + blTopic3.getControlRight() + " .");
 
         //3.2
-        tvMu2topic3.setText(Html.fromHtml("Mu'2 = " + blTopic3.getM2() + " - ( " +
+        tvMu2topic3.setText(Html.fromHtml(blTopic3.getM2() + " - ( " +
                 blTopic3.getM1() + " )<sup>2</sup> = " + blTopic3.getMu2() + " ;"));
-        tvMu3topic3.setText(Html.fromHtml("Mu'3 = " + blTopic3.getM3() + " - 3 * " +
+        tvMu3topic3.setText(Html.fromHtml(blTopic3.getM3() + " - 3 * " +
                 blTopic3.getM1() + " * " + blTopic3.getM2() + " + 2 * ( " + blTopic3.getM1() +
                 " )<sup>3</sup> = " + blTopic3.getMu3()));
-        tvMu4topic3.setText(Html.fromHtml("Mu'4 = " + blTopic3.getM4() + " - 4 * " +
+        tvMu4topic3.setText(Html.fromHtml(blTopic3.getM4() + " - 4 * " +
                 blTopic3.getM1() + " * " + blTopic3.getM3() + " + 6 * ( " + blTopic3.getM1() +
                 " )<sup>2</sup>  * " + blTopic3.getM2() + " - 3 * ( " + blTopic3.getM1() +
                 " )<sup>4</sup> = " + blTopic3.getMu4()));
