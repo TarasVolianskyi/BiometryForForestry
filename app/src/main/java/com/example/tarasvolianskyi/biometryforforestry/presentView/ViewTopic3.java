@@ -11,14 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
-import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic21;
 import com.example.tarasvolianskyi.biometryforforestry.businessLogic.BLTopic3;
-import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter;
 import com.example.tarasvolianskyi.biometryforforestry.presentView.POJOTableAdapters.POJOTableAdapter3;
 
 import java.util.ArrayList;
@@ -71,6 +70,7 @@ public class ViewTopic3 extends Fragment {
     private TextView tvCh35Res3Topic3;
     private TextView tvCh35Res4Topic3;
     private TextView tvCh35Res5Topic3;
+    private ImageView mImageView;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -134,9 +134,15 @@ public class ViewTopic3 extends Fragment {
         tvCh35Res3Topic3 = view.findViewById(R.id.tv_chapter_35_res3_view_fragment);
         tvCh35Res4Topic3 = view.findViewById(R.id.tv_chapter_35_res4_view_fragment);
         tvCh35Res5Topic3 = view.findViewById(R.id.tv_chapter_35_res5_view_fragment);
-
+//initImagesView();
         setTexts();
         fillTableLayout();
+    }
+
+    private void initImagesView() {
+
+        mImageView = (ImageView) view.findViewById(R.id.imageViewId);
+        mImageView.setImageResource(R.drawable.math312);
     }
 
     private void setTexts() {

@@ -28,9 +28,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/topic_3_subject"
-                    android:transitionName="transformationName1"
                     android:textSize="15dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:transitionName="transformationName1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
 
                 <View
                     android:layout_width="match_parent"
@@ -178,13 +183,26 @@
                     android:text="@string/title_of_chapter_31"
                     android:textStyle="bold" />
 
-
-                <TextView
-                    android:id="@+id/tv_chapter_31_M1_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewId"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math312" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_31_M1_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="left|center" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_chapter_31_M2_view_fragment"
@@ -672,7 +690,6 @@
                     android:layout_gravity="left"
                     android:gravity="left"
                     android:text="@string/final_for_chapter_34" />
-
 
 
                 <View
