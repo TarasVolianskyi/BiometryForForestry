@@ -201,23 +201,23 @@ public class ViewTopic3 extends Fragment {
         tvCh34Res11Topic3.setText(blTopic3.getChapter34Res11() + "");
 
         //3.5
-        tvCh35Res1Topic3.setText("R1 = " + blTopic3.getChapter34Res1() + " ± " +
+        tvCh35Res1Topic3.setText(blTopic3.getChapter34Res1() + " ± " +
                 blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res6() + " = " +
                 blTopic3.getLimitRes1Min() + " ÷ " + blTopic3.getLimitRes1Max() + " см;");
 
-        tvCh35Res2Topic3.setText("R2 = " + blTopic3.getChapter34Res2() + " ± " +
+        tvCh35Res2Topic3.setText(blTopic3.getChapter34Res2() + " ± " +
                 blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res7() + " = " +
                 blTopic3.getLimitRes2Min() + " ÷ " + blTopic3.getLimitRes2Max() + " см;");
 
-        tvCh35Res3Topic3.setText("R3 = " + blTopic3.getChapter34Res3() + " ± " +
+        tvCh35Res3Topic3.setText(blTopic3.getChapter34Res3() + " ± " +
                 blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res8() + " = " +
                 blTopic3.getLimitRes3Min() + " ÷ " + blTopic3.getLimitRes3Max() + " %;");
 
-        tvCh35Res4Topic3.setText("R4 = " + blTopic3.getChapter34Res4() + " ± " +
+        tvCh35Res4Topic3.setText(blTopic3.getChapter34Res4() + " ± " +
                 blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res9() + " = " +
                 blTopic3.getLimitRes4Min() + " ÷ " + blTopic3.getLimitRes4Max() + " ;");
 
-        tvCh35Res5Topic3.setText("R5 = " + blTopic3.getChapter34Res5() + " ± " +
+        tvCh35Res5Topic3.setText(blTopic3.getChapter34Res5() + " ± " +
                 blTopic3.getKvantul() + " * " + blTopic3.getChapter34Res10() + " = " +
                 blTopic3.getLimitRes5Min() + " ÷ " + blTopic3.getLimitRes5Max() + " .");
 

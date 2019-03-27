@@ -442,7 +442,7 @@
                         android:layout_width="0dp"
                         android:layout_height="70dp"
                         android:layout_weight="40"
-                        android:src="@drawable/math314" />
+                        android:src="@drawable/math331" />
 
 
                     <LinearLayout
@@ -498,13 +498,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="10"
-                        android:gravity="center"
-                        android:text="=" />
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math332" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -573,13 +571,26 @@
                     android:gravity="left"
                     android:text="@string/ser_arefm" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res1_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/math341" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res1_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="left"
+                        android:padding="4dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -592,13 +603,26 @@
                     android:gravity="left"
                     android:text="@string/ser_kvadratichne" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res2_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/math342" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res2_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="left"
+                        android:padding="4dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -611,13 +635,26 @@
                     android:gravity="left"
                     android:text="@string/koef_minlv" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res3_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/math343" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res3_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="left"
+                        android:padding="4dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -630,13 +667,26 @@
                     android:gravity="left"
                     android:text="@string/pokaznk_asumetrii" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res4_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/math344" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res4_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="left"
+                        android:padding="4dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -649,13 +699,26 @@
                     android:gravity="left"
                     android:text="@string/pokaznik_ekscesy" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res5_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:src="@drawable/math345" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res5_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="left"
+                        android:padding="4dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -668,13 +731,65 @@
                     android:gravity="left"
                     android:text="@string/osn_pomilk_ser_znach" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res6_view_fragment"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form6_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form6_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res6_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -687,13 +802,65 @@
                     android:gravity="left"
                     android:text="@string/osn_pomilk_ser_kvdr_znach" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res7_view_fragment"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form7_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form7_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res7_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -706,13 +873,65 @@
                     android:gravity="left"
                     android:text="@string/osn_pomilk_koef_minlv" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res8_view_fragment"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form8_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form8_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res8_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -725,13 +944,65 @@
                     android:gravity="left"
                     android:text="@string/osn_pomilk_pokazn_asimetrii" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res9_view_fragment"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form9_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form9_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res9_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -744,13 +1015,65 @@
                     android:gravity="left"
                     android:text="@string/osn_pomilk_pokazn_ekscesy" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res10_view_fragment"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form10_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form10_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="=" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res10_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="25"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -763,13 +1086,65 @@
                     android:gravity="left"
                     android:text="@string/pokazn_tochnosti_doslidy" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_34_res11_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/math346" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form11_top_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_34_form11_down_view_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="15"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="* 100% =" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_34_res11_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="15"
+                        android:gravity="left"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -792,46 +1167,120 @@
                     android:text="@string/title_of_chapter_35"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_chapter_35_res1_view_fragment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_chapter_35_res2_view_fragment"
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_35_res1_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_chapter_35_res3_view_fragment"
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math352" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_35_res2_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_chapter_35_res4_view_fragment"
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math353" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_35_res3_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_chapter_35_res5_view_fragment"
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math354" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_35_res4_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left"
-                    android:padding="4dp" />
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
 
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math355" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_35_res5_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
