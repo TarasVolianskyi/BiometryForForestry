@@ -133,5 +133,7 @@
     <string name="topic_4_text4_view_fragment">властивість функції нормованого нормального розподілу;</string>
     <string name="topic_4_text5_view_fragment">імовірність потрапляння випадкової величини в i-й розряд (одна із властивостей функції розподілу);</string>
     <string name="topic_4_text6_view_fragment">теоретична частота i-го розряду (наслідок статестичного визначення ймовірності події).</string>
+    <string name="topic_4_text7_view_fragment">Таблиця 5</string>
+    <string name="topic_4_table_name">Обчислення частот кривої нормального розподілу</string>
 
 </resources>

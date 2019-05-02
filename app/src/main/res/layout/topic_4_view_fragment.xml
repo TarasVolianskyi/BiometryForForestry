@@ -94,6 +94,155 @@
                     android:text="@string/topic_4_text6_view_fragment" />
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res1_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res2_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res3_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res4_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res5_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/math351" />
+
+                    <TextView
+                        android:id="@+id/tv_chapter_4_res6_view_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:paddingTop="18dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv7_topic_4_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:padding="5dp"
+                    android:text="@string/topic_4_text7_view_fragment" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/topic_4_table_name"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
