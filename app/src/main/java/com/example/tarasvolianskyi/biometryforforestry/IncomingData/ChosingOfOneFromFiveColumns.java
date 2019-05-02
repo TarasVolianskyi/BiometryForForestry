@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.tarasvolianskyi.biometryforforestry.R;
 import com.example.tarasvolianskyi.biometryforforestry.TopicOneCountFragment;
@@ -88,11 +87,11 @@ public class ChosingOfOneFromFiveColumns extends Fragment implements View.OnClic
             case R.id.btn_3_choose_from_all_topics_fragment:
                 ViewTopic3 viewTopic3 = new ViewTopic3();
 
-                Pair[] pairs = new Pair[1];
-                pairs[0] = new Pair<View, String>(btnTopic3, "transformationName1");
+                //Pair[] pairs = new Pair[1];
+                //pairs[0] = new Pair<View, String>(btnTopic3, "transformationName1");
                 FragmentManager fragmentManager3 = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction3 = fragmentManager3.beginTransaction();
-                fragmentTransaction3.replace(R.id.flMainActivity, viewTopic3, "timeForReservation");
+               // fragmentTransaction3.replace(R.id.flMainActivity, viewTopic3, "timeForReservation3");
                 fragmentTransaction3.addToBackStack(null);
                 fragmentTransaction3.commit();
                 break;
