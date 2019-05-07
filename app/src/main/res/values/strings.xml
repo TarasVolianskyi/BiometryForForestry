@@ -135,5 +135,6 @@
     <string name="topic_4_text6_view_fragment">теоретична частота i-го розряду (наслідок статестичного визначення ймовірності події).</string>
     <string name="topic_4_text7_view_fragment">Таблиця 5</string>
     <string name="topic_4_table_name">Обчислення частот кривої нормального розподілу</string>
+    <string name="x1_cm">xi, cм</string>
 
 </resources>

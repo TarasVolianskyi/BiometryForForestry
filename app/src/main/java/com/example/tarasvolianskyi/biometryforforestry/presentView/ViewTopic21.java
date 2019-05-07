@@ -56,7 +56,6 @@ public class ViewTopic21 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.topic_2_1_view_frament, container, false);
         getArray();
-
         initView();
         fillTableLayout();
         fillTableLayout2();

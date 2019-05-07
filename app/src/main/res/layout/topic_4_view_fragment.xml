@@ -243,6 +243,95 @@
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/tl_topic212_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    tools:context=".MainActivity">
+
+                    <TableRow android:background="@drawable/table_row_bg">
+
+                        <TextView
+                            android:id="@+id/tv_C1R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C2R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C3R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C4R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C5R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C6R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C7R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+
+                        <TextView
+                            android:id="@+id/tv_C8R1_Table5_view_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/x1_cm" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_topic4_view_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
