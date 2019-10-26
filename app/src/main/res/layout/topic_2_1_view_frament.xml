@@ -31,7 +31,6 @@
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
-
                 <TextView
                     android:id="@+id/tv1_topic_2_1_view_fragment"
                     android:layout_width="match_parent"
@@ -63,7 +62,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/topic_2_1_text3" />
-
 
                 <TextView
                     android:id="@+id/tv5_topic_2_1_view_fragment"
@@ -219,16 +217,12 @@
                             android:gravity="center"
                             android:text="@string/nakopuch_chastot" />
                     </TableRow>
-
-
                 </TableLayout>
 
                 <TableLayout
                     android:id="@+id/tl_topic21_view_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
-
                 </TableLayout>
 
 
@@ -257,15 +251,10 @@
                     android:id="@+id/graph2_topic_2_1_view_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="200dip" />
-
-
             </LinearLayout>
-
             <View
                 android:layout_width="10dp"
                 android:layout_height="match_parent" />
-
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
